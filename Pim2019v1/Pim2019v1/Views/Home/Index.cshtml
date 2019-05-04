@@ -1,0 +1,50 @@
+﻿@model IEnumerable<Pim2019v1.Models.Turma>
+
+<div class="container">
+    <div class="row text-center">
+        <div class="col-md-12 pt-3 mb-3">
+            <h1 class="form-check h2 ">Consultar Turmas</h1>
+        </div>
+    </div>
+    <div class="row text-center">
+        <div class="col-md-12 pb-2 mb-3">
+            <p class="lead">Consulte abaixo os detalhes das salas das turmas.</p>
+        </div>
+    </div>
+    <div class="row text-center">
+        <div>
+            @using (Html.BeginForm())
+            {
+                <p>Código da turma</p>
+                <input type="text" name="cod" id="cod" placeholder="Digite a pesquisa" />
+                <button type="submit">Filtrar</button>
+            }
+        </div>
+        <div class="table-responsive">
+            <table class="table table-striped table-sm">
+                <thead>
+                    <tr>
+                        <th class="text-center">ID</th>
+                        <th class="text-center">Codigo</th>
+                        <th class="text-center">Quantidade de Alunos</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @{if (Model != null)
+                        {
+                            foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td>@item.id</td>
+                                    <td>@item.codigo</td>
+                                    <td>@item.quantidade_alunos</td>
+                                </tr>
+                            }
+                        }                        
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+

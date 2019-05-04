@@ -1,0 +1,16 @@
+C:\Users\tiago\source\repos\Pim2019v1\pim2019_desk\bin\Debug\pim2019_desk.exe.config
+C:\Users\tiago\source\repos\Pim2019v1\pim2019_desk\bin\Debug\pim2019_desk.exe
+C:\Users\tiago\source\repos\Pim2019v1\pim2019_desk\bin\Debug\pim2019_desk.pdb
+C:\Users\tiago\source\repos\Pim2019v1\pim2019_desk\obj\Debug\pim2019_desk.csprojAssemblyReference.cache
+C:\Users\tiago\source\repos\Pim2019v1\pim2019_desk\obj\Debug\pim2019_desk.Form1.resources
+C:\Users\tiago\source\repos\Pim2019v1\pim2019_desk\obj\Debug\pim2019_desk.Properties.Resources.resources
+C:\Users\tiago\source\repos\Pim2019v1\pim2019_desk\obj\Debug\pim2019_desk.csproj.GenerateResource.cache
+C:\Users\tiago\source\repos\Pim2019v1\pim2019_desk\obj\Debug\pim2019_desk.csproj.CoreCompileInputs.cache
+C:\Users\tiago\source\repos\Pim2019v1\pim2019_desk\obj\Debug\pim2019_desk.exe
+C:\Users\tiago\source\repos\Pim2019v1\pim2019_desk\obj\Debug\pim2019_desk.pdb
+C:\Users\tiago\source\repos\Pim2019v1\pim2019_desk\obj\Debug\pim2019_desk.Apresentacao.frmCampus.resources
+C:\Users\tiago\source\repos\Pim2019v1\pim2019_desk\bin\Debug\EntityFramework.dll
+C:\Users\tiago\source\repos\Pim2019v1\pim2019_desk\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\tiago\source\repos\Pim2019v1\pim2019_desk\bin\Debug\EntityFramework.xml
+C:\Users\tiago\source\repos\Pim2019v1\pim2019_desk\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\tiago\source\repos\Pim2019v1\pim2019_desk\obj\Debug\pim2019_desk.csproj.CopyComplete

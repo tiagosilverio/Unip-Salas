@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.572
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "pim2019_web", "Pim2019v1\pim2019_web.csproj", "{505422CE-FB3F-4DDF-956A-2BA98D72F16C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "pim2019_desk", "pim2019_desk\pim2019_desk.csproj", "{1AF82AAC-AE80-46AC-B726-DDE5555D4C9D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{505422CE-FB3F-4DDF-956A-2BA98D72F16C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{505422CE-FB3F-4DDF-956A-2BA98D72F16C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{505422CE-FB3F-4DDF-956A-2BA98D72F16C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{505422CE-FB3F-4DDF-956A-2BA98D72F16C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1AF82AAC-AE80-46AC-B726-DDE5555D4C9D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1AF82AAC-AE80-46AC-B726-DDE5555D4C9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1AF82AAC-AE80-46AC-B726-DDE5555D4C9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1AF82AAC-AE80-46AC-B726-DDE5555D4C9D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {47313951-0364-42D2-B22D-A493CCC1EBBB}
+	EndGlobalSection
+EndGlobal

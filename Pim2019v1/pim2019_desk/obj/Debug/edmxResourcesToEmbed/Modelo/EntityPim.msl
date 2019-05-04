@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="unip_salaModelStoreContainer" CdmEntityContainer="unip_salaEntities">
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="unip_salaModel.sysdiagrams">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_alfabeto">
+      <EntityTypeMapping TypeName="unip_salaModel.tb_alfabeto">
+        <MappingFragment StoreEntitySet="tb_alfabeto">
+          <ScalarProperty Name="idAlfabeto" ColumnName="idAlfabeto" />
+          <ScalarProperty Name="nomeAlfabeto" ColumnName="nomeAlfabeto" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_aluno">
+      <EntityTypeMapping TypeName="unip_salaModel.tb_aluno">
+        <MappingFragment StoreEntitySet="tb_aluno">
+          <ScalarProperty Name="idAluno" ColumnName="idAluno" />
+          <ScalarProperty Name="raAluno" ColumnName="raAluno" />
+          <ScalarProperty Name="nomeAluno" ColumnName="nomeAluno" />
+          <ScalarProperty Name="statusAluno" ColumnName="statusAluno" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_andar">
+      <EntityTypeMapping TypeName="unip_salaModel.tb_andar">
+        <MappingFragment StoreEntitySet="tb_andar">
+          <ScalarProperty Name="idAndar" ColumnName="idAndar" />
+          <ScalarProperty Name="nomeAndar" ColumnName="nomeAndar" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_aula_local">
+      <EntityTypeMapping TypeName="unip_salaModel.tb_aula_local">
+        <MappingFragment StoreEntitySet="tb_aula_local">
+          <ScalarProperty Name="idAulaLocal" ColumnName="idAulaLocal" />
+          <ScalarProperty Name="fkSala" ColumnName="fkSala" />
+          <ScalarProperty Name="fkTurmaAluno" ColumnName="fkTurmaAluno" />
+          <ScalarProperty Name="fkDiaSemana" ColumnName="fkDiaSemana" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_campus">
+      <EntityTypeMapping TypeName="unip_salaModel.tb_campus">
+        <MappingFragment StoreEntitySet="tb_campus">
+          <ScalarProperty Name="idCampus" ColumnName="idCampus" />
+          <ScalarProperty Name="nomeCampus" ColumnName="nomeCampus" />
+          <ScalarProperty Name="numeroCampus" ColumnName="numeroCampus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_curso">
+      <EntityTypeMapping TypeName="unip_salaModel.tb_curso">
+        <MappingFragment StoreEntitySet="tb_curso">
+          <ScalarProperty Name="idCurso" ColumnName="idCurso" />
+          <ScalarProperty Name="nomeCurso" ColumnName="nomeCurso" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_dia_semana">
+      <EntityTypeMapping TypeName="unip_salaModel.tb_dia_semana">
+        <MappingFragment StoreEntitySet="tb_dia_semana">
+          <ScalarProperty Name="idDiaSemana" ColumnName="idDiaSemana" />
+          <ScalarProperty Name="nomeDiaSemana" ColumnName="nomeDiaSemana" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_sala">
+      <EntityTypeMapping TypeName="unip_salaModel.tb_sala">
+        <MappingFragment StoreEntitySet="tb_sala">
+          <ScalarProperty Name="idSala" ColumnName="idSala" />
+          <ScalarProperty Name="numeroSala" ColumnName="numeroSala" />
+          <ScalarProperty Name="capacidade" ColumnName="capacidade" />
+          <ScalarProperty Name="fkAlfabeto" ColumnName="fkAlfabeto" />
+          <ScalarProperty Name="fkTipoSala" ColumnName="fkTipoSala" />
+          <ScalarProperty Name="fkAndar" ColumnName="fkAndar" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_sigla">
+      <EntityTypeMapping TypeName="unip_salaModel.tb_sigla">
+        <MappingFragment StoreEntitySet="tb_sigla">
+          <ScalarProperty Name="idSigla" ColumnName="idSigla" />
+          <ScalarProperty Name="nomeSigla" ColumnName="nomeSigla" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_tipo_sala">
+      <EntityTypeMapping TypeName="unip_salaModel.tb_tipo_sala">
+        <MappingFragment StoreEntitySet="tb_tipo_sala">
+          <ScalarProperty Name="idTipoSala" ColumnName="idTipoSala" />
+          <ScalarProperty Name="nomeTipoSala" ColumnName="nomeTipoSala" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_turma">
+      <EntityTypeMapping TypeName="unip_salaModel.tb_turma">
+        <MappingFragment StoreEntitySet="tb_turma">
+          <ScalarProperty Name="idTurma" ColumnName="idTurma" />
+          <ScalarProperty Name="fkSigla" ColumnName="fkSigla" />
+          <ScalarProperty Name="fkAlfabeto" ColumnName="fkAlfabeto" />
+          <ScalarProperty Name="fkCampus" ColumnName="fkCampus" />
+          <ScalarProperty Name="fkCurso" ColumnName="fkCurso" />
+          <ScalarProperty Name="anoInicio" ColumnName="anoInicio" />
+          <ScalarProperty Name="semestreInicio" ColumnName="semestreInicio" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_turma_aluno">
+      <EntityTypeMapping TypeName="unip_salaModel.tb_turma_aluno">
+        <MappingFragment StoreEntitySet="tb_turma_aluno">
+          <ScalarProperty Name="idTurmaAluno" ColumnName="idTurmaAluno" />
+          <ScalarProperty Name="fkTurma" ColumnName="fkTurma" />
+          <ScalarProperty Name="fkAluno" ColumnName="fkAluno" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

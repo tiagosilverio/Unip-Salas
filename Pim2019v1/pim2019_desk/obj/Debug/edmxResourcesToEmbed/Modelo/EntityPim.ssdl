@@ -1,0 +1,303 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="unip_salaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="tb_alfabeto">
+    <Key>
+      <PropertyRef Name="idAlfabeto" />
+    </Key>
+    <Property Name="idAlfabeto" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nomeAlfabeto" Type="char" MaxLength="1" />
+  </EntityType>
+  <EntityType Name="tb_aluno">
+    <Key>
+      <PropertyRef Name="idAluno" />
+    </Key>
+    <Property Name="idAluno" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="raAluno" Type="char" MaxLength="7" Nullable="false" />
+    <Property Name="nomeAluno" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="statusAluno" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tb_andar">
+    <Key>
+      <PropertyRef Name="idAndar" />
+    </Key>
+    <Property Name="idAndar" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nomeAndar" Type="varchar" MaxLength="40" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tb_aula_local">
+    <Key>
+      <PropertyRef Name="idAulaLocal" />
+    </Key>
+    <Property Name="idAulaLocal" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="fkSala" Type="int" />
+    <Property Name="fkTurmaAluno" Type="int" />
+    <Property Name="fkDiaSemana" Type="int" />
+  </EntityType>
+  <EntityType Name="tb_campus">
+    <Key>
+      <PropertyRef Name="idCampus" />
+    </Key>
+    <Property Name="idCampus" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nomeCampus" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="numeroCampus" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tb_curso">
+    <Key>
+      <PropertyRef Name="idCurso" />
+    </Key>
+    <Property Name="idCurso" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nomeCurso" Type="varchar" MaxLength="70" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tb_dia_semana">
+    <Key>
+      <PropertyRef Name="idDiaSemana" />
+    </Key>
+    <Property Name="idDiaSemana" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nomeDiaSemana" Type="varchar" MaxLength="15" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tb_sala">
+    <Key>
+      <PropertyRef Name="idSala" />
+    </Key>
+    <Property Name="idSala" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="numeroSala" Type="int" Nullable="false" />
+    <Property Name="capacidade" Type="int" Nullable="false" />
+    <Property Name="fkAlfabeto" Type="int" />
+    <Property Name="fkTipoSala" Type="int" />
+    <Property Name="fkAndar" Type="int" />
+  </EntityType>
+  <EntityType Name="tb_sigla">
+    <Key>
+      <PropertyRef Name="idSigla" />
+    </Key>
+    <Property Name="idSigla" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nomeSigla" Type="varchar" MaxLength="8" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tb_tipo_sala">
+    <Key>
+      <PropertyRef Name="idTipoSala" />
+    </Key>
+    <Property Name="idTipoSala" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nomeTipoSala" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tb_turma">
+    <Key>
+      <PropertyRef Name="idTurma" />
+    </Key>
+    <Property Name="idTurma" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="fkSigla" Type="int" />
+    <Property Name="fkAlfabeto" Type="int" />
+    <Property Name="fkCampus" Type="int" />
+    <Property Name="fkCurso" Type="int" />
+    <Property Name="anoInicio" Type="date" />
+    <Property Name="semestreInicio" Type="int" />
+  </EntityType>
+  <EntityType Name="tb_turma_aluno">
+    <Key>
+      <PropertyRef Name="idTurmaAluno" />
+    </Key>
+    <Property Name="idTurmaAluno" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="fkTurma" Type="int" />
+    <Property Name="fkAluno" Type="int" />
+  </EntityType>
+  <Association Name="FK_TB_AULALOCAL_DIASEMANA">
+    <End Role="tb_dia_semana" Type="Self.tb_dia_semana" Multiplicity="0..1" />
+    <End Role="tb_aula_local" Type="Self.tb_aula_local" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_dia_semana">
+        <PropertyRef Name="idDiaSemana" />
+      </Principal>
+      <Dependent Role="tb_aula_local">
+        <PropertyRef Name="fkDiaSemana" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TB_AULALOCAL_SALA">
+    <End Role="tb_sala" Type="Self.tb_sala" Multiplicity="0..1" />
+    <End Role="tb_aula_local" Type="Self.tb_aula_local" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_sala">
+        <PropertyRef Name="idSala" />
+      </Principal>
+      <Dependent Role="tb_aula_local">
+        <PropertyRef Name="fkSala" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TB_AULALOCAL_TURMAALUNO">
+    <End Role="tb_turma_aluno" Type="Self.tb_turma_aluno" Multiplicity="0..1" />
+    <End Role="tb_aula_local" Type="Self.tb_aula_local" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_turma_aluno">
+        <PropertyRef Name="idTurmaAluno" />
+      </Principal>
+      <Dependent Role="tb_aula_local">
+        <PropertyRef Name="fkTurmaAluno" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TB_SALA_ALFABETO">
+    <End Role="tb_alfabeto" Type="Self.tb_alfabeto" Multiplicity="0..1" />
+    <End Role="tb_sala" Type="Self.tb_sala" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_alfabeto">
+        <PropertyRef Name="idAlfabeto" />
+      </Principal>
+      <Dependent Role="tb_sala">
+        <PropertyRef Name="fkAlfabeto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TB_SALA_ANDAR">
+    <End Role="tb_andar" Type="Self.tb_andar" Multiplicity="0..1" />
+    <End Role="tb_sala" Type="Self.tb_sala" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_andar">
+        <PropertyRef Name="idAndar" />
+      </Principal>
+      <Dependent Role="tb_sala">
+        <PropertyRef Name="fkAndar" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TB_SALA_TIPOSALA">
+    <End Role="tb_tipo_sala" Type="Self.tb_tipo_sala" Multiplicity="0..1" />
+    <End Role="tb_sala" Type="Self.tb_sala" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_tipo_sala">
+        <PropertyRef Name="idTipoSala" />
+      </Principal>
+      <Dependent Role="tb_sala">
+        <PropertyRef Name="fkTipoSala" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TB_TURMA_CAMPUS">
+    <End Role="tb_campus" Type="Self.tb_campus" Multiplicity="0..1" />
+    <End Role="tb_turma" Type="Self.tb_turma" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_campus">
+        <PropertyRef Name="idCampus" />
+      </Principal>
+      <Dependent Role="tb_turma">
+        <PropertyRef Name="fkCampus" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TB_TURMA_CURSO">
+    <End Role="tb_curso" Type="Self.tb_curso" Multiplicity="0..1" />
+    <End Role="tb_turma" Type="Self.tb_turma" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_curso">
+        <PropertyRef Name="idCurso" />
+      </Principal>
+      <Dependent Role="tb_turma">
+        <PropertyRef Name="fkCurso" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TB_TURMA_SIGLA">
+    <End Role="tb_sigla" Type="Self.tb_sigla" Multiplicity="0..1" />
+    <End Role="tb_turma" Type="Self.tb_turma" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_sigla">
+        <PropertyRef Name="idSigla" />
+      </Principal>
+      <Dependent Role="tb_turma">
+        <PropertyRef Name="fkSigla" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TB_TURMAALUNO_ALUNO">
+    <End Role="tb_aluno" Type="Self.tb_aluno" Multiplicity="0..1" />
+    <End Role="tb_turma_aluno" Type="Self.tb_turma_aluno" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_aluno">
+        <PropertyRef Name="idAluno" />
+      </Principal>
+      <Dependent Role="tb_turma_aluno">
+        <PropertyRef Name="fkAluno" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TB_TURMAALUNO_TURMA">
+    <End Role="tb_turma" Type="Self.tb_turma" Multiplicity="0..1" />
+    <End Role="tb_turma_aluno" Type="Self.tb_turma_aluno" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_turma">
+        <PropertyRef Name="idTurma" />
+      </Principal>
+      <Dependent Role="tb_turma_aluno">
+        <PropertyRef Name="fkTurma" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="unip_salaModelStoreContainer">
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tb_alfabeto" EntityType="Self.tb_alfabeto" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tb_aluno" EntityType="Self.tb_aluno" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tb_andar" EntityType="Self.tb_andar" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tb_aula_local" EntityType="Self.tb_aula_local" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tb_campus" EntityType="Self.tb_campus" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tb_curso" EntityType="Self.tb_curso" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tb_dia_semana" EntityType="Self.tb_dia_semana" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tb_sala" EntityType="Self.tb_sala" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tb_sigla" EntityType="Self.tb_sigla" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tb_tipo_sala" EntityType="Self.tb_tipo_sala" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tb_turma" EntityType="Self.tb_turma" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tb_turma_aluno" EntityType="Self.tb_turma_aluno" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_TB_AULALOCAL_DIASEMANA" Association="Self.FK_TB_AULALOCAL_DIASEMANA">
+      <End Role="tb_dia_semana" EntitySet="tb_dia_semana" />
+      <End Role="tb_aula_local" EntitySet="tb_aula_local" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TB_AULALOCAL_SALA" Association="Self.FK_TB_AULALOCAL_SALA">
+      <End Role="tb_sala" EntitySet="tb_sala" />
+      <End Role="tb_aula_local" EntitySet="tb_aula_local" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TB_AULALOCAL_TURMAALUNO" Association="Self.FK_TB_AULALOCAL_TURMAALUNO">
+      <End Role="tb_turma_aluno" EntitySet="tb_turma_aluno" />
+      <End Role="tb_aula_local" EntitySet="tb_aula_local" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TB_SALA_ALFABETO" Association="Self.FK_TB_SALA_ALFABETO">
+      <End Role="tb_alfabeto" EntitySet="tb_alfabeto" />
+      <End Role="tb_sala" EntitySet="tb_sala" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TB_SALA_ANDAR" Association="Self.FK_TB_SALA_ANDAR">
+      <End Role="tb_andar" EntitySet="tb_andar" />
+      <End Role="tb_sala" EntitySet="tb_sala" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TB_SALA_TIPOSALA" Association="Self.FK_TB_SALA_TIPOSALA">
+      <End Role="tb_tipo_sala" EntitySet="tb_tipo_sala" />
+      <End Role="tb_sala" EntitySet="tb_sala" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TB_TURMA_CAMPUS" Association="Self.FK_TB_TURMA_CAMPUS">
+      <End Role="tb_campus" EntitySet="tb_campus" />
+      <End Role="tb_turma" EntitySet="tb_turma" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TB_TURMA_CURSO" Association="Self.FK_TB_TURMA_CURSO">
+      <End Role="tb_curso" EntitySet="tb_curso" />
+      <End Role="tb_turma" EntitySet="tb_turma" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TB_TURMA_SIGLA" Association="Self.FK_TB_TURMA_SIGLA">
+      <End Role="tb_sigla" EntitySet="tb_sigla" />
+      <End Role="tb_turma" EntitySet="tb_turma" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TB_TURMAALUNO_ALUNO" Association="Self.FK_TB_TURMAALUNO_ALUNO">
+      <End Role="tb_aluno" EntitySet="tb_aluno" />
+      <End Role="tb_turma_aluno" EntitySet="tb_turma_aluno" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TB_TURMAALUNO_TURMA" Association="Self.FK_TB_TURMAALUNO_TURMA">
+      <End Role="tb_turma" EntitySet="tb_turma" />
+      <End Role="tb_turma_aluno" EntitySet="tb_turma_aluno" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
