@@ -73,6 +73,27 @@
             this.unip_salaDataSet2 = new pim2019_desk.unip_salaDataSet2();
             this.tbcursoBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.tb_cursoTableAdapter1 = new pim2019_desk.unip_salaDataSet2TableAdapters.tb_cursoTableAdapter();
+            this.dgvAluno = new System.Windows.Forms.DataGridView();
+            this.unip_salaDataSet3 = new pim2019_desk.unip_salaDataSet3();
+            this.tbalunoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tb_alunoTableAdapter = new pim2019_desk.unip_salaDataSet3TableAdapters.tb_alunoTableAdapter();
+            this.idAlunoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.raAlunoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nomeAlunoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.statusAlunoDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.btnExcluirAluno = new System.Windows.Forms.Button();
+            this.lblNomeAluno = new System.Windows.Forms.Label();
+            this.btnLimparAluno = new System.Windows.Forms.Button();
+            this.txbNomeAluno = new System.Windows.Forms.TextBox();
+            this.btnEditarAluno = new System.Windows.Forms.Button();
+            this.btnCadastrarAluno = new System.Windows.Forms.Button();
+            this.lblIdAluno = new System.Windows.Forms.Label();
+            this.lblRa = new System.Windows.Forms.Label();
+            this.txbIdAluno = new System.Windows.Forms.TextBox();
+            this.txbRaAluno = new System.Windows.Forms.TextBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.rdbMatriculado = new System.Windows.Forms.RadioButton();
+            this.rdbNaoMatriculado = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.unip_salaDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbcursoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCampus)).BeginInit();
@@ -81,10 +102,15 @@
             this.tabControl1.SuspendLayout();
             this.tabCampus.SuspendLayout();
             this.tbpCurso.SuspendLayout();
+            this.tbpAluno.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCurso)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.unip_salaDataSet2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbcursoBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAluno)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.unip_salaDataSet3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tbalunoBindingSource)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblNumeroCampus
@@ -341,6 +367,18 @@
             // 
             // tbpAluno
             // 
+            this.tbpAluno.Controls.Add(this.groupBox1);
+            this.tbpAluno.Controls.Add(this.txbRaAluno);
+            this.tbpAluno.Controls.Add(this.btnExcluirAluno);
+            this.tbpAluno.Controls.Add(this.lblNomeAluno);
+            this.tbpAluno.Controls.Add(this.btnLimparAluno);
+            this.tbpAluno.Controls.Add(this.txbNomeAluno);
+            this.tbpAluno.Controls.Add(this.btnEditarAluno);
+            this.tbpAluno.Controls.Add(this.btnCadastrarAluno);
+            this.tbpAluno.Controls.Add(this.lblIdAluno);
+            this.tbpAluno.Controls.Add(this.lblRa);
+            this.tbpAluno.Controls.Add(this.txbIdAluno);
+            this.tbpAluno.Controls.Add(this.dgvAluno);
             this.tbpAluno.Location = new System.Drawing.Point(4, 22);
             this.tbpAluno.Name = "tbpAluno";
             this.tbpAluno.Padding = new System.Windows.Forms.Padding(3);
@@ -385,6 +423,7 @@
             this.dgvCurso.ReadOnly = true;
             this.dgvCurso.Size = new System.Drawing.Size(460, 221);
             this.dgvCurso.TabIndex = 0;
+            this.dgvCurso.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCurso_CellEnter);
             // 
             // idCursoDataGridViewTextBoxColumn
             // 
@@ -414,6 +453,7 @@
             this.btnExcluirCurso.Text = "Excluir";
             this.btnExcluirCurso.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnExcluirCurso.UseVisualStyleBackColor = false;
+            this.btnExcluirCurso.Click += new System.EventHandler(this.btnExcluirCurso_Click);
             // 
             // lblNomeCurso
             // 
@@ -436,6 +476,7 @@
             this.btnLimparCurso.Text = "Limpar";
             this.btnLimparCurso.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnLimparCurso.UseVisualStyleBackColor = false;
+            this.btnLimparCurso.Click += new System.EventHandler(this.btnLimparCurso_Click);
             // 
             // txbNomeCurso
             // 
@@ -456,6 +497,7 @@
             this.btnEditarCurso.Text = "Editar";
             this.btnEditarCurso.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnEditarCurso.UseVisualStyleBackColor = false;
+            this.btnEditarCurso.Click += new System.EventHandler(this.btnEditarCurso_Click);
             // 
             // btnCadastrarCurso
             // 
@@ -526,6 +568,207 @@
             // 
             this.tb_cursoTableAdapter1.ClearBeforeFill = true;
             // 
+            // dgvAluno
+            // 
+            this.dgvAluno.AllowUserToAddRows = false;
+            this.dgvAluno.AllowUserToDeleteRows = false;
+            this.dgvAluno.AllowUserToResizeColumns = false;
+            this.dgvAluno.AllowUserToResizeRows = false;
+            this.dgvAluno.AutoGenerateColumns = false;
+            this.dgvAluno.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAluno.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idAlunoDataGridViewTextBoxColumn,
+            this.raAlunoDataGridViewTextBoxColumn,
+            this.nomeAlunoDataGridViewTextBoxColumn,
+            this.statusAlunoDataGridViewCheckBoxColumn});
+            this.dgvAluno.DataSource = this.tbalunoBindingSource;
+            this.dgvAluno.Location = new System.Drawing.Point(7, 7);
+            this.dgvAluno.Name = "dgvAluno";
+            this.dgvAluno.ReadOnly = true;
+            this.dgvAluno.Size = new System.Drawing.Size(460, 221);
+            this.dgvAluno.TabIndex = 0;
+            // 
+            // unip_salaDataSet3
+            // 
+            this.unip_salaDataSet3.DataSetName = "unip_salaDataSet3";
+            this.unip_salaDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tbalunoBindingSource
+            // 
+            this.tbalunoBindingSource.DataMember = "tb_aluno";
+            this.tbalunoBindingSource.DataSource = this.unip_salaDataSet3;
+            // 
+            // tb_alunoTableAdapter
+            // 
+            this.tb_alunoTableAdapter.ClearBeforeFill = true;
+            // 
+            // idAlunoDataGridViewTextBoxColumn
+            // 
+            this.idAlunoDataGridViewTextBoxColumn.DataPropertyName = "idAluno";
+            this.idAlunoDataGridViewTextBoxColumn.HeaderText = "ID";
+            this.idAlunoDataGridViewTextBoxColumn.Name = "idAlunoDataGridViewTextBoxColumn";
+            this.idAlunoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idAlunoDataGridViewTextBoxColumn.Width = 60;
+            // 
+            // raAlunoDataGridViewTextBoxColumn
+            // 
+            this.raAlunoDataGridViewTextBoxColumn.DataPropertyName = "raAluno";
+            this.raAlunoDataGridViewTextBoxColumn.HeaderText = "RA";
+            this.raAlunoDataGridViewTextBoxColumn.Name = "raAlunoDataGridViewTextBoxColumn";
+            this.raAlunoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.raAlunoDataGridViewTextBoxColumn.Width = 70;
+            // 
+            // nomeAlunoDataGridViewTextBoxColumn
+            // 
+            this.nomeAlunoDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.nomeAlunoDataGridViewTextBoxColumn.DataPropertyName = "nomeAluno";
+            this.nomeAlunoDataGridViewTextBoxColumn.HeaderText = "Nome";
+            this.nomeAlunoDataGridViewTextBoxColumn.Name = "nomeAlunoDataGridViewTextBoxColumn";
+            this.nomeAlunoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // statusAlunoDataGridViewCheckBoxColumn
+            // 
+            this.statusAlunoDataGridViewCheckBoxColumn.DataPropertyName = "statusAluno";
+            this.statusAlunoDataGridViewCheckBoxColumn.HeaderText = "Status";
+            this.statusAlunoDataGridViewCheckBoxColumn.Name = "statusAlunoDataGridViewCheckBoxColumn";
+            this.statusAlunoDataGridViewCheckBoxColumn.ReadOnly = true;
+            this.statusAlunoDataGridViewCheckBoxColumn.Width = 60;
+            // 
+            // btnExcluirAluno
+            // 
+            this.btnExcluirAluno.BackColor = System.Drawing.Color.Gainsboro;
+            this.btnExcluirAluno.Image = ((System.Drawing.Image)(resources.GetObject("btnExcluirAluno.Image")));
+            this.btnExcluirAluno.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnExcluirAluno.Location = new System.Drawing.Point(319, 365);
+            this.btnExcluirAluno.Name = "btnExcluirAluno";
+            this.btnExcluirAluno.Size = new System.Drawing.Size(74, 38);
+            this.btnExcluirAluno.TabIndex = 22;
+            this.btnExcluirAluno.Text = "Excluir";
+            this.btnExcluirAluno.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnExcluirAluno.UseVisualStyleBackColor = false;
+            // 
+            // lblNomeAluno
+            // 
+            this.lblNomeAluno.AutoSize = true;
+            this.lblNomeAluno.Location = new System.Drawing.Point(3, 296);
+            this.lblNomeAluno.Name = "lblNomeAluno";
+            this.lblNomeAluno.Size = new System.Drawing.Size(80, 13);
+            this.lblNomeAluno.TabIndex = 14;
+            this.lblNomeAluno.Text = "Nome do Aluno";
+            // 
+            // btnLimparAluno
+            // 
+            this.btnLimparAluno.BackColor = System.Drawing.Color.Gainsboro;
+            this.btnLimparAluno.Image = ((System.Drawing.Image)(resources.GetObject("btnLimparAluno.Image")));
+            this.btnLimparAluno.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLimparAluno.Location = new System.Drawing.Point(244, 365);
+            this.btnLimparAluno.Name = "btnLimparAluno";
+            this.btnLimparAluno.Size = new System.Drawing.Size(69, 38);
+            this.btnLimparAluno.TabIndex = 20;
+            this.btnLimparAluno.Text = "Limpar";
+            this.btnLimparAluno.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnLimparAluno.UseVisualStyleBackColor = false;
+            // 
+            // txbNomeAluno
+            // 
+            this.txbNomeAluno.Location = new System.Drawing.Point(6, 313);
+            this.txbNomeAluno.Name = "txbNomeAluno";
+            this.txbNomeAluno.Size = new System.Drawing.Size(457, 20);
+            this.txbNomeAluno.TabIndex = 15;
+            // 
+            // btnEditarAluno
+            // 
+            this.btnEditarAluno.BackColor = System.Drawing.Color.Gainsboro;
+            this.btnEditarAluno.Image = ((System.Drawing.Image)(resources.GetObject("btnEditarAluno.Image")));
+            this.btnEditarAluno.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEditarAluno.Location = new System.Drawing.Point(165, 365);
+            this.btnEditarAluno.Name = "btnEditarAluno";
+            this.btnEditarAluno.Size = new System.Drawing.Size(73, 38);
+            this.btnEditarAluno.TabIndex = 19;
+            this.btnEditarAluno.Text = "Editar";
+            this.btnEditarAluno.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnEditarAluno.UseVisualStyleBackColor = false;
+            // 
+            // btnCadastrarAluno
+            // 
+            this.btnCadastrarAluno.BackColor = System.Drawing.Color.Gainsboro;
+            this.btnCadastrarAluno.Image = ((System.Drawing.Image)(resources.GetObject("btnCadastrarAluno.Image")));
+            this.btnCadastrarAluno.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCadastrarAluno.Location = new System.Drawing.Point(71, 365);
+            this.btnCadastrarAluno.Name = "btnCadastrarAluno";
+            this.btnCadastrarAluno.Size = new System.Drawing.Size(88, 38);
+            this.btnCadastrarAluno.TabIndex = 16;
+            this.btnCadastrarAluno.Text = "Cadastrar";
+            this.btnCadastrarAluno.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnCadastrarAluno.UseVisualStyleBackColor = false;
+            // 
+            // lblIdAluno
+            // 
+            this.lblIdAluno.AutoSize = true;
+            this.lblIdAluno.Location = new System.Drawing.Point(6, 242);
+            this.lblIdAluno.Name = "lblIdAluno";
+            this.lblIdAluno.Size = new System.Drawing.Size(18, 13);
+            this.lblIdAluno.TabIndex = 17;
+            this.lblIdAluno.Text = "ID";
+            // 
+            // lblRa
+            // 
+            this.lblRa.AutoSize = true;
+            this.lblRa.Location = new System.Drawing.Point(71, 242);
+            this.lblRa.Name = "lblRa";
+            this.lblRa.Size = new System.Drawing.Size(22, 13);
+            this.lblRa.TabIndex = 13;
+            this.lblRa.Text = "RA";
+            // 
+            // txbIdAluno
+            // 
+            this.txbIdAluno.Enabled = false;
+            this.txbIdAluno.Location = new System.Drawing.Point(6, 258);
+            this.txbIdAluno.Name = "txbIdAluno";
+            this.txbIdAluno.ReadOnly = true;
+            this.txbIdAluno.Size = new System.Drawing.Size(53, 20);
+            this.txbIdAluno.TabIndex = 18;
+            // 
+            // txbRaAluno
+            // 
+            this.txbRaAluno.Location = new System.Drawing.Point(74, 258);
+            this.txbRaAluno.Name = "txbRaAluno";
+            this.txbRaAluno.Size = new System.Drawing.Size(98, 20);
+            this.txbRaAluno.TabIndex = 23;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.rdbNaoMatriculado);
+            this.groupBox1.Controls.Add(this.rdbMatriculado);
+            this.groupBox1.Location = new System.Drawing.Point(263, 242);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(200, 45);
+            this.groupBox1.TabIndex = 24;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Status";
+            // 
+            // rdbMatriculado
+            // 
+            this.rdbMatriculado.AutoSize = true;
+            this.rdbMatriculado.Location = new System.Drawing.Point(6, 19);
+            this.rdbMatriculado.Name = "rdbMatriculado";
+            this.rdbMatriculado.Size = new System.Drawing.Size(80, 17);
+            this.rdbMatriculado.TabIndex = 0;
+            this.rdbMatriculado.TabStop = true;
+            this.rdbMatriculado.Text = "Matriculado";
+            this.rdbMatriculado.UseVisualStyleBackColor = true;
+            // 
+            // rdbNaoMatriculado
+            // 
+            this.rdbNaoMatriculado.AutoSize = true;
+            this.rdbNaoMatriculado.Location = new System.Drawing.Point(91, 19);
+            this.rdbNaoMatriculado.Name = "rdbNaoMatriculado";
+            this.rdbNaoMatriculado.Size = new System.Drawing.Size(103, 17);
+            this.rdbNaoMatriculado.TabIndex = 1;
+            this.rdbNaoMatriculado.TabStop = true;
+            this.rdbNaoMatriculado.Text = "Não Matriculado";
+            this.rdbNaoMatriculado.UseVisualStyleBackColor = true;
+            // 
             // frmInicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -553,10 +796,17 @@
             this.tabCampus.PerformLayout();
             this.tbpCurso.ResumeLayout(false);
             this.tbpCurso.PerformLayout();
+            this.tbpAluno.ResumeLayout(false);
+            this.tbpAluno.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCurso)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.unip_salaDataSet2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbcursoBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAluno)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.unip_salaDataSet3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tbalunoBindingSource)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -605,5 +855,26 @@
         private unip_salaDataSet2 unip_salaDataSet2;
         private System.Windows.Forms.BindingSource tbcursoBindingSource1;
         private unip_salaDataSet2TableAdapters.tb_cursoTableAdapter tb_cursoTableAdapter1;
+        private System.Windows.Forms.DataGridView dgvAluno;
+        private unip_salaDataSet3 unip_salaDataSet3;
+        private System.Windows.Forms.BindingSource tbalunoBindingSource;
+        private unip_salaDataSet3TableAdapters.tb_alunoTableAdapter tb_alunoTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idAlunoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn raAlunoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nomeAlunoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn statusAlunoDataGridViewCheckBoxColumn;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.RadioButton rdbNaoMatriculado;
+        private System.Windows.Forms.RadioButton rdbMatriculado;
+        private System.Windows.Forms.TextBox txbRaAluno;
+        private System.Windows.Forms.Button btnExcluirAluno;
+        private System.Windows.Forms.Label lblNomeAluno;
+        private System.Windows.Forms.Button btnLimparAluno;
+        private System.Windows.Forms.TextBox txbNomeAluno;
+        private System.Windows.Forms.Button btnEditarAluno;
+        private System.Windows.Forms.Button btnCadastrarAluno;
+        private System.Windows.Forms.Label lblIdAluno;
+        private System.Windows.Forms.Label lblRa;
+        private System.Windows.Forms.TextBox txbIdAluno;
     }
 }

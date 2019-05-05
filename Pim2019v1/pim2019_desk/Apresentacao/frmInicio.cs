@@ -41,16 +41,19 @@ namespace pim2019_desk.Apresentacao
 
         private void frmCampus_Load(object sender, EventArgs e)
         {
+            // TODO: esta linha de código carrega dados na tabela 'unip_salaDataSet3.tb_aluno'. Você pode movê-la ou removê-la conforme necessário.
+            this.tb_alunoTableAdapter.Fill(this.unip_salaDataSet3.tb_aluno);
             // TODO: esta linha de código carrega dados na tabela 'unip_salaDataSet2.tb_curso'. Você pode movê-la ou removê-la conforme necessário.
             this.tb_cursoTableAdapter1.Fill(this.unip_salaDataSet2.tb_curso);
+            txbIdCurso.Text = "";
+            txbNomeCurso.Text = "";
+
             // TODO: esta linha de código carrega dados na tabela 'unip_salaDataSet1.tb_campus'. Você pode movê-la ou removê-la conforme necessário.
             this.tb_campusTableAdapter.Fill(this.unip_salaDataSet1.tb_campus);
-
             txbIdCampus.Text = "";
             txbNomeCampus.Text = "";
             mskNumero.Text = "";
-            txbIdCurso.Text = "";
-            txbNomeCurso.Text = "";
+            
         }
 
         private void preencheControlesCampus(Modelo.tb_campus campus)
@@ -132,7 +135,58 @@ namespace pim2019_desk.Apresentacao
             controle.CadastrarCurso(dadosCurso);
             MessageBox.Show(controle.mensagem, "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
             this.tb_cursoTableAdapter1.Fill(this.unip_salaDataSet2.tb_curso);
+            txbIdCurso.Text = "";
             txbNomeCurso.Text = "";
+        }
+
+        private void btnEditarCurso_Click(object sender, EventArgs e)
+        {
+            List<String> dadosCurso = new List<string>();
+            dadosCurso.Add(txbIdCurso.Text);
+            dadosCurso.Add(txbNomeCurso.Text);            
+            Modelo.Controle controle = new Modelo.Controle();
+            controle.EditarCurso(dadosCurso);
+            MessageBox.Show(controle.mensagem, "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            this.tb_cursoTableAdapter1.Fill(this.unip_salaDataSet2.tb_curso);
+            txbIdCurso.Text = "";
+            txbNomeCurso.Text = "";            
+        }
+
+        private void preencheControlesCurso(Modelo.tb_curso curso)
+        {
+            txbIdCurso.Text = curso.idCurso.ToString();
+            txbNomeCurso.Text = curso.nomeCurso;
+        }
+
+        private void dgvCurso_CellEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            int idCurso = Convert.ToInt32(dgvCurso.Rows[e.RowIndex].Cells[0].Value);
+            Modelo.Controle controle = new Modelo.Controle();
+            Modelo.tb_curso curso = controle.GetCursoPorCodigo(idCurso);
+            preencheControlesCurso(curso);
+        }
+
+        private void btnLimparCurso_Click(object sender, EventArgs e)
+        {
+            txbIdCurso.Text = "";
+            txbNomeCurso.Text = "";
+        }
+
+        private void btnExcluirCurso_Click(object sender, EventArgs e)
+        {
+            List<String> dadosCurso = new List<string>();
+            dadosCurso.Add(txbIdCurso.Text);
+            dadosCurso.Add(txbNomeCurso.Text);
+            Modelo.Controle controle = new Modelo.Controle();
+
+            DialogResult result = MessageBox.Show("Deseja realmente excluir?",
+                "Alerta de exclusão", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (result == DialogResult.Yes)
+            {
+                controle.ExcluirCurso(dadosCurso);
+                MessageBox.Show(controle.mensagem, "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            this.tb_cursoTableAdapter1.Fill(this.unip_salaDataSet2.tb_curso);
         }
     }
 }

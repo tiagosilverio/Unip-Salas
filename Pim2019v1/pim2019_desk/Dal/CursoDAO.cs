@@ -45,12 +45,24 @@ namespace pim2019_desk.Dal
 
         public void ExcluirCurso(tb_curso curso)
         {
-            throw new NotImplementedException();
+            try
+            {
+                this.mensagem = "";
+                curso = cursoEntity.tb_curso.Find(curso.idCurso);
+                cursoEntity.tb_curso.Remove(curso);
+                cursoEntity.SaveChanges();
+                this.mensagem = "Excluído com Sucesso!";
+            }
+            catch (EntryPointNotFoundException e)
+            {
+                this.mensagem = e.ToString();
+            }
         }
 
         public tb_curso GetCursoPorCodigo(int codigo)
         {
-            throw new NotImplementedException();
+            tb_curso curso = cursoEntity.tb_curso.First(c => c.idCurso == codigo);
+            return curso;
         }
     }
 }

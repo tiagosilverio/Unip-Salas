@@ -64,6 +64,10 @@ namespace pim2019_desk.Modelo
                 campusDAO.ExcluirCampus(campus);
                 this.mensagem = campusDAO.mensagem;
             }
+            else
+            {
+                this.mensagem = validacao.mensagem;
+            }
         }
 
         public tb_campus GetRegistroPorCodigo(int codigo)
@@ -85,6 +89,53 @@ namespace pim2019_desk.Modelo
                 curso.nomeCurso = dadosCurso[1];
                 Dal.CursoDAO cursoDAO = new Dal.CursoDAO();
                 cursoDAO.CadastrarCurso(curso);
+                this.mensagem = cursoDAO.mensagem;
+            }
+            else
+            {
+                this.mensagem = validacao.mensagem;
+            }
+        }
+
+        public void EditarCurso(List<String> dadosCurso)
+        {
+            this.mensagem = "";
+            Validacao validacao = new Validacao();
+            validacao.ValidarDadosCurso(dadosCurso);
+            if (validacao.mensagem.Equals(""))
+            {
+                tb_curso curso = new tb_curso();
+                curso.idCurso = validacao.idCurso;
+                curso.nomeCurso = dadosCurso[1];                
+                Dal.CursoDAO cursoDAO = new Dal.CursoDAO();
+                cursoDAO.EditarCurso(curso);
+                this.mensagem = cursoDAO.mensagem;
+            }
+            else
+            {
+                this.mensagem = validacao.mensagem;
+            }
+        }
+
+        public tb_curso GetCursoPorCodigo(int codigo)
+        {
+            tb_curso curso = new tb_curso();
+            Dal.CursoDAO cursoDAO = new Dal.CursoDAO();
+            curso = cursoDAO.GetCursoPorCodigo(codigo);
+            return curso;
+        }
+
+        public void ExcluirCurso(List<String> dadosCurso)
+        {
+            this.mensagem = "";
+            Validacao validacao = new Validacao();
+            validacao.ValidarDadosCurso(dadosCurso);
+            if (validacao.mensagem.Equals(""))
+            {
+                tb_curso curso = new tb_curso();
+                curso.idCurso = validacao.idCurso;
+                Dal.CursoDAO cursoDAO = new Dal.CursoDAO();
+                cursoDAO.ExcluirCurso(curso);
                 this.mensagem = cursoDAO.mensagem;
             }
             else

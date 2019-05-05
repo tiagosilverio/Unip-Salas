@@ -45,8 +45,10 @@ namespace pim2019_desk.Modelo
         public void ValidarDadosCurso(List<String> dadosCurso)
         {
             this.mensagem = "";
+            if (dadosCurso[1] == "")
+                this.mensagem = "Insira o nome do curso. \n";
             if (dadosCurso[1].Length > 70)
-                this.mensagem = "Número inválido, deve conter até 70 caracteres. \n";
+                this.mensagem = "Nome inválido, deve conter até 70 caracteres. \n";
 
             try
             {

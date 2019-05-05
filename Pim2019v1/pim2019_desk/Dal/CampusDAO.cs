@@ -46,11 +46,18 @@ namespace pim2019_desk.Dal
 
         public void ExcluirCampus(tb_campus campus)
         {
-            this.mensagem = "";
-            campus = campusEntity.tb_campus.Find(campus.idCampus);
-            campusEntity.tb_campus.Remove(campus);
-            campusEntity.SaveChanges();
-            this.mensagem = "Excluído com Sucesso!";
+            try
+            {
+                this.mensagem = "";
+                campus = campusEntity.tb_campus.Find(campus.idCampus);
+                campusEntity.tb_campus.Remove(campus);
+                campusEntity.SaveChanges();
+                this.mensagem = "Excluído com Sucesso!";
+            }
+            catch (EntryPointNotFoundException e)
+            {
+                this.mensagem = e.ToString();
+            }            
         }
 
         public tb_campus GetRegistroPorCodigo(int codigo)

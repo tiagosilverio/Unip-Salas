@@ -144,6 +144,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>unip_salaDataSet2.xsd</DependentUpon>
     </Compile>
+    <Compile Include="unip_salaDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>unip_salaDataSet3.xsd</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Apresentacao\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -208,6 +213,17 @@
     </None>
     <None Include="unip_salaDataSet2.xss">
       <DependentUpon>unip_salaDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="unip_salaDataSet3.xsc">
+      <DependentUpon>unip_salaDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="unip_salaDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>unip_salaDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="unip_salaDataSet3.xss">
+      <DependentUpon>unip_salaDataSet3.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
