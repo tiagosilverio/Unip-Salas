@@ -18,7 +18,7 @@ namespace pim2019_desk.Modelo
             if (validacao.mensagem.Equals(""))
             {
                 tb_campus campus = new tb_campus();
-                campus.numeroCampus = campus.numeroCampus = Convert.ToInt32(dadosCampus[1]);
+                campus.numeroCampus = validacao.numeroCampus;
                 campus.nomeCampus = dadosCampus[2];
                 Dal.CampusDAO campusDAO = new Dal.CampusDAO();
                 campusDAO.CadastrarCampus(campus);
@@ -38,8 +38,8 @@ namespace pim2019_desk.Modelo
             if (validacao.mensagem.Equals(""))
             {
                 tb_campus campus = new tb_campus();
-                campus.idCampus = validacao.id;
-                campus.numeroCampus = Convert.ToInt32(dadosCampus[1]);
+                campus.idCampus = validacao.idCampus;
+                campus.numeroCampus = validacao.numeroCampus;
                 campus.nomeCampus = dadosCampus[2];
                 Dal.CampusDAO campusDAO = new Dal.CampusDAO();
                 campusDAO.EditarCampus(campus);
@@ -59,7 +59,7 @@ namespace pim2019_desk.Modelo
             if (validacao.mensagem.Equals(""))
             {
                 tb_campus campus = new tb_campus();
-                campus.idCampus = validacao.id;                
+                campus.idCampus = validacao.idCampus;                
                 Dal.CampusDAO campusDAO = new Dal.CampusDAO();
                 campusDAO.ExcluirCampus(campus);
                 this.mensagem = campusDAO.mensagem;
@@ -72,6 +72,25 @@ namespace pim2019_desk.Modelo
             Dal.CampusDAO campusDAO = new Dal.CampusDAO();
             campus = campusDAO.GetRegistroPorCodigo(codigo);
             return campus;
+        }
+
+        public void CadastrarCurso(List<String> dadosCurso)
+        {
+            this.mensagem = "";
+            Validacao validacao = new Validacao();
+            validacao.ValidarDadosCurso(dadosCurso);
+            if (validacao.mensagem.Equals(""))
+            {
+                tb_curso curso = new tb_curso();
+                curso.nomeCurso = dadosCurso[1];
+                Dal.CursoDAO cursoDAO = new Dal.CursoDAO();
+                cursoDAO.CadastrarCurso(curso);
+                this.mensagem = cursoDAO.mensagem;
+            }
+            else
+            {
+                this.mensagem = validacao.mensagem;
+            }
         }
     }
 }

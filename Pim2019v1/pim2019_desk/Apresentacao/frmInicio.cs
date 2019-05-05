@@ -25,8 +25,11 @@ namespace pim2019_desk.Apresentacao
             dadosCampus.Add(txbNomeCampus.Text);
             Modelo.Controle controle = new Modelo.Controle();
             controle.CadastrarCampus(dadosCampus);
-            MessageBox.Show(controle.mensagem, "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);            
+            MessageBox.Show(controle.mensagem, "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
             this.tb_campusTableAdapter.Fill(this.unip_salaDataSet1.tb_campus);
+            txbIdCampus.Text = "";
+            txbNomeCampus.Text = "";
+            mskNumero.Text = "";
         }
 
         private void btnLimpar_Click(object sender, EventArgs e)
@@ -38,11 +41,19 @@ namespace pim2019_desk.Apresentacao
 
         private void frmCampus_Load(object sender, EventArgs e)
         {
+            // TODO: esta linha de código carrega dados na tabela 'unip_salaDataSet2.tb_curso'. Você pode movê-la ou removê-la conforme necessário.
+            this.tb_cursoTableAdapter1.Fill(this.unip_salaDataSet2.tb_curso);
             // TODO: esta linha de código carrega dados na tabela 'unip_salaDataSet1.tb_campus'. Você pode movê-la ou removê-la conforme necessário.
-            this.tb_campusTableAdapter.Fill(this.unip_salaDataSet1.tb_campus);            
+            this.tb_campusTableAdapter.Fill(this.unip_salaDataSet1.tb_campus);
+
+            txbIdCampus.Text = "";
+            txbNomeCampus.Text = "";
+            mskNumero.Text = "";
+            txbIdCurso.Text = "";
+            txbNomeCurso.Text = "";
         }
 
-        private void preencheControles(Modelo.tb_campus campus)
+        private void preencheControlesCampus(Modelo.tb_campus campus)
         {
             txbIdCampus.Text = campus.idCampus.ToString();
             txbNomeCampus.Text = campus.nomeCampus;
@@ -59,7 +70,7 @@ namespace pim2019_desk.Apresentacao
             int idCampus = Convert.ToInt32(dgvCampus.Rows[e.RowIndex].Cells[0].Value);
             Modelo.Controle controle = new Modelo.Controle();
             Modelo.tb_campus campus = controle.GetRegistroPorCodigo(idCampus);
-            preencheControles(campus);            
+            preencheControlesCampus(campus);            
         }
 
         private void btnEditar_Click(object sender, EventArgs e)
@@ -71,7 +82,10 @@ namespace pim2019_desk.Apresentacao
             Modelo.Controle controle = new Modelo.Controle();
             controle.EditarCampus(dadosCampus);
             MessageBox.Show(controle.mensagem, "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            this.tb_campusTableAdapter.Fill(this.unip_salaDataSet1.tb_campus);                            
+            this.tb_campusTableAdapter.Fill(this.unip_salaDataSet1.tb_campus);
+            txbIdCampus.Text = "";
+            txbNomeCampus.Text = "";
+            mskNumero.Text = "";
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -102,6 +116,23 @@ namespace pim2019_desk.Apresentacao
         private void btnSair_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void btnMinimizar_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void btnCadastrarCurso_Click(object sender, EventArgs e)
+        {
+            List<String> dadosCurso = new List<string>();
+            dadosCurso.Add("0");
+            dadosCurso.Add(txbNomeCurso.Text);
+            Modelo.Controle controle = new Modelo.Controle();
+            controle.CadastrarCurso(dadosCurso);
+            MessageBox.Show(controle.mensagem, "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            this.tb_cursoTableAdapter1.Fill(this.unip_salaDataSet2.tb_curso);
+            txbNomeCurso.Text = "";
         }
     }
 }
