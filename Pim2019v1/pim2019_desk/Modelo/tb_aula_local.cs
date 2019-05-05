@@ -16,11 +16,13 @@ namespace pim2019_desk.Modelo
     {
         public int idAulaLocal { get; set; }
         public Nullable<int> fkSala { get; set; }
-        public Nullable<int> fkTurmaAluno { get; set; }
+        public Nullable<int> fkTurma { get; set; }
         public Nullable<int> fkDiaSemana { get; set; }
+        public string horarioAula { get; set; }
+        public byte periodoAula { get; set; }
     
         public virtual tb_dia_semana tb_dia_semana { get; set; }
         public virtual tb_sala tb_sala { get; set; }
-        public virtual tb_turma_aluno tb_turma_aluno { get; set; }
+        public virtual tb_turma tb_turma { get; set; }
     }
 }

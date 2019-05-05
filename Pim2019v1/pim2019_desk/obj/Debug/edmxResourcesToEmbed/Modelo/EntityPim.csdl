@@ -1,15 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="unip_salaModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-  <EntityType Name="sysdiagrams">
-    <Key>
-      <PropertyRef Name="diagram_id" />
-    </Key>
-    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="principal_id" Type="Int32" Nullable="false" />
-    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="version" Type="Int32" />
-    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
-  </EntityType>
   <EntityType Name="tb_alfabeto">
     <Key>
       <PropertyRef Name="idAlfabeto" />
@@ -42,11 +32,13 @@
     </Key>
     <Property Name="idAulaLocal" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="fkSala" Type="Int32" />
-    <Property Name="fkTurmaAluno" Type="Int32" />
+    <Property Name="fkTurma" Type="Int32" />
     <Property Name="fkDiaSemana" Type="Int32" />
+    <Property Name="horarioAula" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="periodoAula" Type="Byte" Nullable="false" />
     <NavigationProperty Name="tb_dia_semana" Relationship="Self.FK_TB_AULALOCAL_DIASEMANA" FromRole="tb_aula_local" ToRole="tb_dia_semana" />
     <NavigationProperty Name="tb_sala" Relationship="Self.FK_TB_AULALOCAL_SALA" FromRole="tb_aula_local" ToRole="tb_sala" />
-    <NavigationProperty Name="tb_turma_aluno" Relationship="Self.FK_TB_AULALOCAL_TURMAALUNO" FromRole="tb_aula_local" ToRole="tb_turma_aluno" />
+    <NavigationProperty Name="tb_turma" Relationship="Self.FK_TB_AULALOCAL_TURMA" FromRole="tb_aula_local" ToRole="tb_turma" />
   </EntityType>
   <EntityType Name="tb_campus">
     <Key>
@@ -115,6 +107,7 @@
     <Property Name="fkCurso" Type="Int32" />
     <Property Name="anoInicio" Type="DateTime" Precision="0" />
     <Property Name="semestreInicio" Type="Int32" />
+    <NavigationProperty Name="tb_aula_local" Relationship="Self.FK_TB_AULALOCAL_TURMA" FromRole="tb_turma" ToRole="tb_aula_local" />
     <NavigationProperty Name="tb_campus" Relationship="Self.FK_TB_TURMA_CAMPUS" FromRole="tb_turma" ToRole="tb_campus" />
     <NavigationProperty Name="tb_curso" Relationship="Self.FK_TB_TURMA_CURSO" FromRole="tb_turma" ToRole="tb_curso" />
     <NavigationProperty Name="tb_sigla" Relationship="Self.FK_TB_TURMA_SIGLA" FromRole="tb_turma" ToRole="tb_sigla" />
@@ -128,7 +121,6 @@
     <Property Name="fkTurma" Type="Int32" />
     <Property Name="fkAluno" Type="Int32" />
     <NavigationProperty Name="tb_aluno" Relationship="Self.FK_TB_TURMAALUNO_ALUNO" FromRole="tb_turma_aluno" ToRole="tb_aluno" />
-    <NavigationProperty Name="tb_aula_local" Relationship="Self.FK_TB_AULALOCAL_TURMAALUNO" FromRole="tb_turma_aluno" ToRole="tb_aula_local" />
     <NavigationProperty Name="tb_turma" Relationship="Self.FK_TB_TURMAALUNO_TURMA" FromRole="tb_turma_aluno" ToRole="tb_turma" />
   </EntityType>
   <Association Name="FK_TB_SALA_ALFABETO">
@@ -191,15 +183,15 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_TB_AULALOCAL_TURMAALUNO">
-    <End Role="tb_turma_aluno" Type="Self.tb_turma_aluno" Multiplicity="0..1" />
+  <Association Name="FK_TB_AULALOCAL_TURMA">
+    <End Role="tb_turma" Type="Self.tb_turma" Multiplicity="0..1" />
     <End Role="tb_aula_local" Type="Self.tb_aula_local" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="tb_turma_aluno">
-        <PropertyRef Name="idTurmaAluno" />
+      <Principal Role="tb_turma">
+        <PropertyRef Name="idTurma" />
       </Principal>
       <Dependent Role="tb_aula_local">
-        <PropertyRef Name="fkTurmaAluno" />
+        <PropertyRef Name="fkTurma" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -264,7 +256,6 @@
     </ReferentialConstraint>
   </Association>
   <EntityContainer Name="unip_salaEntities" annotation:LazyLoadingEnabled="true">
-    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
     <EntitySet Name="tb_alfabeto" EntityType="Self.tb_alfabeto" />
     <EntitySet Name="tb_aluno" EntityType="Self.tb_aluno" />
     <EntitySet Name="tb_andar" EntityType="Self.tb_andar" />
@@ -297,8 +288,8 @@
       <End Role="tb_sala" EntitySet="tb_sala" />
       <End Role="tb_aula_local" EntitySet="tb_aula_local" />
     </AssociationSet>
-    <AssociationSet Name="FK_TB_AULALOCAL_TURMAALUNO" Association="Self.FK_TB_AULALOCAL_TURMAALUNO">
-      <End Role="tb_turma_aluno" EntitySet="tb_turma_aluno" />
+    <AssociationSet Name="FK_TB_AULALOCAL_TURMA" Association="Self.FK_TB_AULALOCAL_TURMA">
+      <End Role="tb_turma" EntitySet="tb_turma" />
       <End Role="tb_aula_local" EntitySet="tb_aula_local" />
     </AssociationSet>
     <AssociationSet Name="FK_TB_TURMA_CAMPUS" Association="Self.FK_TB_TURMA_CAMPUS">

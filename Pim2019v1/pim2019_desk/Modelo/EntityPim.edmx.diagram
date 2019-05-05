@@ -4,26 +4,25 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="2035b9ca62f741cea42419508c554dfc" Name="Diagram1">
-        <EntityTypeShape EntityType="unip_salaModel.sysdiagrams" Width="1.5" PointX="7.75" PointY="4.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="unip_salaModel.tb_alfabeto" Width="1.5" PointX="3" PointY="9.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="unip_salaModel.tb_aluno" Width="1.5" PointX="3" PointY="5.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="unip_salaModel.tb_andar" Width="1.5" PointX="3" PointY="11.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="unip_salaModel.tb_aula_local" Width="1.5" PointX="7.5" PointY="1.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="unip_salaModel.tb_campus" Width="1.5" PointX="0.75" PointY="1.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="unip_salaModel.tb_curso" Width="1.5" PointX="0.75" PointY="4.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="unip_salaModel.tb_dia_semana" Width="1.5" PointX="5.25" PointY="4.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="unip_salaModel.tb_sala" Width="1.5" PointX="5.25" PointY="10.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="unip_salaModel.tb_sigla" Width="1.5" PointX="0.75" PointY="7.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="unip_salaModel.tb_tipo_sala" Width="1.5" PointX="3" PointY="13.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="unip_salaModel.tb_turma" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
-        <EntityTypeShape EntityType="unip_salaModel.tb_turma_aluno" Width="1.5" PointX="5.25" PointY="1.5" IsExpanded="true" />
+      <Diagram DiagramId="5676c5bab8c745428eec84d2ac05d690" Name="Diagram1">
+        <EntityTypeShape EntityType="unip_salaModel.tb_alfabeto" Width="1.5" PointX="0.75" PointY="10.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="unip_salaModel.tb_aluno" Width="1.5" PointX="6" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="unip_salaModel.tb_andar" Width="1.5" PointX="0.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="unip_salaModel.tb_aula_local" Width="1.5" PointX="5.25" PointY="3.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="unip_salaModel.tb_campus" Width="1.5" PointX="0.75" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="unip_salaModel.tb_curso" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="unip_salaModel.tb_dia_semana" Width="1.5" PointX="3" PointY="8.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="unip_salaModel.tb_sala" Width="1.5" PointX="3" PointY="12.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="unip_salaModel.tb_sigla" Width="1.5" PointX="0.75" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="unip_salaModel.tb_tipo_sala" Width="1.5" PointX="0.75" PointY="15.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="unip_salaModel.tb_turma" Width="1.5" PointX="3" PointY="3" IsExpanded="true" />
+        <EntityTypeShape EntityType="unip_salaModel.tb_turma_aluno" Width="1.5" PointX="8.25" PointY="3.75" IsExpanded="true" />
         <AssociationConnector Association="unip_salaModel.FK_TB_SALA_ALFABETO" ManuallyRouted="false" />
         <AssociationConnector Association="unip_salaModel.FK_TB_TURMAALUNO_ALUNO" ManuallyRouted="false" />
         <AssociationConnector Association="unip_salaModel.FK_TB_SALA_ANDAR" ManuallyRouted="false" />
         <AssociationConnector Association="unip_salaModel.FK_TB_AULALOCAL_DIASEMANA" ManuallyRouted="false" />
         <AssociationConnector Association="unip_salaModel.FK_TB_AULALOCAL_SALA" ManuallyRouted="false" />
-        <AssociationConnector Association="unip_salaModel.FK_TB_AULALOCAL_TURMAALUNO" ManuallyRouted="false" />
+        <AssociationConnector Association="unip_salaModel.FK_TB_AULALOCAL_TURMA" ManuallyRouted="false" />
         <AssociationConnector Association="unip_salaModel.FK_TB_TURMA_CAMPUS" ManuallyRouted="false" />
         <AssociationConnector Association="unip_salaModel.FK_TB_TURMA_CURSO" ManuallyRouted="false" />
         <AssociationConnector Association="unip_salaModel.FK_TB_SALA_TIPOSALA" ManuallyRouted="false" />

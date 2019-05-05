@@ -67,8 +67,10 @@
     <Compile Include="Apresentacao\frmInicio.Designer.cs">
       <DependentUpon>frmInicio.cs</DependentUpon>
     </Compile>
+    <Compile Include="Dal\AlunoDAO.cs" />
     <Compile Include="Dal\CampusDAO.cs" />
     <Compile Include="Dal\CursoDAO.cs" />
+    <Compile Include="Dal\intAlunoDAO.cs" />
     <Compile Include="Dal\intCampusDAO.cs" />
     <Compile Include="Dal\intCursoDAO.cs" />
     <Compile Include="Modelo\Controle.cs" />
@@ -86,9 +88,6 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>EntityPim.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="Modelo\sysdiagrams.cs">
-      <DependentUpon>EntityPim.tt</DependentUpon>
     </Compile>
     <Compile Include="Modelo\tb_alfabeto.cs">
       <DependentUpon>EntityPim.tt</DependentUpon>
@@ -229,12 +228,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <Content Include="Modelo\EntityPim.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>EntityPim.Context.cs</LastGenOutput>
       <DependentUpon>EntityPim.edmx</DependentUpon>
+      <LastGenOutput>EntityPim.Context.cs</LastGenOutput>
     </Content>
     <Content Include="Modelo\EntityPim.tt">
       <Generator>TextTemplatingFileGenerator</Generator>

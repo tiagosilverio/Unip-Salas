@@ -14,19 +14,11 @@ namespace pim2019_desk.Modelo
     
     public partial class tb_turma_aluno
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public tb_turma_aluno()
-        {
-            this.tb_aula_local = new HashSet<tb_aula_local>();
-        }
-    
         public int idTurmaAluno { get; set; }
         public Nullable<int> fkTurma { get; set; }
         public Nullable<int> fkAluno { get; set; }
     
         public virtual tb_aluno tb_aluno { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<tb_aula_local> tb_aula_local { get; set; }
         public virtual tb_turma tb_turma { get; set; }
     }
 }

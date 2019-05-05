@@ -25,7 +25,6 @@ namespace pim2019_desk.Modelo
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
         public virtual DbSet<tb_alfabeto> tb_alfabeto { get; set; }
         public virtual DbSet<tb_aluno> tb_aluno { get; set; }
         public virtual DbSet<tb_andar> tb_andar { get; set; }

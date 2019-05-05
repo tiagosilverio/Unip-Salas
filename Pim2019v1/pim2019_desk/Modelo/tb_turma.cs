@@ -17,6 +17,7 @@ namespace pim2019_desk.Modelo
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public tb_turma()
         {
+            this.tb_aula_local = new HashSet<tb_aula_local>();
             this.tb_turma_aluno = new HashSet<tb_turma_aluno>();
         }
     
@@ -28,6 +29,8 @@ namespace pim2019_desk.Modelo
         public Nullable<System.DateTime> anoInicio { get; set; }
         public Nullable<int> semestreInicio { get; set; }
     
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<tb_aula_local> tb_aula_local { get; set; }
         public virtual tb_campus tb_campus { get; set; }
         public virtual tb_curso tb_curso { get; set; }
         public virtual tb_sigla tb_sigla { get; set; }
