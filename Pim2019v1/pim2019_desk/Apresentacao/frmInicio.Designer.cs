@@ -587,6 +587,7 @@
             this.dgvAluno.ReadOnly = true;
             this.dgvAluno.Size = new System.Drawing.Size(460, 221);
             this.dgvAluno.TabIndex = 0;
+            this.dgvAluno.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAluno_CellEnter);
             // 
             // unip_salaDataSet3
             // 
@@ -646,6 +647,7 @@
             this.btnExcluirAluno.Text = "Excluir";
             this.btnExcluirAluno.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnExcluirAluno.UseVisualStyleBackColor = false;
+            this.btnExcluirAluno.Click += new System.EventHandler(this.btnExcluirAluno_Click);
             // 
             // lblNomeAluno
             // 
@@ -668,6 +670,7 @@
             this.btnLimparAluno.Text = "Limpar";
             this.btnLimparAluno.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnLimparAluno.UseVisualStyleBackColor = false;
+            this.btnLimparAluno.Click += new System.EventHandler(this.btnLimparAluno_Click);
             // 
             // txbNomeAluno
             // 
@@ -688,6 +691,7 @@
             this.btnEditarAluno.Text = "Editar";
             this.btnEditarAluno.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnEditarAluno.UseVisualStyleBackColor = false;
+            this.btnEditarAluno.Click += new System.EventHandler(this.btnEditarAluno_Click);
             // 
             // btnCadastrarAluno
             // 
@@ -701,6 +705,7 @@
             this.btnCadastrarAluno.Text = "Cadastrar";
             this.btnCadastrarAluno.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCadastrarAluno.UseVisualStyleBackColor = false;
+            this.btnCadastrarAluno.Click += new System.EventHandler(this.btnCadastrarAluno_Click);
             // 
             // lblIdAluno
             // 

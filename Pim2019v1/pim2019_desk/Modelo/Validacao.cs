@@ -12,6 +12,7 @@ namespace pim2019_desk.Modelo
         public int idCampus;
         public int numeroCampus;
         public int idCurso;
+        public int idAluno;
 
         public void ValidarDadosCampus(List<String> dadosCampus)
         {
@@ -53,6 +54,28 @@ namespace pim2019_desk.Modelo
             try
             {
                 this.idCurso = Convert.ToInt32(dadosCurso[0]);
+            }
+            catch (FormatException)
+            {
+                this.mensagem += "ID inválido. \n";
+            }
+        }
+
+        public void ValidarDadosAluno(List<String> dadosAluno)
+        {
+            this.mensagem = "";
+            if (dadosAluno[1] == "")
+                this.mensagem = "Insira o RA do aluno. \n";
+            if (dadosAluno[1].Length > 7)
+                this.mensagem += "RA inválido, deve conter até 7 caracteres. \n";
+            if (dadosAluno[2] == "")
+                this.mensagem += "Insira o nome do aluno. \n";
+            if (dadosAluno[2].Length > 50)
+                this.mensagem += "Nome inválido, deve conter até 50 caracteres. \n";            
+
+            try
+            {
+                this.idAluno = Convert.ToInt32(dadosAluno[0]);
             }
             catch (FormatException)
             {

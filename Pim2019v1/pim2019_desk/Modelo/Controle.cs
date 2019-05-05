@@ -143,5 +143,75 @@ namespace pim2019_desk.Modelo
                 this.mensagem = validacao.mensagem;
             }
         }
+
+        public void CadastrarAluno(List<String> dadosAluno)
+        {
+            this.mensagem = "";
+            Validacao validacao = new Validacao();
+            validacao.ValidarDadosAluno(dadosAluno);
+            if (validacao.mensagem.Equals(""))
+            {
+                tb_aluno aluno = new tb_aluno();
+                aluno.raAluno = dadosAluno[1];
+                aluno.nomeAluno = dadosAluno[2];
+                aluno.statusAluno = Convert.ToBoolean(dadosAluno[3]);
+                Dal.AlunoDAO alunoDAO = new Dal.AlunoDAO();
+                alunoDAO.CadastrarAluno(aluno);
+                this.mensagem = alunoDAO.mensagem;
+            }
+            else
+            {
+                this.mensagem = validacao.mensagem;
+            }            
+        }
+
+        public tb_aluno GetAlunoPorCodigo(int codigo)
+        {
+            tb_aluno aluno = new tb_aluno();
+            Dal.AlunoDAO alunoDAO = new Dal.AlunoDAO();
+            aluno = alunoDAO.GetAlunoPorCodigo(codigo);
+            return aluno;
+        }
+
+        public void EditarAluno(List<String> dadosAluno)
+        {
+            this.mensagem = "";
+            Validacao validacao = new Validacao();
+            validacao.ValidarDadosAluno(dadosAluno);
+            if (validacao.mensagem.Equals(""))
+            {
+                tb_aluno aluno = new tb_aluno();
+                aluno.idAluno = validacao.idAluno;
+                aluno.raAluno = dadosAluno[1];
+                aluno.nomeAluno = dadosAluno[2];
+                aluno.statusAluno = Convert.ToBoolean(dadosAluno[3]);
+                Dal.AlunoDAO alunoDAO = new Dal.AlunoDAO();
+                alunoDAO.EditarAluno(aluno);
+                this.mensagem = alunoDAO.mensagem;
+            }
+            else
+            {
+                this.mensagem = validacao.mensagem;
+            }
+        }
+
+        public void ExcluirAluno(List<String> dadosAluno)
+        {
+            this.mensagem = "";
+            Validacao validacao = new Validacao();
+            validacao.ValidarDadosAluno(dadosAluno);
+            if (validacao.mensagem.Equals(""))
+            {
+                tb_aluno aluno = new tb_aluno();
+                aluno.idAluno = validacao.idAluno;
+                Dal.AlunoDAO alunoDAO = new Dal.AlunoDAO();
+                alunoDAO.ExcluirAluno(aluno);
+                this.mensagem = alunoDAO.mensagem;
+            }
+            else
+            {
+                this.mensagem = validacao.mensagem;
+            }
+        }
     }
 }

@@ -29,17 +29,40 @@ namespace pim2019_desk.Dal
 
         public void EditarAluno(tb_aluno aluno)
         {
-            throw new NotImplementedException();
+            this.mensagem = "";
+
+            try
+            {
+                alunoEntity.Entry(aluno).State = System.Data.Entity.EntityState.Modified;
+                alunoEntity.SaveChanges();
+                this.mensagem = "Editado com Sucesso!";
+            }
+            catch (EntryPointNotFoundException e)
+            {
+                this.mensagem = e.ToString();
+            }
         }
 
         public void ExcluirAluno(tb_aluno aluno)
         {
-            throw new NotImplementedException();
+            try
+            {
+                this.mensagem = "";
+                aluno = alunoEntity.tb_aluno.Find(aluno.idAluno);
+                alunoEntity.tb_aluno.Remove(aluno);
+                alunoEntity.SaveChanges();
+                this.mensagem = "Excluído com Sucesso!";
+            }
+            catch (EntryPointNotFoundException e)
+            {
+                this.mensagem = e.ToString();
+            }
         }
 
         public tb_aluno GetAlunoPorCodigo(int codigo)
         {
-            throw new NotImplementedException();
+            tb_aluno aluno = alunoEntity.tb_aluno.First(c => c.idAluno == codigo);
+            return aluno;
         }
     }
 }

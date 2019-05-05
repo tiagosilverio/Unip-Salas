@@ -43,6 +43,12 @@ namespace pim2019_desk.Apresentacao
         {
             // TODO: esta linha de código carrega dados na tabela 'unip_salaDataSet3.tb_aluno'. Você pode movê-la ou removê-la conforme necessário.
             this.tb_alunoTableAdapter.Fill(this.unip_salaDataSet3.tb_aluno);
+            txbIdAluno.Text = "";
+            txbRaAluno.Text = "";
+            txbNomeAluno.Text = "";
+            rdbMatriculado.Checked = false;
+            rdbNaoMatriculado.Checked = false;
+
             // TODO: esta linha de código carrega dados na tabela 'unip_salaDataSet2.tb_curso'. Você pode movê-la ou removê-la conforme necessário.
             this.tb_cursoTableAdapter1.Fill(this.unip_salaDataSet2.tb_curso);
             txbIdCurso.Text = "";
@@ -187,6 +193,134 @@ namespace pim2019_desk.Apresentacao
                 MessageBox.Show(controle.mensagem, "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             this.tb_cursoTableAdapter1.Fill(this.unip_salaDataSet2.tb_curso);
+        }
+
+        private void btnCadastrarAluno_Click(object sender, EventArgs e)
+        {            
+            bool statusAluno = false;
+
+            if (rdbMatriculado.Checked)
+            {
+                statusAluno = true;
+            }
+
+            if (rdbNaoMatriculado.Checked)
+            {
+                statusAluno = false;
+            }
+
+            List<String> dadosAluno = new List<string>();
+            dadosAluno.Add("0");
+            dadosAluno.Add(txbRaAluno.Text);
+            dadosAluno.Add(txbNomeAluno.Text);
+            dadosAluno.Add(Convert.ToString(statusAluno));
+            Modelo.Controle controle = new Modelo.Controle();
+            controle.CadastrarAluno(dadosAluno);
+            MessageBox.Show(controle.mensagem, "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            this.tb_alunoTableAdapter.Fill(this.unip_salaDataSet3.tb_aluno);
+            txbIdAluno.Text = "";
+            txbRaAluno.Text = "";
+            txbNomeAluno.Text = "";
+            rdbMatriculado.Checked = false;
+            rdbNaoMatriculado.Checked = false;
+        }
+
+        private void preencheControlesAluno(Modelo.tb_aluno aluno)
+        {
+            txbIdAluno.Text = aluno.idAluno.ToString();
+            txbRaAluno.Text = aluno.raAluno;
+            txbNomeAluno.Text = aluno.nomeAluno;
+            if (aluno.statusAluno == true)
+            {
+                rdbMatriculado.Checked = true;
+            }
+            else
+            {
+                rdbNaoMatriculado.Checked = true;
+            }                
+        }
+
+        private void dgvAluno_CellEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            int idAluno = Convert.ToInt32(dgvAluno.Rows[e.RowIndex].Cells[0].Value);
+            Modelo.Controle controle = new Modelo.Controle();
+            Modelo.tb_aluno aluno = controle.GetAlunoPorCodigo(idAluno);
+            preencheControlesAluno(aluno);
+        }
+
+        private void btnEditarAluno_Click(object sender, EventArgs e)
+        {
+            bool statusAluno = false;
+
+            if (rdbMatriculado.Checked)
+            {
+                statusAluno = true;
+            }
+
+            if (rdbNaoMatriculado.Checked)
+            {
+                statusAluno = false;
+            }
+
+            List<String> dadosAluno = new List<string>();
+            dadosAluno.Add(txbIdAluno.Text);
+            dadosAluno.Add(txbRaAluno.Text);
+            dadosAluno.Add(txbNomeAluno.Text);
+            dadosAluno.Add(Convert.ToString(statusAluno));
+            Modelo.Controle controle = new Modelo.Controle();
+            controle.EditarAluno(dadosAluno);
+            MessageBox.Show(controle.mensagem, "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            this.tb_alunoTableAdapter.Fill(this.unip_salaDataSet3.tb_aluno);
+            txbIdAluno.Text = "";
+            txbRaAluno.Text = "";
+            txbNomeAluno.Text = "";
+            rdbMatriculado.Checked = false;
+            rdbNaoMatriculado.Checked = false;
+        }
+
+        private void btnLimparAluno_Click(object sender, EventArgs e)
+        {
+            txbIdAluno.Text = "";
+            txbRaAluno.Text = "";
+            txbNomeAluno.Text = "";
+            rdbMatriculado.Checked = false;
+            rdbNaoMatriculado.Checked = false;
+        }
+
+        private void btnExcluirAluno_Click(object sender, EventArgs e)
+        {
+            bool statusAluno = false;
+
+            if (rdbMatriculado.Checked)
+            {
+                statusAluno = true;
+            }
+
+            if (rdbNaoMatriculado.Checked)
+            {
+                statusAluno = false;
+            }
+
+            List<String> dadosAluno = new List<string>();
+            dadosAluno.Add(txbIdAluno.Text);
+            dadosAluno.Add(txbRaAluno.Text);
+            dadosAluno.Add(txbNomeAluno.Text);
+            dadosAluno.Add(Convert.ToString(statusAluno));
+            Modelo.Controle controle = new Modelo.Controle();
+
+            DialogResult result = MessageBox.Show("Deseja realmente excluir?",
+                "Alerta de exclusão", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (result == DialogResult.Yes)
+            {
+                controle.ExcluirAluno(dadosAluno);
+                MessageBox.Show(controle.mensagem, "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.tb_alunoTableAdapter.Fill(this.unip_salaDataSet3.tb_aluno);
+                txbIdAluno.Text = "";
+                txbRaAluno.Text = "";
+                txbNomeAluno.Text = "";
+                rdbMatriculado.Checked = false;
+                rdbNaoMatriculado.Checked = false;
+            }
         }
     }
 }
