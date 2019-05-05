@@ -61,12 +61,15 @@
     <Compile Include="Apresentacao\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Apresentacao\frmCampus.cs">
+    <Compile Include="Apresentacao\frmInicio.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Apresentacao\frmCampus.Designer.cs">
-      <DependentUpon>frmCampus.cs</DependentUpon>
+    <Compile Include="Apresentacao\frmInicio.Designer.cs">
+      <DependentUpon>frmInicio.cs</DependentUpon>
     </Compile>
+    <Compile Include="Dal\CampusDAO.cs" />
+    <Compile Include="Dal\intCampusDAO.cs" />
+    <Compile Include="Modelo\Controle.cs" />
     <Compile Include="Modelo\EntityPim.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -121,13 +124,24 @@
     <Compile Include="Modelo\tb_turma_aluno.cs">
       <DependentUpon>EntityPim.tt</DependentUpon>
     </Compile>
+    <Compile Include="Modelo\Validacao.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="unip_salaDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>unip_salaDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="unip_salaDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>unip_salaDataSet1.xsd</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Apresentacao\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Apresentacao\frmCampus.resx">
-      <DependentUpon>frmCampus.cs</DependentUpon>
+    <EmbeddedResource Include="Apresentacao\frmInicio.resx">
+      <DependentUpon>frmInicio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -155,13 +169,33 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="unip_salaDataSet.xsc">
+      <DependentUpon>unip_salaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="unip_salaDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>unip_salaDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="unip_salaDataSet.xss">
+      <DependentUpon>unip_salaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="unip_salaDataSet1.xsc">
+      <DependentUpon>unip_salaDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="unip_salaDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>unip_salaDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="unip_salaDataSet1.xss">
+      <DependentUpon>unip_salaDataSet1.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Dal\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="Modelo\EntityPim.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>

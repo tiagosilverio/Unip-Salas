@@ -16,11 +16,21 @@ namespace pim2019_desk
         {
             InitializeComponent();
         }
+        
 
-        private void btnCampus_Click(object sender, EventArgs e)
+        private void timer1_Tick(object sender, EventArgs e)
         {
-            Apresentacao.frmCampus frmCampus = new Apresentacao.frmCampus();
-            frmCampus.ShowDialog();
+            if(progressBar1.Value < 100)
+            {
+                progressBar1.Value = progressBar1.Value + 4;
+            }
+            else
+            {
+                timer1.Enabled = false;
+                Apresentacao.frmInicio frmInicio = new Apresentacao.frmInicio();
+                this.Visible = false;
+                frmInicio.ShowDialog();                   
+            }
         }
     }
 }

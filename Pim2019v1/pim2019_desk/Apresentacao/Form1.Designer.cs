@@ -28,82 +28,70 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnCampus = new System.Windows.Forms.Button();
-            this.btnCurso = new System.Windows.Forms.Button();
-            this.btnTurma = new System.Windows.Forms.Button();
-            this.btnSala = new System.Windows.Forms.Button();
-            this.btnAluno = new System.Windows.Forms.Button();
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.progressBar1 = new System.Windows.Forms.ProgressBar();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // btnCampus
+            // panel1
             // 
-            this.btnCampus.Location = new System.Drawing.Point(29, 112);
-            this.btnCampus.Name = "btnCampus";
-            this.btnCampus.Size = new System.Drawing.Size(115, 56);
-            this.btnCampus.TabIndex = 0;
-            this.btnCampus.Text = "Campus";
-            this.btnCampus.UseVisualStyleBackColor = true;
-            this.btnCampus.Click += new System.EventHandler(this.btnCampus_Click);
+            this.panel1.Controls.Add(this.progressBar1);
+            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(400, 400);
+            this.panel1.TabIndex = 0;
             // 
-            // btnCurso
+            // pictureBox1
             // 
-            this.btnCurso.Location = new System.Drawing.Point(150, 112);
-            this.btnCurso.Name = "btnCurso";
-            this.btnCurso.Size = new System.Drawing.Size(115, 56);
-            this.btnCurso.TabIndex = 1;
-            this.btnCurso.Text = "Curso";
-            this.btnCurso.UseVisualStyleBackColor = true;
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(400, 400);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
-            // btnTurma
+            // progressBar1
             // 
-            this.btnTurma.Location = new System.Drawing.Point(271, 112);
-            this.btnTurma.Name = "btnTurma";
-            this.btnTurma.Size = new System.Drawing.Size(115, 56);
-            this.btnTurma.TabIndex = 2;
-            this.btnTurma.Text = "Turma";
-            this.btnTurma.UseVisualStyleBackColor = true;
+            this.progressBar1.Location = new System.Drawing.Point(83, 266);
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.Size = new System.Drawing.Size(240, 24);
+            this.progressBar1.TabIndex = 1;
             // 
-            // btnSala
+            // timer1
             // 
-            this.btnSala.Location = new System.Drawing.Point(513, 112);
-            this.btnSala.Name = "btnSala";
-            this.btnSala.Size = new System.Drawing.Size(115, 56);
-            this.btnSala.TabIndex = 3;
-            this.btnSala.Text = "Sala";
-            this.btnSala.UseVisualStyleBackColor = true;
-            // 
-            // btnAluno
-            // 
-            this.btnAluno.Location = new System.Drawing.Point(392, 112);
-            this.btnAluno.Name = "btnAluno";
-            this.btnAluno.Size = new System.Drawing.Size(115, 56);
-            this.btnAluno.TabIndex = 4;
-            this.btnAluno.Text = "Aluno";
-            this.btnAluno.UseVisualStyleBackColor = true;
+            this.timer1.Enabled = true;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(661, 286);
-            this.Controls.Add(this.btnAluno);
-            this.Controls.Add(this.btnSala);
-            this.Controls.Add(this.btnTurma);
-            this.Controls.Add(this.btnCurso);
-            this.Controls.Add(this.btnCampus);
+            this.ClientSize = new System.Drawing.Size(400, 400);
+            this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form1";
-            this.Text = "Gerenciamento de Salas";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button btnCampus;
-        private System.Windows.Forms.Button btnCurso;
-        private System.Windows.Forms.Button btnTurma;
-        private System.Windows.Forms.Button btnSala;
-        private System.Windows.Forms.Button btnAluno;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.ProgressBar progressBar1;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 
