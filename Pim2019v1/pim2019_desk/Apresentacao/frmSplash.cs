@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace pim2019_desk
 {
-    public partial class Form1 : Form
+    public partial class frmSplash : Form
     {
-        public Form1()
+        public frmSplash()
         {
             InitializeComponent();
         }
@@ -27,9 +27,9 @@ namespace pim2019_desk
             else
             {
                 timer1.Enabled = false;
-                Apresentacao.frmInicio frmInicio = new Apresentacao.frmInicio();
+                Apresentacao.frmPrincipal frmPrincipal = new Apresentacao.frmPrincipal();
                 this.Visible = false;
-                frmInicio.ShowDialog();                   
+                frmPrincipal.ShowDialog();                   
             }
         }
     }

@@ -55,17 +55,59 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Apresentacao\Form1.cs">
+    <Compile Include="Apresentacao\frmCadastrarAluno.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Apresentacao\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Apresentacao\frmCadastrarAluno.Designer.cs">
+      <DependentUpon>frmCadastrarAluno.cs</DependentUpon>
     </Compile>
-    <Compile Include="Apresentacao\frmInicio.cs">
+    <Compile Include="Apresentacao\frmCadastrarCampus.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Apresentacao\frmInicio.Designer.cs">
-      <DependentUpon>frmInicio.cs</DependentUpon>
+    <Compile Include="Apresentacao\frmCadastrarCampus.Designer.cs">
+      <DependentUpon>frmCadastrarCampus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Apresentacao\frmCadastrarCurso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Apresentacao\frmCadastrarCurso.Designer.cs">
+      <DependentUpon>frmCadastrarCurso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Apresentacao\frmEditarAluno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Apresentacao\frmEditarAluno.Designer.cs">
+      <DependentUpon>frmEditarAluno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Apresentacao\frmEditarCampus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Apresentacao\frmEditarCampus.Designer.cs">
+      <DependentUpon>frmEditarCampus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Apresentacao\frmEditarCurso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Apresentacao\frmEditarCurso.Designer.cs">
+      <DependentUpon>frmEditarCurso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Apresentacao\frmSplash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Apresentacao\frmSplash.Designer.cs">
+      <DependentUpon>frmSplash.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Apresentacao\frmConfigurar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Apresentacao\frmConfigurar.Designer.cs">
+      <DependentUpon>frmConfigurar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Apresentacao\frmPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Apresentacao\frmPrincipal.Designer.cs">
+      <DependentUpon>frmPrincipal.cs</DependentUpon>
     </Compile>
     <Compile Include="Dal\AlunoDAO.cs" />
     <Compile Include="Dal\CampusDAO.cs" />
@@ -73,6 +115,7 @@
     <Compile Include="Dal\intAlunoDAO.cs" />
     <Compile Include="Dal\intCampusDAO.cs" />
     <Compile Include="Dal\intCursoDAO.cs" />
+    <Compile Include="Modelo\atbEstaticos.cs" />
     <Compile Include="Modelo\Controle.cs" />
     <Compile Include="Modelo\EntityPim.Context.cs">
       <AutoGen>True</AutoGen>
@@ -148,11 +191,37 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>unip_salaDataSet3.xsd</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Apresentacao\Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="unip_salaDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>unip_salaDataSet4.xsd</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Apresentacao\frmCadastrarAluno.resx">
+      <DependentUpon>frmCadastrarAluno.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Apresentacao\frmInicio.resx">
-      <DependentUpon>frmInicio.cs</DependentUpon>
+    <EmbeddedResource Include="Apresentacao\frmCadastrarCampus.resx">
+      <DependentUpon>frmCadastrarCampus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Apresentacao\frmCadastrarCurso.resx">
+      <DependentUpon>frmCadastrarCurso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Apresentacao\frmEditarAluno.resx">
+      <DependentUpon>frmEditarAluno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Apresentacao\frmEditarCampus.resx">
+      <DependentUpon>frmEditarCampus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Apresentacao\frmEditarCurso.resx">
+      <DependentUpon>frmEditarCurso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Apresentacao\frmSplash.resx">
+      <DependentUpon>frmSplash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Apresentacao\frmConfigurar.resx">
+      <DependentUpon>frmConfigurar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Apresentacao\frmPrincipal.resx">
+      <DependentUpon>frmPrincipal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -224,9 +293,22 @@
     <None Include="unip_salaDataSet3.xss">
       <DependentUpon>unip_salaDataSet3.xsd</DependentUpon>
     </None>
+    <None Include="unip_salaDataSet4.xsc">
+      <DependentUpon>unip_salaDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="unip_salaDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>unip_salaDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="unip_salaDataSet4.xss">
+      <DependentUpon>unip_salaDataSet4.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Modelo\EntityPim.Context.tt">
