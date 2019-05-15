@@ -105,6 +105,24 @@ namespace pim2019_desk.Apresentacao
             editarCurso.txbNomeCurso.Text = this.lblNomeCursoResultado.Text;
             editarCurso.ShowDialog();
             ExibirCurso();            
-        }    
+        }
+
+        private void tipoDeSalaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmTipoSala tipoSala = new frmTipoSala();
+            tipoSala.ShowDialog();
+        }
+
+        private void andarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmAndar andar = new frmAndar();
+            andar.ShowDialog();
+        }
+
+        private void alfabetoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmAlfabeto alfabeto = new frmAlfabeto();
+            alfabeto.ShowDialog();
+        }
     }
 }

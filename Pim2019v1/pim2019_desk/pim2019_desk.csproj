@@ -55,11 +55,35 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Apresentacao\frmAlfabeto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Apresentacao\frmAlfabeto.Designer.cs">
+      <DependentUpon>frmAlfabeto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Apresentacao\frmAndar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Apresentacao\frmAndar.Designer.cs">
+      <DependentUpon>frmAndar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Apresentacao\frmCadastrarAlfabeto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Apresentacao\frmCadastrarAlfabeto.Designer.cs">
+      <DependentUpon>frmCadastrarAlfabeto.cs</DependentUpon>
+    </Compile>
     <Compile Include="Apresentacao\frmCadastrarAluno.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Apresentacao\frmCadastrarAluno.Designer.cs">
       <DependentUpon>frmCadastrarAluno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Apresentacao\frmCadastrarAndar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Apresentacao\frmCadastrarAndar.Designer.cs">
+      <DependentUpon>frmCadastrarAndar.cs</DependentUpon>
     </Compile>
     <Compile Include="Apresentacao\frmCadastrarCampus.cs">
       <SubType>Form</SubType>
@@ -73,11 +97,29 @@
     <Compile Include="Apresentacao\frmCadastrarCurso.Designer.cs">
       <DependentUpon>frmCadastrarCurso.cs</DependentUpon>
     </Compile>
+    <Compile Include="Apresentacao\frmCadastrarTipoSala.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Apresentacao\frmCadastrarTipoSala.Designer.cs">
+      <DependentUpon>frmCadastrarTipoSala.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Apresentacao\frmEditarAlfabeto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Apresentacao\frmEditarAlfabeto.Designer.cs">
+      <DependentUpon>frmEditarAlfabeto.cs</DependentUpon>
+    </Compile>
     <Compile Include="Apresentacao\frmEditarAluno.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Apresentacao\frmEditarAluno.Designer.cs">
       <DependentUpon>frmEditarAluno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Apresentacao\frmEditarAndar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Apresentacao\frmEditarAndar.Designer.cs">
+      <DependentUpon>frmEditarAndar.cs</DependentUpon>
     </Compile>
     <Compile Include="Apresentacao\frmEditarCampus.cs">
       <SubType>Form</SubType>
@@ -90,6 +132,12 @@
     </Compile>
     <Compile Include="Apresentacao\frmEditarCurso.Designer.cs">
       <DependentUpon>frmEditarCurso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Apresentacao\frmEditarTipoSala.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Apresentacao\frmEditarTipoSala.Designer.cs">
+      <DependentUpon>frmEditarTipoSala.cs</DependentUpon>
     </Compile>
     <Compile Include="Apresentacao\frmSplash.cs">
       <SubType>Form</SubType>
@@ -108,6 +156,12 @@
     </Compile>
     <Compile Include="Apresentacao\frmPrincipal.Designer.cs">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Apresentacao\frmTipoSala.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Apresentacao\frmTipoSala.Designer.cs">
+      <DependentUpon>frmTipoSala.cs</DependentUpon>
     </Compile>
     <Compile Include="Dal\AlunoDAO.cs" />
     <Compile Include="Dal\CampusDAO.cs" />
@@ -196,8 +250,20 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>unip_salaDataSet4.xsd</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Apresentacao\frmAlfabeto.resx">
+      <DependentUpon>frmAlfabeto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Apresentacao\frmAndar.resx">
+      <DependentUpon>frmAndar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Apresentacao\frmCadastrarAlfabeto.resx">
+      <DependentUpon>frmCadastrarAlfabeto.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Apresentacao\frmCadastrarAluno.resx">
       <DependentUpon>frmCadastrarAluno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Apresentacao\frmCadastrarAndar.resx">
+      <DependentUpon>frmCadastrarAndar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Apresentacao\frmCadastrarCampus.resx">
       <DependentUpon>frmCadastrarCampus.cs</DependentUpon>
@@ -205,14 +271,26 @@
     <EmbeddedResource Include="Apresentacao\frmCadastrarCurso.resx">
       <DependentUpon>frmCadastrarCurso.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Apresentacao\frmCadastrarTipoSala.resx">
+      <DependentUpon>frmCadastrarTipoSala.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Apresentacao\frmEditarAlfabeto.resx">
+      <DependentUpon>frmEditarAlfabeto.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Apresentacao\frmEditarAluno.resx">
       <DependentUpon>frmEditarAluno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Apresentacao\frmEditarAndar.resx">
+      <DependentUpon>frmEditarAndar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Apresentacao\frmEditarCampus.resx">
       <DependentUpon>frmEditarCampus.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Apresentacao\frmEditarCurso.resx">
       <DependentUpon>frmEditarCurso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Apresentacao\frmEditarTipoSala.resx">
+      <DependentUpon>frmEditarTipoSala.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Apresentacao\frmSplash.resx">
       <DependentUpon>frmSplash.cs</DependentUpon>
@@ -222,6 +300,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Apresentacao\frmPrincipal.resx">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Apresentacao\frmTipoSala.resx">
+      <DependentUpon>frmTipoSala.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

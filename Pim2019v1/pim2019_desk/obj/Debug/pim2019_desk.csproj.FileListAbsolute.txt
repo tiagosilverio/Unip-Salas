@@ -37,3 +37,12 @@ C:\Users\tiago\source\repos\Unip-Salas\Pim2019v1\pim2019_desk\obj\Debug\pim2019_
 C:\Users\tiago\source\repos\Unip-Salas\Pim2019v1\pim2019_desk\obj\Debug\pim2019_desk.Apresentacao.frmEditarCurso.resources
 C:\Users\tiago\source\repos\Unip-Salas\Pim2019v1\pim2019_desk\obj\Debug\pim2019_desk.Apresentacao.frmCadastrarAluno.resources
 C:\Users\tiago\source\repos\Unip-Salas\Pim2019v1\pim2019_desk\obj\Debug\pim2019_desk.Apresentacao.frmEditarAluno.resources
+C:\Users\tiago\source\repos\Unip-Salas\Pim2019v1\pim2019_desk\obj\Debug\pim2019_desk.Apresentacao.frmCadastrarTipoSala.resources
+C:\Users\tiago\source\repos\Unip-Salas\Pim2019v1\pim2019_desk\obj\Debug\pim2019_desk.Apresentacao.frmTipoSala.resources
+C:\Users\tiago\source\repos\Unip-Salas\Pim2019v1\pim2019_desk\obj\Debug\pim2019_desk.Apresentacao.frmEditarTipoSala.resources
+C:\Users\tiago\source\repos\Unip-Salas\Pim2019v1\pim2019_desk\obj\Debug\pim2019_desk.Apresentacao.frmAndar.resources
+C:\Users\tiago\source\repos\Unip-Salas\Pim2019v1\pim2019_desk\obj\Debug\pim2019_desk.Apresentacao.frmCadastrarAndar.resources
+C:\Users\tiago\source\repos\Unip-Salas\Pim2019v1\pim2019_desk\obj\Debug\pim2019_desk.Apresentacao.frmEditarAndar.resources
+C:\Users\tiago\source\repos\Unip-Salas\Pim2019v1\pim2019_desk\obj\Debug\pim2019_desk.Apresentacao.frmAlfabeto.resources
+C:\Users\tiago\source\repos\Unip-Salas\Pim2019v1\pim2019_desk\obj\Debug\pim2019_desk.Apresentacao.frmCadastrarAlfabeto.resources
+C:\Users\tiago\source\repos\Unip-Salas\Pim2019v1\pim2019_desk\obj\Debug\pim2019_desk.Apresentacao.frmEditarAlfabeto.resources
