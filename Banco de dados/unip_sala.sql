@@ -38,7 +38,8 @@ create table tb_tipo_sala
 	idTipoSala int identity,
 	nomeTipoSala varchar(50) not null
 
-	constraint PK_TIPOSALA primary key (idTipoSala)
+	constraint PK_TIPOSALA primary key (idTipoSala),
+	constraint UQ_TIPOSALA unique (nomeTipoSala)
 );
 go
 
@@ -58,7 +59,8 @@ create table tb_andar
 	idAndar int identity,
 	nomeAndar varchar (40) not null
 
-	constraint PK_ANDAR primary key (idAndar)
+	constraint PK_ANDAR primary key (idAndar),
+	constraint UQ_ANDAR unique (nomeAndar)
 );
 go
 
@@ -67,7 +69,8 @@ create table tb_dia_semana
 	idDiaSemana int identity,
 	nomeDiaSemana varchar(15) not null
 
-	constraint PK_DIA_SEMANA primary key (idDiaSemana)
+	constraint PK_DIA_SEMANA primary key (idDiaSemana),
+	constraint UQ_DIA_SEMANA unique (nomeDiaSemana)
 );
 go
 
@@ -78,10 +81,12 @@ create table tb_turma
 	fkAlfabeto int,
 	fkCampus int,
 	fkCurso int,
-	anoInicio date,
-	semestreInicio int
+	anoInicio date not null,
+	semestreInicio int not null,
+	numeroTurma int not null,
 
-	constraint PK_TURMA primary key (idTurma)
+	constraint PK_TURMA primary key (idTurma),
+	constraint UQ_TURMA unique (fkSigla, fkAlfabeto, fkCampus, anoInicio, semestreInicio)
 );
 go
 
@@ -92,7 +97,8 @@ create table tb_aluno
 	nomeAluno varchar(50) not null,
 	statusAluno bit not null
 
-	constraint PK_ALUNO primary key (idAluno)
+	constraint PK_ALUNO primary key (idAluno),
+	constraint UQ_ALUNO unique (raAluno)
 );
 go
 
@@ -116,7 +122,8 @@ create table tb_sala
 	fkTipoSala int,
 	fkAndar int
 
-	constraint PK_SALA primary key (idSala)
+	constraint PK_SALA primary key (idSala),
+	constraint UQ_SALA unique (numeroSala, capacidade, fkAlfabeto, fkTipoSala, fkAndar)
 );
 go
 
@@ -126,10 +133,11 @@ create table tb_aula_local
 	fkSala int,
 	fkTurma int,
 	fkDiaSemana int,
-	horarioAula varchar(10) not null,
-	periodoAula tinyint not null
+	periodoAula varchar(10) not null,
+	horarioAula tinyint not null
 
-	constraint PK_AULA_LOCAL primary key (idAulaLocal)
+	constraint PK_AULA_LOCAL primary key (idAulaLocal),
+	constraint UQ_AULA_LOCAL unique (fkSala, fkTurma, fkDiaSemana, horarioAula)
 );
 
 -- ADICIONANDO CHAVE ESTRANGEIRA 
@@ -137,7 +145,8 @@ create table tb_aula_local
 alter table tb_turma add 
 	constraint FK_TB_TURMA_SIGLA  foreign key (fkSigla) references tb_sigla (idSigla),
 	constraint FK_TB_TURMA_CAMPUS foreign key (fkCampus) references tb_campus (idCampus),
-	constraint FK_TB_TURMA_CURSO foreign key (fkCurso) references tb_curso (idCurso);
+	constraint FK_TB_TURMA_CURSO foreign key (fkCurso) references tb_curso (idCurso),
+	constraint FK_TB_TURMA_ALFABETO foreign key (fkAlfabeto) references tb_alfabeto(idAlfabeto);
 go
 
 alter table tb_turma_aluno add
@@ -156,4 +165,3 @@ alter table tb_aula_local add
 	constraint FK_TB_AULALOCAL_TURMA foreign key (fkTurma) references tb_turma (idTurma),
 	constraint FK_TB_AULALOCAL_DIASEMANA foreign key (fkDiaSemana) references tb_dia_semana (idDiaSemana);
 go
-
