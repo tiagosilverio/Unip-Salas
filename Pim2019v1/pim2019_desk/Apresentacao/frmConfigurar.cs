@@ -124,5 +124,23 @@ namespace pim2019_desk.Apresentacao
             frmAlfabeto alfabeto = new frmAlfabeto();
             alfabeto.ShowDialog();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            frmCadastrarSala cadastrarSala = new frmCadastrarSala();
+            cadastrarSala.ShowDialog();
+        }
+
+        private void btnEditarSala_Click(object sender, EventArgs e)
+        {
+            frmEditarSala editarSala = new frmEditarSala();
+            editarSala.ShowDialog();
+        }
+
+        private void btnNovaSala_Click(object sender, EventArgs e)
+        {
+            frmCadastrarSala cadastrarSala = new frmCadastrarSala();
+            cadastrarSala.ShowDialog();
+        }
     }
 }

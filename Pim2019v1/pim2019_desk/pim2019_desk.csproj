@@ -85,6 +85,12 @@
     <Compile Include="Apresentacao\frmCadastrarAndar.Designer.cs">
       <DependentUpon>frmCadastrarAndar.cs</DependentUpon>
     </Compile>
+    <Compile Include="Apresentacao\frmCadastrarAula.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Apresentacao\frmCadastrarAula.Designer.cs">
+      <DependentUpon>frmCadastrarAula.cs</DependentUpon>
+    </Compile>
     <Compile Include="Apresentacao\frmCadastrarCampus.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -97,11 +103,29 @@
     <Compile Include="Apresentacao\frmCadastrarCurso.Designer.cs">
       <DependentUpon>frmCadastrarCurso.cs</DependentUpon>
     </Compile>
+    <Compile Include="Apresentacao\frmCadastrarSala.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Apresentacao\frmCadastrarSala.Designer.cs">
+      <DependentUpon>frmCadastrarSala.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Apresentacao\frmCadastrarSigla.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Apresentacao\frmCadastrarSigla.Designer.cs">
+      <DependentUpon>frmCadastrarSigla.cs</DependentUpon>
+    </Compile>
     <Compile Include="Apresentacao\frmCadastrarTipoSala.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Apresentacao\frmCadastrarTipoSala.Designer.cs">
       <DependentUpon>frmCadastrarTipoSala.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Apresentacao\frmCadastrarTurma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Apresentacao\frmCadastrarTurma.Designer.cs">
+      <DependentUpon>frmCadastrarTurma.cs</DependentUpon>
     </Compile>
     <Compile Include="Apresentacao\frmEditarAlfabeto.cs">
       <SubType>Form</SubType>
@@ -121,6 +145,12 @@
     <Compile Include="Apresentacao\frmEditarAndar.Designer.cs">
       <DependentUpon>frmEditarAndar.cs</DependentUpon>
     </Compile>
+    <Compile Include="Apresentacao\frmEditarAula.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Apresentacao\frmEditarAula.Designer.cs">
+      <DependentUpon>frmEditarAula.cs</DependentUpon>
+    </Compile>
     <Compile Include="Apresentacao\frmEditarCampus.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -133,11 +163,35 @@
     <Compile Include="Apresentacao\frmEditarCurso.Designer.cs">
       <DependentUpon>frmEditarCurso.cs</DependentUpon>
     </Compile>
+    <Compile Include="Apresentacao\frmEditarSala.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Apresentacao\frmEditarSala.Designer.cs">
+      <DependentUpon>frmEditarSala.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Apresentacao\frmEditarSigla.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Apresentacao\frmEditarSigla.Designer.cs">
+      <DependentUpon>frmEditarSigla.cs</DependentUpon>
+    </Compile>
     <Compile Include="Apresentacao\frmEditarTipoSala.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Apresentacao\frmEditarTipoSala.Designer.cs">
       <DependentUpon>frmEditarTipoSala.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Apresentacao\frmEditarTurma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Apresentacao\frmEditarTurma.Designer.cs">
+      <DependentUpon>frmEditarTurma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Apresentacao\frmSigla.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Apresentacao\frmSigla.Designer.cs">
+      <DependentUpon>frmSigla.cs</DependentUpon>
     </Compile>
     <Compile Include="Apresentacao\frmSplash.cs">
       <SubType>Form</SubType>
@@ -265,14 +319,26 @@
     <EmbeddedResource Include="Apresentacao\frmCadastrarAndar.resx">
       <DependentUpon>frmCadastrarAndar.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Apresentacao\frmCadastrarAula.resx">
+      <DependentUpon>frmCadastrarAula.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Apresentacao\frmCadastrarCampus.resx">
       <DependentUpon>frmCadastrarCampus.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Apresentacao\frmCadastrarCurso.resx">
       <DependentUpon>frmCadastrarCurso.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Apresentacao\frmCadastrarSala.resx">
+      <DependentUpon>frmCadastrarSala.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Apresentacao\frmCadastrarSigla.resx">
+      <DependentUpon>frmCadastrarSigla.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Apresentacao\frmCadastrarTipoSala.resx">
       <DependentUpon>frmCadastrarTipoSala.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Apresentacao\frmCadastrarTurma.resx">
+      <DependentUpon>frmCadastrarTurma.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Apresentacao\frmEditarAlfabeto.resx">
       <DependentUpon>frmEditarAlfabeto.cs</DependentUpon>
@@ -283,14 +349,29 @@
     <EmbeddedResource Include="Apresentacao\frmEditarAndar.resx">
       <DependentUpon>frmEditarAndar.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Apresentacao\frmEditarAula.resx">
+      <DependentUpon>frmEditarAula.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Apresentacao\frmEditarCampus.resx">
       <DependentUpon>frmEditarCampus.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Apresentacao\frmEditarCurso.resx">
       <DependentUpon>frmEditarCurso.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Apresentacao\frmEditarSala.resx">
+      <DependentUpon>frmEditarSala.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Apresentacao\frmEditarSigla.resx">
+      <DependentUpon>frmEditarSigla.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Apresentacao\frmEditarTipoSala.resx">
       <DependentUpon>frmEditarTipoSala.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Apresentacao\frmEditarTurma.resx">
+      <DependentUpon>frmEditarTurma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Apresentacao\frmSigla.resx">
+      <DependentUpon>frmSigla.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Apresentacao\frmSplash.resx">
       <DependentUpon>frmSplash.cs</DependentUpon>

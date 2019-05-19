@@ -46,6 +46,25 @@
             this.tb_cursoTableAdapter1 = new pim2019_desk.unip_salaDataSet2TableAdapters.tb_cursoTableAdapter();
             this.tb_alunoTableAdapter = new pim2019_desk.unip_salaDataSet3TableAdapters.tb_alunoTableAdapter();
             this.tbpSala = new System.Windows.Forms.TabPage();
+            this.btnEditarSala = new System.Windows.Forms.Button();
+            this.btnNovaSala = new System.Windows.Forms.Button();
+            this.btnPesquisarSala = new System.Windows.Forms.Button();
+            this.txbPesquisarSala = new System.Windows.Forms.TextBox();
+            this.lblPesquisarSala = new System.Windows.Forms.Label();
+            this.gpbResultadoSala = new System.Windows.Forms.GroupBox();
+            this.lblAndarResultado = new System.Windows.Forms.Label();
+            this.lblNumeroSalaResultado = new System.Windows.Forms.Label();
+            this.lblAlfabetoResultado = new System.Windows.Forms.Label();
+            this.lblAndar = new System.Windows.Forms.Label();
+            this.lblNumeroSala = new System.Windows.Forms.Label();
+            this.lblAlfabeto = new System.Windows.Forms.Label();
+            this.lblCapacidadeResultado = new System.Windows.Forms.Label();
+            this.lblTipoSalaResultado = new System.Windows.Forms.Label();
+            this.lblIdSalaResultado = new System.Windows.Forms.Label();
+            this.lblCapacidade = new System.Windows.Forms.Label();
+            this.lblTipoSala = new System.Windows.Forms.Label();
+            this.lblIdSala = new System.Windows.Forms.Label();
+            this.dgvSala = new System.Windows.Forms.DataGridView();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.editarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tipoDeSalaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -83,25 +102,6 @@
             this.numeroCampusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nomeCampusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.dgvSala = new System.Windows.Forms.DataGridView();
-            this.gpbResultadoSala = new System.Windows.Forms.GroupBox();
-            this.lblPesquisarSala = new System.Windows.Forms.Label();
-            this.txbPesquisarSala = new System.Windows.Forms.TextBox();
-            this.btnPesquisarSala = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.lblIdSala = new System.Windows.Forms.Label();
-            this.lblTipoSala = new System.Windows.Forms.Label();
-            this.lblCapacidade = new System.Windows.Forms.Label();
-            this.lblIdSalaResultado = new System.Windows.Forms.Label();
-            this.lblTipoSalaResultado = new System.Windows.Forms.Label();
-            this.lblCapacidadeResultado = new System.Windows.Forms.Label();
-            this.lblAndarResultado = new System.Windows.Forms.Label();
-            this.lblNumeroSalaResultado = new System.Windows.Forms.Label();
-            this.lblAlfabetoResultado = new System.Windows.Forms.Label();
-            this.lblAndar = new System.Windows.Forms.Label();
-            this.lblNumeroSala = new System.Windows.Forms.Label();
-            this.lblAlfabeto = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.unip_salaDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbcursoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbcampusBindingSource)).BeginInit();
@@ -112,6 +112,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.unip_salaDataSet3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tbpSala.SuspendLayout();
+            this.gpbResultadoSala.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSala)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.tbpCurso.SuspendLayout();
             this.gpbResultadoCurso.SuspendLayout();
@@ -120,8 +122,6 @@
             this.gpbResultadoCampus.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCampus)).BeginInit();
             this.tabControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvSala)).BeginInit();
-            this.gpbResultadoSala.SuspendLayout();
             this.SuspendLayout();
             // 
             // unip_salaDataSet
@@ -217,8 +217,8 @@
             // 
             // tbpSala
             // 
-            this.tbpSala.Controls.Add(this.button3);
-            this.tbpSala.Controls.Add(this.button2);
+            this.tbpSala.Controls.Add(this.btnEditarSala);
+            this.tbpSala.Controls.Add(this.btnNovaSala);
             this.tbpSala.Controls.Add(this.btnPesquisarSala);
             this.tbpSala.Controls.Add(this.txbPesquisarSala);
             this.tbpSala.Controls.Add(this.lblPesquisarSala);
@@ -232,6 +232,194 @@
             this.tbpSala.TabIndex = 3;
             this.tbpSala.Text = "Sala";
             this.tbpSala.UseVisualStyleBackColor = true;
+            // 
+            // btnEditarSala
+            // 
+            this.btnEditarSala.Image = ((System.Drawing.Image)(resources.GetObject("btnEditarSala.Image")));
+            this.btnEditarSala.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEditarSala.Location = new System.Drawing.Point(357, 381);
+            this.btnEditarSala.Name = "btnEditarSala";
+            this.btnEditarSala.Size = new System.Drawing.Size(109, 37);
+            this.btnEditarSala.TabIndex = 7;
+            this.btnEditarSala.Text = "Editar Sala";
+            this.btnEditarSala.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnEditarSala.UseVisualStyleBackColor = true;
+            this.btnEditarSala.Click += new System.EventHandler(this.btnEditarSala_Click);
+            // 
+            // btnNovaSala
+            // 
+            this.btnNovaSala.Image = ((System.Drawing.Image)(resources.GetObject("btnNovaSala.Image")));
+            this.btnNovaSala.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnNovaSala.Location = new System.Drawing.Point(6, 381);
+            this.btnNovaSala.Name = "btnNovaSala";
+            this.btnNovaSala.Size = new System.Drawing.Size(109, 37);
+            this.btnNovaSala.TabIndex = 6;
+            this.btnNovaSala.Text = "Nova Sala";
+            this.btnNovaSala.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnNovaSala.UseVisualStyleBackColor = true;
+            this.btnNovaSala.Click += new System.EventHandler(this.btnNovaSala_Click);
+            // 
+            // btnPesquisarSala
+            // 
+            this.btnPesquisarSala.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnPesquisarSala.BackgroundImage")));
+            this.btnPesquisarSala.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnPesquisarSala.Location = new System.Drawing.Point(284, 195);
+            this.btnPesquisarSala.Name = "btnPesquisarSala";
+            this.btnPesquisarSala.Size = new System.Drawing.Size(25, 25);
+            this.btnPesquisarSala.TabIndex = 5;
+            this.btnPesquisarSala.UseVisualStyleBackColor = true;
+            // 
+            // txbPesquisarSala
+            // 
+            this.txbPesquisarSala.Location = new System.Drawing.Point(178, 198);
+            this.txbPesquisarSala.Name = "txbPesquisarSala";
+            this.txbPesquisarSala.Size = new System.Drawing.Size(100, 20);
+            this.txbPesquisarSala.TabIndex = 4;
+            // 
+            // lblPesquisarSala
+            // 
+            this.lblPesquisarSala.AutoSize = true;
+            this.lblPesquisarSala.Location = new System.Drawing.Point(119, 201);
+            this.lblPesquisarSala.Name = "lblPesquisarSala";
+            this.lblPesquisarSala.Size = new System.Drawing.Size(53, 13);
+            this.lblPesquisarSala.TabIndex = 3;
+            this.lblPesquisarSala.Text = "Pesquisar";
+            // 
+            // gpbResultadoSala
+            // 
+            this.gpbResultadoSala.Controls.Add(this.lblAndarResultado);
+            this.gpbResultadoSala.Controls.Add(this.lblNumeroSalaResultado);
+            this.gpbResultadoSala.Controls.Add(this.lblAlfabetoResultado);
+            this.gpbResultadoSala.Controls.Add(this.lblAndar);
+            this.gpbResultadoSala.Controls.Add(this.lblNumeroSala);
+            this.gpbResultadoSala.Controls.Add(this.lblAlfabeto);
+            this.gpbResultadoSala.Controls.Add(this.lblCapacidadeResultado);
+            this.gpbResultadoSala.Controls.Add(this.lblTipoSalaResultado);
+            this.gpbResultadoSala.Controls.Add(this.lblIdSalaResultado);
+            this.gpbResultadoSala.Controls.Add(this.lblCapacidade);
+            this.gpbResultadoSala.Controls.Add(this.lblTipoSala);
+            this.gpbResultadoSala.Controls.Add(this.lblIdSala);
+            this.gpbResultadoSala.Location = new System.Drawing.Point(43, 226);
+            this.gpbResultadoSala.Name = "gpbResultadoSala";
+            this.gpbResultadoSala.Size = new System.Drawing.Size(381, 132);
+            this.gpbResultadoSala.TabIndex = 2;
+            this.gpbResultadoSala.TabStop = false;
+            // 
+            // lblAndarResultado
+            // 
+            this.lblAndarResultado.AutoSize = true;
+            this.lblAndarResultado.Location = new System.Drawing.Point(293, 100);
+            this.lblAndarResultado.Name = "lblAndarResultado";
+            this.lblAndarResultado.Size = new System.Drawing.Size(10, 13);
+            this.lblAndarResultado.TabIndex = 15;
+            this.lblAndarResultado.Text = "-";
+            // 
+            // lblNumeroSalaResultado
+            // 
+            this.lblNumeroSalaResultado.AutoSize = true;
+            this.lblNumeroSalaResultado.Location = new System.Drawing.Point(293, 65);
+            this.lblNumeroSalaResultado.Name = "lblNumeroSalaResultado";
+            this.lblNumeroSalaResultado.Size = new System.Drawing.Size(10, 13);
+            this.lblNumeroSalaResultado.TabIndex = 14;
+            this.lblNumeroSalaResultado.Text = "-";
+            // 
+            // lblAlfabetoResultado
+            // 
+            this.lblAlfabetoResultado.AutoSize = true;
+            this.lblAlfabetoResultado.Location = new System.Drawing.Point(293, 30);
+            this.lblAlfabetoResultado.Name = "lblAlfabetoResultado";
+            this.lblAlfabetoResultado.Size = new System.Drawing.Size(10, 13);
+            this.lblAlfabetoResultado.TabIndex = 13;
+            this.lblAlfabetoResultado.Text = "-";
+            // 
+            // lblAndar
+            // 
+            this.lblAndar.AutoSize = true;
+            this.lblAndar.Location = new System.Drawing.Point(234, 100);
+            this.lblAndar.Name = "lblAndar";
+            this.lblAndar.Size = new System.Drawing.Size(38, 13);
+            this.lblAndar.TabIndex = 12;
+            this.lblAndar.Text = "Andar:";
+            // 
+            // lblNumeroSala
+            // 
+            this.lblNumeroSala.AutoSize = true;
+            this.lblNumeroSala.Location = new System.Drawing.Point(225, 65);
+            this.lblNumeroSala.Name = "lblNumeroSala";
+            this.lblNumeroSala.Size = new System.Drawing.Size(47, 13);
+            this.lblNumeroSala.TabIndex = 11;
+            this.lblNumeroSala.Text = "Número:";
+            // 
+            // lblAlfabeto
+            // 
+            this.lblAlfabeto.AutoSize = true;
+            this.lblAlfabeto.Location = new System.Drawing.Point(235, 30);
+            this.lblAlfabeto.Name = "lblAlfabeto";
+            this.lblAlfabeto.Size = new System.Drawing.Size(37, 13);
+            this.lblAlfabeto.TabIndex = 10;
+            this.lblAlfabeto.Text = "Bloco:";
+            // 
+            // lblCapacidadeResultado
+            // 
+            this.lblCapacidadeResultado.AutoSize = true;
+            this.lblCapacidadeResultado.Location = new System.Drawing.Point(94, 100);
+            this.lblCapacidadeResultado.Name = "lblCapacidadeResultado";
+            this.lblCapacidadeResultado.Size = new System.Drawing.Size(10, 13);
+            this.lblCapacidadeResultado.TabIndex = 9;
+            this.lblCapacidadeResultado.Text = "-";
+            // 
+            // lblTipoSalaResultado
+            // 
+            this.lblTipoSalaResultado.AutoSize = true;
+            this.lblTipoSalaResultado.Location = new System.Drawing.Point(94, 65);
+            this.lblTipoSalaResultado.Name = "lblTipoSalaResultado";
+            this.lblTipoSalaResultado.Size = new System.Drawing.Size(10, 13);
+            this.lblTipoSalaResultado.TabIndex = 8;
+            this.lblTipoSalaResultado.Text = "-";
+            // 
+            // lblIdSalaResultado
+            // 
+            this.lblIdSalaResultado.AutoSize = true;
+            this.lblIdSalaResultado.Location = new System.Drawing.Point(94, 30);
+            this.lblIdSalaResultado.Name = "lblIdSalaResultado";
+            this.lblIdSalaResultado.Size = new System.Drawing.Size(10, 13);
+            this.lblIdSalaResultado.TabIndex = 7;
+            this.lblIdSalaResultado.Text = "-";
+            // 
+            // lblCapacidade
+            // 
+            this.lblCapacidade.AutoSize = true;
+            this.lblCapacidade.Location = new System.Drawing.Point(12, 100);
+            this.lblCapacidade.Name = "lblCapacidade";
+            this.lblCapacidade.Size = new System.Drawing.Size(67, 13);
+            this.lblCapacidade.TabIndex = 6;
+            this.lblCapacidade.Text = "Capacidade:";
+            // 
+            // lblTipoSala
+            // 
+            this.lblTipoSala.AutoSize = true;
+            this.lblTipoSala.Location = new System.Drawing.Point(9, 65);
+            this.lblTipoSala.Name = "lblTipoSala";
+            this.lblTipoSala.Size = new System.Drawing.Size(70, 13);
+            this.lblTipoSala.TabIndex = 5;
+            this.lblTipoSala.Text = "Tipo de Sala:";
+            // 
+            // lblIdSala
+            // 
+            this.lblIdSala.AutoSize = true;
+            this.lblIdSala.Location = new System.Drawing.Point(58, 30);
+            this.lblIdSala.Name = "lblIdSala";
+            this.lblIdSala.Size = new System.Drawing.Size(21, 13);
+            this.lblIdSala.TabIndex = 4;
+            this.lblIdSala.Text = "ID:";
+            // 
+            // dgvSala
+            // 
+            this.dgvSala.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvSala.Location = new System.Drawing.Point(6, 30);
+            this.dgvSala.Name = "dgvSala";
+            this.dgvSala.Size = new System.Drawing.Size(460, 162);
+            this.dgvSala.TabIndex = 1;
             // 
             // menuStrip1
             // 
@@ -257,21 +445,21 @@
             // tipoDeSalaToolStripMenuItem
             // 
             this.tipoDeSalaToolStripMenuItem.Name = "tipoDeSalaToolStripMenuItem";
-            this.tipoDeSalaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.tipoDeSalaToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
             this.tipoDeSalaToolStripMenuItem.Text = "Tipo de Sala";
             this.tipoDeSalaToolStripMenuItem.Click += new System.EventHandler(this.tipoDeSalaToolStripMenuItem_Click);
             // 
             // andarToolStripMenuItem
             // 
             this.andarToolStripMenuItem.Name = "andarToolStripMenuItem";
-            this.andarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.andarToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
             this.andarToolStripMenuItem.Text = "Andar";
             this.andarToolStripMenuItem.Click += new System.EventHandler(this.andarToolStripMenuItem_Click);
             // 
             // alfabetoToolStripMenuItem
             // 
             this.alfabetoToolStripMenuItem.Name = "alfabetoToolStripMenuItem";
-            this.alfabetoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.alfabetoToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
             this.alfabetoToolStripMenuItem.Text = "Caracteres";
             this.alfabetoToolStripMenuItem.Click += new System.EventHandler(this.alfabetoToolStripMenuItem_Click);
             // 
@@ -631,192 +819,6 @@
             this.tabControl1.Size = new System.Drawing.Size(480, 450);
             this.tabControl1.TabIndex = 13;
             // 
-            // dgvSala
-            // 
-            this.dgvSala.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvSala.Location = new System.Drawing.Point(6, 30);
-            this.dgvSala.Name = "dgvSala";
-            this.dgvSala.Size = new System.Drawing.Size(460, 162);
-            this.dgvSala.TabIndex = 1;
-            // 
-            // gpbResultadoSala
-            // 
-            this.gpbResultadoSala.Controls.Add(this.lblAndarResultado);
-            this.gpbResultadoSala.Controls.Add(this.lblNumeroSalaResultado);
-            this.gpbResultadoSala.Controls.Add(this.lblAlfabetoResultado);
-            this.gpbResultadoSala.Controls.Add(this.lblAndar);
-            this.gpbResultadoSala.Controls.Add(this.lblNumeroSala);
-            this.gpbResultadoSala.Controls.Add(this.lblAlfabeto);
-            this.gpbResultadoSala.Controls.Add(this.lblCapacidadeResultado);
-            this.gpbResultadoSala.Controls.Add(this.lblTipoSalaResultado);
-            this.gpbResultadoSala.Controls.Add(this.lblIdSalaResultado);
-            this.gpbResultadoSala.Controls.Add(this.lblCapacidade);
-            this.gpbResultadoSala.Controls.Add(this.lblTipoSala);
-            this.gpbResultadoSala.Controls.Add(this.lblIdSala);
-            this.gpbResultadoSala.Location = new System.Drawing.Point(43, 226);
-            this.gpbResultadoSala.Name = "gpbResultadoSala";
-            this.gpbResultadoSala.Size = new System.Drawing.Size(381, 132);
-            this.gpbResultadoSala.TabIndex = 2;
-            this.gpbResultadoSala.TabStop = false;
-            // 
-            // lblPesquisarSala
-            // 
-            this.lblPesquisarSala.AutoSize = true;
-            this.lblPesquisarSala.Location = new System.Drawing.Point(119, 201);
-            this.lblPesquisarSala.Name = "lblPesquisarSala";
-            this.lblPesquisarSala.Size = new System.Drawing.Size(53, 13);
-            this.lblPesquisarSala.TabIndex = 3;
-            this.lblPesquisarSala.Text = "Pesquisar";
-            // 
-            // txbPesquisarSala
-            // 
-            this.txbPesquisarSala.Location = new System.Drawing.Point(178, 198);
-            this.txbPesquisarSala.Name = "txbPesquisarSala";
-            this.txbPesquisarSala.Size = new System.Drawing.Size(100, 20);
-            this.txbPesquisarSala.TabIndex = 4;
-            // 
-            // btnPesquisarSala
-            // 
-            this.btnPesquisarSala.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnPesquisarSala.BackgroundImage")));
-            this.btnPesquisarSala.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnPesquisarSala.Location = new System.Drawing.Point(284, 195);
-            this.btnPesquisarSala.Name = "btnPesquisarSala";
-            this.btnPesquisarSala.Size = new System.Drawing.Size(25, 25);
-            this.btnPesquisarSala.TabIndex = 5;
-            this.btnPesquisarSala.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(6, 381);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(109, 37);
-            this.button2.TabIndex = 6;
-            this.button2.Text = "Nova Sala";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(357, 381);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(109, 37);
-            this.button3.TabIndex = 7;
-            this.button3.Text = "Editar Sala";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // lblIdSala
-            // 
-            this.lblIdSala.AutoSize = true;
-            this.lblIdSala.Location = new System.Drawing.Point(58, 30);
-            this.lblIdSala.Name = "lblIdSala";
-            this.lblIdSala.Size = new System.Drawing.Size(21, 13);
-            this.lblIdSala.TabIndex = 4;
-            this.lblIdSala.Text = "ID:";
-            // 
-            // lblTipoSala
-            // 
-            this.lblTipoSala.AutoSize = true;
-            this.lblTipoSala.Location = new System.Drawing.Point(9, 65);
-            this.lblTipoSala.Name = "lblTipoSala";
-            this.lblTipoSala.Size = new System.Drawing.Size(70, 13);
-            this.lblTipoSala.TabIndex = 5;
-            this.lblTipoSala.Text = "Tipo de Sala:";
-            // 
-            // lblCapacidade
-            // 
-            this.lblCapacidade.AutoSize = true;
-            this.lblCapacidade.Location = new System.Drawing.Point(12, 100);
-            this.lblCapacidade.Name = "lblCapacidade";
-            this.lblCapacidade.Size = new System.Drawing.Size(67, 13);
-            this.lblCapacidade.TabIndex = 6;
-            this.lblCapacidade.Text = "Capacidade:";
-            // 
-            // lblIdSalaResultado
-            // 
-            this.lblIdSalaResultado.AutoSize = true;
-            this.lblIdSalaResultado.Location = new System.Drawing.Point(94, 30);
-            this.lblIdSalaResultado.Name = "lblIdSalaResultado";
-            this.lblIdSalaResultado.Size = new System.Drawing.Size(10, 13);
-            this.lblIdSalaResultado.TabIndex = 7;
-            this.lblIdSalaResultado.Text = "-";
-            // 
-            // lblTipoSalaResultado
-            // 
-            this.lblTipoSalaResultado.AutoSize = true;
-            this.lblTipoSalaResultado.Location = new System.Drawing.Point(94, 65);
-            this.lblTipoSalaResultado.Name = "lblTipoSalaResultado";
-            this.lblTipoSalaResultado.Size = new System.Drawing.Size(10, 13);
-            this.lblTipoSalaResultado.TabIndex = 8;
-            this.lblTipoSalaResultado.Text = "-";
-            // 
-            // lblCapacidadeResultado
-            // 
-            this.lblCapacidadeResultado.AutoSize = true;
-            this.lblCapacidadeResultado.Location = new System.Drawing.Point(94, 100);
-            this.lblCapacidadeResultado.Name = "lblCapacidadeResultado";
-            this.lblCapacidadeResultado.Size = new System.Drawing.Size(10, 13);
-            this.lblCapacidadeResultado.TabIndex = 9;
-            this.lblCapacidadeResultado.Text = "-";
-            // 
-            // lblAndarResultado
-            // 
-            this.lblAndarResultado.AutoSize = true;
-            this.lblAndarResultado.Location = new System.Drawing.Point(293, 100);
-            this.lblAndarResultado.Name = "lblAndarResultado";
-            this.lblAndarResultado.Size = new System.Drawing.Size(10, 13);
-            this.lblAndarResultado.TabIndex = 15;
-            this.lblAndarResultado.Text = "-";
-            // 
-            // lblNumeroSalaResultado
-            // 
-            this.lblNumeroSalaResultado.AutoSize = true;
-            this.lblNumeroSalaResultado.Location = new System.Drawing.Point(293, 65);
-            this.lblNumeroSalaResultado.Name = "lblNumeroSalaResultado";
-            this.lblNumeroSalaResultado.Size = new System.Drawing.Size(10, 13);
-            this.lblNumeroSalaResultado.TabIndex = 14;
-            this.lblNumeroSalaResultado.Text = "-";
-            // 
-            // lblAlfabetoResultado
-            // 
-            this.lblAlfabetoResultado.AutoSize = true;
-            this.lblAlfabetoResultado.Location = new System.Drawing.Point(293, 30);
-            this.lblAlfabetoResultado.Name = "lblAlfabetoResultado";
-            this.lblAlfabetoResultado.Size = new System.Drawing.Size(10, 13);
-            this.lblAlfabetoResultado.TabIndex = 13;
-            this.lblAlfabetoResultado.Text = "-";
-            // 
-            // lblAndar
-            // 
-            this.lblAndar.AutoSize = true;
-            this.lblAndar.Location = new System.Drawing.Point(234, 100);
-            this.lblAndar.Name = "lblAndar";
-            this.lblAndar.Size = new System.Drawing.Size(38, 13);
-            this.lblAndar.TabIndex = 12;
-            this.lblAndar.Text = "Andar:";
-            // 
-            // lblNumeroSala
-            // 
-            this.lblNumeroSala.AutoSize = true;
-            this.lblNumeroSala.Location = new System.Drawing.Point(225, 65);
-            this.lblNumeroSala.Name = "lblNumeroSala";
-            this.lblNumeroSala.Size = new System.Drawing.Size(47, 13);
-            this.lblNumeroSala.TabIndex = 11;
-            this.lblNumeroSala.Text = "Número:";
-            // 
-            // lblAlfabeto
-            // 
-            this.lblAlfabeto.AutoSize = true;
-            this.lblAlfabeto.Location = new System.Drawing.Point(235, 30);
-            this.lblAlfabeto.Name = "lblAlfabeto";
-            this.lblAlfabeto.Size = new System.Drawing.Size(37, 13);
-            this.lblAlfabeto.TabIndex = 10;
-            this.lblAlfabeto.Text = "Bloco:";
-            // 
             // frmConfigurar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -846,6 +848,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tbpSala.ResumeLayout(false);
             this.tbpSala.PerformLayout();
+            this.gpbResultadoSala.ResumeLayout(false);
+            this.gpbResultadoSala.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSala)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.tbpCurso.ResumeLayout(false);
@@ -859,9 +864,6 @@
             this.gpbResultadoCampus.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCampus)).EndInit();
             this.tabControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvSala)).EndInit();
-            this.gpbResultadoSala.ResumeLayout(false);
-            this.gpbResultadoSala.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -921,8 +923,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn nomeCampusDataGridViewTextBoxColumn;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.DataGridView dgvSala;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnEditarSala;
+        private System.Windows.Forms.Button btnNovaSala;
         private System.Windows.Forms.Button btnPesquisarSala;
         private System.Windows.Forms.TextBox txbPesquisarSala;
         private System.Windows.Forms.Label lblPesquisarSala;

@@ -30,19 +30,19 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAndar));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.dgvAndar = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
-            this.btnFechar = new System.Windows.Forms.Button();
-            this.btnNovoAndar = new System.Windows.Forms.Button();
-            this.btnEditarAndar = new System.Windows.Forms.Button();
             this.gpbAndar = new System.Windows.Forms.GroupBox();
-            this.lblIdAndar = new System.Windows.Forms.Label();
-            this.lblNomeAndar = new System.Windows.Forms.Label();
-            this.lblIdAndarResultado = new System.Windows.Forms.Label();
             this.lblNomeAndarResultado = new System.Windows.Forms.Label();
+            this.lblIdAndarResultado = new System.Windows.Forms.Label();
+            this.lblNomeAndar = new System.Windows.Forms.Label();
+            this.lblIdAndar = new System.Windows.Forms.Label();
+            this.btnEditarAndar = new System.Windows.Forms.Button();
+            this.btnNovoAndar = new System.Windows.Forms.Button();
+            this.btnFechar = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.dgvAndar = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvAndar)).BeginInit();
             this.gpbAndar.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAndar)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -59,47 +59,53 @@
             this.panel1.Size = new System.Drawing.Size(384, 297);
             this.panel1.TabIndex = 0;
             // 
-            // dgvAndar
+            // gpbAndar
             // 
-            this.dgvAndar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvAndar.Location = new System.Drawing.Point(3, 48);
-            this.dgvAndar.Name = "dgvAndar";
-            this.dgvAndar.Size = new System.Drawing.Size(378, 91);
-            this.dgvAndar.TabIndex = 0;
+            this.gpbAndar.Controls.Add(this.lblNomeAndarResultado);
+            this.gpbAndar.Controls.Add(this.lblIdAndarResultado);
+            this.gpbAndar.Controls.Add(this.lblNomeAndar);
+            this.gpbAndar.Controls.Add(this.lblIdAndar);
+            this.gpbAndar.Location = new System.Drawing.Point(65, 145);
+            this.gpbAndar.Name = "gpbAndar";
+            this.gpbAndar.Size = new System.Drawing.Size(259, 99);
+            this.gpbAndar.TabIndex = 5;
+            this.gpbAndar.TabStop = false;
             // 
-            // label1
+            // lblNomeAndarResultado
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Kristen ITC", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(3, 3);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(75, 28);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Andar";
+            this.lblNomeAndarResultado.AutoSize = true;
+            this.lblNomeAndarResultado.Location = new System.Drawing.Point(88, 61);
+            this.lblNomeAndarResultado.Name = "lblNomeAndarResultado";
+            this.lblNomeAndarResultado.Size = new System.Drawing.Size(10, 13);
+            this.lblNomeAndarResultado.TabIndex = 3;
+            this.lblNomeAndarResultado.Text = "-";
             // 
-            // btnFechar
+            // lblIdAndarResultado
             // 
-            this.btnFechar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnFechar.BackgroundImage")));
-            this.btnFechar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnFechar.Location = new System.Drawing.Point(356, 3);
-            this.btnFechar.Name = "btnFechar";
-            this.btnFechar.Size = new System.Drawing.Size(25, 25);
-            this.btnFechar.TabIndex = 2;
-            this.btnFechar.UseVisualStyleBackColor = true;
-            this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
+            this.lblIdAndarResultado.AutoSize = true;
+            this.lblIdAndarResultado.Location = new System.Drawing.Point(88, 33);
+            this.lblIdAndarResultado.Name = "lblIdAndarResultado";
+            this.lblIdAndarResultado.Size = new System.Drawing.Size(10, 13);
+            this.lblIdAndarResultado.TabIndex = 2;
+            this.lblIdAndarResultado.Text = "-";
             // 
-            // btnNovoAndar
+            // lblNomeAndar
             // 
-            this.btnNovoAndar.Image = ((System.Drawing.Image)(resources.GetObject("btnNovoAndar.Image")));
-            this.btnNovoAndar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNovoAndar.Location = new System.Drawing.Point(3, 257);
-            this.btnNovoAndar.Name = "btnNovoAndar";
-            this.btnNovoAndar.Size = new System.Drawing.Size(99, 37);
-            this.btnNovoAndar.TabIndex = 3;
-            this.btnNovoAndar.Text = "Novo Andar";
-            this.btnNovoAndar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnNovoAndar.UseVisualStyleBackColor = true;
-            this.btnNovoAndar.Click += new System.EventHandler(this.btnNovoAndar_Click);
+            this.lblNomeAndar.AutoSize = true;
+            this.lblNomeAndar.Location = new System.Drawing.Point(44, 61);
+            this.lblNomeAndar.Name = "lblNomeAndar";
+            this.lblNomeAndar.Size = new System.Drawing.Size(38, 13);
+            this.lblNomeAndar.TabIndex = 1;
+            this.lblNomeAndar.Text = "Andar:";
+            // 
+            // lblIdAndar
+            // 
+            this.lblIdAndar.AutoSize = true;
+            this.lblIdAndar.Location = new System.Drawing.Point(61, 33);
+            this.lblIdAndar.Name = "lblIdAndar";
+            this.lblIdAndar.Size = new System.Drawing.Size(21, 13);
+            this.lblIdAndar.TabIndex = 0;
+            this.lblIdAndar.Text = "ID:";
             // 
             // btnEditarAndar
             // 
@@ -114,53 +120,47 @@
             this.btnEditarAndar.UseVisualStyleBackColor = true;
             this.btnEditarAndar.Click += new System.EventHandler(this.btnEditarAndar_Click);
             // 
-            // gpbAndar
+            // btnNovoAndar
             // 
-            this.gpbAndar.Controls.Add(this.lblNomeAndarResultado);
-            this.gpbAndar.Controls.Add(this.lblIdAndarResultado);
-            this.gpbAndar.Controls.Add(this.lblNomeAndar);
-            this.gpbAndar.Controls.Add(this.lblIdAndar);
-            this.gpbAndar.Location = new System.Drawing.Point(65, 145);
-            this.gpbAndar.Name = "gpbAndar";
-            this.gpbAndar.Size = new System.Drawing.Size(259, 99);
-            this.gpbAndar.TabIndex = 5;
-            this.gpbAndar.TabStop = false;
+            this.btnNovoAndar.Image = ((System.Drawing.Image)(resources.GetObject("btnNovoAndar.Image")));
+            this.btnNovoAndar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnNovoAndar.Location = new System.Drawing.Point(3, 257);
+            this.btnNovoAndar.Name = "btnNovoAndar";
+            this.btnNovoAndar.Size = new System.Drawing.Size(99, 37);
+            this.btnNovoAndar.TabIndex = 3;
+            this.btnNovoAndar.Text = "Novo Andar";
+            this.btnNovoAndar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnNovoAndar.UseVisualStyleBackColor = true;
+            this.btnNovoAndar.Click += new System.EventHandler(this.btnNovoAndar_Click);
             // 
-            // lblIdAndar
+            // btnFechar
             // 
-            this.lblIdAndar.AutoSize = true;
-            this.lblIdAndar.Location = new System.Drawing.Point(61, 33);
-            this.lblIdAndar.Name = "lblIdAndar";
-            this.lblIdAndar.Size = new System.Drawing.Size(21, 13);
-            this.lblIdAndar.TabIndex = 0;
-            this.lblIdAndar.Text = "ID:";
+            this.btnFechar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnFechar.BackgroundImage")));
+            this.btnFechar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnFechar.Location = new System.Drawing.Point(356, 3);
+            this.btnFechar.Name = "btnFechar";
+            this.btnFechar.Size = new System.Drawing.Size(25, 25);
+            this.btnFechar.TabIndex = 2;
+            this.btnFechar.UseVisualStyleBackColor = true;
+            this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
             // 
-            // lblNomeAndar
+            // label1
             // 
-            this.lblNomeAndar.AutoSize = true;
-            this.lblNomeAndar.Location = new System.Drawing.Point(44, 61);
-            this.lblNomeAndar.Name = "lblNomeAndar";
-            this.lblNomeAndar.Size = new System.Drawing.Size(38, 13);
-            this.lblNomeAndar.TabIndex = 1;
-            this.lblNomeAndar.Text = "Andar:";
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Kristen ITC", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(3, 3);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(75, 28);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Andar";
             // 
-            // lblIdAndarResultado
+            // dgvAndar
             // 
-            this.lblIdAndarResultado.AutoSize = true;
-            this.lblIdAndarResultado.Location = new System.Drawing.Point(88, 33);
-            this.lblIdAndarResultado.Name = "lblIdAndarResultado";
-            this.lblIdAndarResultado.Size = new System.Drawing.Size(10, 13);
-            this.lblIdAndarResultado.TabIndex = 2;
-            this.lblIdAndarResultado.Text = "-";
-            // 
-            // lblNomeAndarResultado
-            // 
-            this.lblNomeAndarResultado.AutoSize = true;
-            this.lblNomeAndarResultado.Location = new System.Drawing.Point(88, 61);
-            this.lblNomeAndarResultado.Name = "lblNomeAndarResultado";
-            this.lblNomeAndarResultado.Size = new System.Drawing.Size(10, 13);
-            this.lblNomeAndarResultado.TabIndex = 3;
-            this.lblNomeAndarResultado.Text = "-";
+            this.dgvAndar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAndar.Location = new System.Drawing.Point(3, 48);
+            this.dgvAndar.Name = "dgvAndar";
+            this.dgvAndar.Size = new System.Drawing.Size(378, 91);
+            this.dgvAndar.TabIndex = 0;
             // 
             // frmAndar
             // 
@@ -175,9 +175,9 @@
             this.Text = "frmAndar";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvAndar)).EndInit();
             this.gpbAndar.ResumeLayout(false);
             this.gpbAndar.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAndar)).EndInit();
             this.ResumeLayout(false);
 
         }

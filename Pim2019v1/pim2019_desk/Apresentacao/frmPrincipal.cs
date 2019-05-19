@@ -93,5 +93,35 @@ namespace pim2019_desk.Apresentacao
             editarAluno.ShowDialog();
             ExibirAluno();
         }
+
+        private void siglaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmSigla sigla = new frmSigla();
+            sigla.ShowDialog();
+        }
+
+        private void btnEditarTurma_Click(object sender, EventArgs e)
+        {
+            frmEditarTurma editarTurma = new frmEditarTurma();
+            editarTurma.ShowDialog();
+        }
+
+        private void btnNovaTurma_Click(object sender, EventArgs e)
+        {
+            frmCadastrarTurma cadastrarTurma = new frmCadastrarTurma();
+            cadastrarTurma.ShowDialog();
+        }
+
+        private void btnNovaAula_Click(object sender, EventArgs e)
+        {
+            frmCadastrarAula cadastrarAula = new frmCadastrarAula();
+            cadastrarAula.ShowDialog();
+        }
+
+        private void btnEditarAula_Click(object sender, EventArgs e)
+        {
+            frmEditarAula editarAula = new frmEditarAula();
+            editarAula.ShowDialog();
+        }
     }
 }
