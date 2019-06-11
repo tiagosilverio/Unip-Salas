@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmEditarSala));
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblAndar = new System.Windows.Forms.Label();
@@ -36,6 +37,8 @@
             this.cmbAndar = new System.Windows.Forms.ComboBox();
             this.cmbAlfabeto = new System.Windows.Forms.ComboBox();
             this.cmbTipoSala = new System.Windows.Forms.ComboBox();
+            this.tbtiposalaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cmbTipoSalaEditarSala = new pim2019_desk.cmbTipoSalaEditarSala();
             this.txbCapacidade = new System.Windows.Forms.TextBox();
             this.lblCapacidade = new System.Windows.Forms.Label();
             this.txbNumeroSala = new System.Windows.Forms.TextBox();
@@ -47,7 +50,30 @@
             this.btnEditarSala = new System.Windows.Forms.Button();
             this.btnFechar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.cmbAlfabeto1 = new pim2019_desk.cmbAlfabeto();
+            this.cmbAlfabeto1BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cmbAlfabeto1BindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.cmbTipoSala1 = new pim2019_desk.cmbTipoSala();
+            this.cmbTipoSala1BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tb_tipo_salaTableAdapter = new pim2019_desk.cmbTipoSalaEditarSalaTableAdapters.tb_tipo_salaTableAdapter();
+            this.tbalfabetoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tb_alfabetoTableAdapter = new pim2019_desk.cmbAlfabetoTableAdapters.tb_alfabetoTableAdapter();
+            this.cmbAndar1 = new pim2019_desk.cmbAndar();
+            this.cmbAndar1BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tbandarBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tb_andarTableAdapter = new pim2019_desk.cmbAndarTableAdapters.tb_andarTableAdapter();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tbtiposalaBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbTipoSalaEditarSala)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbAlfabeto1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbAlfabeto1BindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbAlfabeto1BindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbTipoSala1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbTipoSala1BindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tbalfabetoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbAndar1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbAndar1BindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tbandarBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -104,27 +130,46 @@
             // 
             // cmbAndar
             // 
+            this.cmbAndar.DataSource = this.tbandarBindingSource;
+            this.cmbAndar.DisplayMember = "nomeAndar";
             this.cmbAndar.FormattingEnabled = true;
             this.cmbAndar.Location = new System.Drawing.Point(203, 188);
             this.cmbAndar.Name = "cmbAndar";
             this.cmbAndar.Size = new System.Drawing.Size(121, 21);
             this.cmbAndar.TabIndex = 13;
+            this.cmbAndar.ValueMember = "idAndar";
             // 
             // cmbAlfabeto
             // 
+            this.cmbAlfabeto.DataSource = this.tbalfabetoBindingSource;
+            this.cmbAlfabeto.DisplayMember = "nomeAlfabeto";
             this.cmbAlfabeto.FormattingEnabled = true;
             this.cmbAlfabeto.Location = new System.Drawing.Point(203, 132);
             this.cmbAlfabeto.Name = "cmbAlfabeto";
             this.cmbAlfabeto.Size = new System.Drawing.Size(121, 21);
             this.cmbAlfabeto.TabIndex = 12;
+            this.cmbAlfabeto.ValueMember = "idAlfabeto";
             // 
             // cmbTipoSala
             // 
+            this.cmbTipoSala.DataSource = this.tbtiposalaBindingSource;
+            this.cmbTipoSala.DisplayMember = "nomeTipoSala";
             this.cmbTipoSala.FormattingEnabled = true;
             this.cmbTipoSala.Location = new System.Drawing.Point(203, 74);
             this.cmbTipoSala.Name = "cmbTipoSala";
             this.cmbTipoSala.Size = new System.Drawing.Size(121, 21);
             this.cmbTipoSala.TabIndex = 11;
+            this.cmbTipoSala.ValueMember = "idTipoSala";
+            // 
+            // tbtiposalaBindingSource
+            // 
+            this.tbtiposalaBindingSource.DataMember = "tb_tipo_sala";
+            this.tbtiposalaBindingSource.DataSource = this.cmbTipoSalaEditarSala;
+            // 
+            // cmbTipoSalaEditarSala
+            // 
+            this.cmbTipoSalaEditarSala.DataSetName = "cmbTipoSalaEditarSala";
+            this.cmbTipoSalaEditarSala.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // txbCapacidade
             // 
@@ -187,6 +232,7 @@
             this.btnExcluirSala.Text = "Excluir";
             this.btnExcluirSala.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnExcluirSala.UseVisualStyleBackColor = true;
+            this.btnExcluirSala.Click += new System.EventHandler(this.btnExcluirSala_Click);
             // 
             // btnCancelar
             // 
@@ -212,6 +258,7 @@
             this.btnEditarSala.Text = "Salvar";
             this.btnEditarSala.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnEditarSala.UseVisualStyleBackColor = true;
+            this.btnEditarSala.Click += new System.EventHandler(this.btnEditarSala_Click);
             // 
             // btnFechar
             // 
@@ -234,6 +281,63 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Editar Sala";
             // 
+            // cmbAlfabeto1
+            // 
+            this.cmbAlfabeto1.DataSetName = "cmbAlfabeto";
+            this.cmbAlfabeto1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // cmbAlfabeto1BindingSource
+            // 
+            this.cmbAlfabeto1BindingSource.DataSource = this.cmbAlfabeto1;
+            this.cmbAlfabeto1BindingSource.Position = 0;
+            // 
+            // cmbAlfabeto1BindingSource1
+            // 
+            this.cmbAlfabeto1BindingSource1.DataSource = this.cmbAlfabeto1;
+            this.cmbAlfabeto1BindingSource1.Position = 0;
+            // 
+            // cmbTipoSala1
+            // 
+            this.cmbTipoSala1.DataSetName = "cmbTipoSala";
+            this.cmbTipoSala1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // cmbTipoSala1BindingSource
+            // 
+            this.cmbTipoSala1BindingSource.DataSource = this.cmbTipoSala1;
+            this.cmbTipoSala1BindingSource.Position = 0;
+            // 
+            // tb_tipo_salaTableAdapter
+            // 
+            this.tb_tipo_salaTableAdapter.ClearBeforeFill = true;
+            // 
+            // tbalfabetoBindingSource
+            // 
+            this.tbalfabetoBindingSource.DataMember = "tb_alfabeto";
+            this.tbalfabetoBindingSource.DataSource = this.cmbAlfabeto1BindingSource;
+            // 
+            // tb_alfabetoTableAdapter
+            // 
+            this.tb_alfabetoTableAdapter.ClearBeforeFill = true;
+            // 
+            // cmbAndar1
+            // 
+            this.cmbAndar1.DataSetName = "cmbAndar";
+            this.cmbAndar1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // cmbAndar1BindingSource
+            // 
+            this.cmbAndar1BindingSource.DataSource = this.cmbAndar1;
+            this.cmbAndar1BindingSource.Position = 0;
+            // 
+            // tbandarBindingSource
+            // 
+            this.tbandarBindingSource.DataMember = "tb_andar";
+            this.tbandarBindingSource.DataSource = this.cmbAndar1BindingSource;
+            // 
+            // tb_andarTableAdapter
+            // 
+            this.tb_andarTableAdapter.ClearBeforeFill = true;
+            // 
             // frmEditarSala
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -245,8 +349,20 @@
             this.Name = "frmEditarSala";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmEditarSala";
+            this.Load += new System.EventHandler(this.frmEditarSala_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tbtiposalaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbTipoSalaEditarSala)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbAlfabeto1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbAlfabeto1BindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbAlfabeto1BindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbTipoSala1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbTipoSala1BindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tbalfabetoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbAndar1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbAndar1BindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tbandarBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -271,5 +387,19 @@
         public System.Windows.Forms.TextBox txbCapacidade;
         public System.Windows.Forms.TextBox txbNumeroSala;
         public System.Windows.Forms.TextBox txbIdSala;
+        private System.Windows.Forms.BindingSource cmbTipoSala1BindingSource;
+        private cmbTipoSala cmbTipoSala1;
+        private cmbAlfabeto cmbAlfabeto1;
+        private System.Windows.Forms.BindingSource cmbAlfabeto1BindingSource;
+        private System.Windows.Forms.BindingSource cmbAlfabeto1BindingSource1;
+        private cmbTipoSalaEditarSala cmbTipoSalaEditarSala;
+        private System.Windows.Forms.BindingSource tbtiposalaBindingSource;
+        private cmbTipoSalaEditarSalaTableAdapters.tb_tipo_salaTableAdapter tb_tipo_salaTableAdapter;
+        private System.Windows.Forms.BindingSource tbalfabetoBindingSource;
+        private cmbAlfabetoTableAdapters.tb_alfabetoTableAdapter tb_alfabetoTableAdapter;
+        private System.Windows.Forms.BindingSource cmbAndar1BindingSource;
+        private cmbAndar cmbAndar1;
+        private System.Windows.Forms.BindingSource tbandarBindingSource;
+        private cmbAndarTableAdapters.tb_andarTableAdapter tb_andarTableAdapter;
     }
 }

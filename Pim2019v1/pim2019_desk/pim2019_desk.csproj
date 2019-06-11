@@ -217,12 +217,60 @@
     <Compile Include="Apresentacao\frmTipoSala.Designer.cs">
       <DependentUpon>frmTipoSala.cs</DependentUpon>
     </Compile>
+    <Compile Include="cmbAlfabeto.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cmbAlfabeto.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="cmbAndar.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cmbAndar.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="cmbTipoSala.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cmbTipoSala.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="cmbTipoSalaEditarSala.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cmbTipoSalaEditarSala.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dal\AlfabetoDAO.cs" />
     <Compile Include="Dal\AlunoDAO.cs" />
+    <Compile Include="Dal\AndarDAO.cs" />
     <Compile Include="Dal\CampusDAO.cs" />
+    <Compile Include="Dal\Conexao.cs" />
     <Compile Include="Dal\CursoDAO.cs" />
+    <Compile Include="Dal\intAlfabetoDAO.cs" />
     <Compile Include="Dal\intAlunoDAO.cs" />
+    <Compile Include="Dal\intAndarDAO.cs" />
     <Compile Include="Dal\intCampusDAO.cs" />
     <Compile Include="Dal\intCursoDAO.cs" />
+    <Compile Include="Dal\intSalaDAO.cs" />
+    <Compile Include="Dal\intSiglaDAO.cs" />
+    <Compile Include="Dal\intTipoSalaDAO.cs" />
+    <Compile Include="Dal\intTurmaDAO.cs" />
+    <Compile Include="Dal\SalaDAO.cs" />
+    <Compile Include="Dal\SiglaDAO.cs" />
+    <Compile Include="Dal\TipoSalaDAO.cs" />
+    <Compile Include="Dal\TurmaDAO.cs" />
+    <Compile Include="dts_turma.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dts_turma.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ListarSalaxsd.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ListarSalaxsd.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ListarTurma.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ListarTurma.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Modelo\atbEstaticos.cs" />
     <Compile Include="Modelo\Controle.cs" />
     <Compile Include="Modelo\EntityPim.Context.cs">
@@ -303,6 +351,34 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>unip_salaDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="unip_salaDataSet5.cs">
+      <DependentUpon>unip_salaDataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="unip_salaDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>unip_salaDataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="unip_salaDataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>unip_salaDataSet6.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="unip_salaDataSet7.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>unip_salaDataSet7.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="unip_salaDataSet8.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>unip_salaDataSet8.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="unip_salaDataSet9.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>unip_salaDataSet9.xsd</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Apresentacao\frmAlfabeto.resx">
       <DependentUpon>frmAlfabeto.cs</DependentUpon>
@@ -398,6 +474,83 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>EntityPim.Designer.cs</LastGenOutput>
     </EntityDeploy>
+    <None Include="cmbAlfabeto.xsc">
+      <DependentUpon>cmbAlfabeto.xsd</DependentUpon>
+    </None>
+    <None Include="cmbAlfabeto.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>cmbAlfabeto.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="cmbAlfabeto.xss">
+      <DependentUpon>cmbAlfabeto.xsd</DependentUpon>
+    </None>
+    <None Include="cmbAndar.xsc">
+      <DependentUpon>cmbAndar.xsd</DependentUpon>
+    </None>
+    <None Include="cmbAndar.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>cmbAndar.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="cmbAndar.xss">
+      <DependentUpon>cmbAndar.xsd</DependentUpon>
+    </None>
+    <None Include="cmbTipoSala.xsc">
+      <DependentUpon>cmbTipoSala.xsd</DependentUpon>
+    </None>
+    <None Include="cmbTipoSala.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>cmbTipoSala.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="cmbTipoSala.xss">
+      <DependentUpon>cmbTipoSala.xsd</DependentUpon>
+    </None>
+    <None Include="cmbTipoSalaEditarSala.xsc">
+      <DependentUpon>cmbTipoSalaEditarSala.xsd</DependentUpon>
+    </None>
+    <None Include="cmbTipoSalaEditarSala.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>cmbTipoSalaEditarSala.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="cmbTipoSalaEditarSala.xss">
+      <DependentUpon>cmbTipoSalaEditarSala.xsd</DependentUpon>
+    </None>
+    <None Include="dts_turma.xsc">
+      <DependentUpon>dts_turma.xsd</DependentUpon>
+    </None>
+    <None Include="dts_turma.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dts_turma.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dts_turma.xss">
+      <DependentUpon>dts_turma.xsd</DependentUpon>
+    </None>
+    <None Include="ListarSalaxsd.xsc">
+      <DependentUpon>ListarSalaxsd.xsd</DependentUpon>
+    </None>
+    <None Include="ListarSalaxsd.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ListarSalaxsd.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ListarSalaxsd.xss">
+      <DependentUpon>ListarSalaxsd.xsd</DependentUpon>
+    </None>
+    <None Include="ListarTurma.xsc">
+      <DependentUpon>ListarTurma.xsd</DependentUpon>
+    </None>
+    <None Include="ListarTurma.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ListarTurma.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ListarTurma.xss">
+      <DependentUpon>ListarTurma.xsd</DependentUpon>
+    </None>
     <None Include="Modelo\EntityPim.edmx.diagram">
       <DependentUpon>EntityPim.edmx</DependentUpon>
     </None>
@@ -465,6 +618,61 @@
     </None>
     <None Include="unip_salaDataSet4.xss">
       <DependentUpon>unip_salaDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="unip_salaDataSet5.xsc">
+      <DependentUpon>unip_salaDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="unip_salaDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>unip_salaDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="unip_salaDataSet5.xss">
+      <DependentUpon>unip_salaDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="unip_salaDataSet6.xsc">
+      <DependentUpon>unip_salaDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="unip_salaDataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>unip_salaDataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="unip_salaDataSet6.xss">
+      <DependentUpon>unip_salaDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="unip_salaDataSet7.xsc">
+      <DependentUpon>unip_salaDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="unip_salaDataSet7.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>unip_salaDataSet7.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="unip_salaDataSet7.xss">
+      <DependentUpon>unip_salaDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="unip_salaDataSet8.xsc">
+      <DependentUpon>unip_salaDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="unip_salaDataSet8.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>unip_salaDataSet8.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="unip_salaDataSet8.xss">
+      <DependentUpon>unip_salaDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="unip_salaDataSet9.xsc">
+      <DependentUpon>unip_salaDataSet9.xsd</DependentUpon>
+    </None>
+    <None Include="unip_salaDataSet9.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>unip_salaDataSet9.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="unip_salaDataSet9.xss">
+      <DependentUpon>unip_salaDataSet9.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

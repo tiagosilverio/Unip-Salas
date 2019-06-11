@@ -30,12 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCadastrarTipoSala));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.btnFechar = new System.Windows.Forms.Button();
-            this.btnSalvar = new System.Windows.Forms.Button();
-            this.btnCancelar = new System.Windows.Forms.Button();
-            this.lblTipoSala = new System.Windows.Forms.Label();
             this.txbTipoSala = new System.Windows.Forms.TextBox();
+            this.lblTipoSala = new System.Windows.Forms.Label();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.btnSalvar = new System.Windows.Forms.Button();
+            this.btnFechar = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -53,38 +53,21 @@
             this.panel1.Size = new System.Drawing.Size(337, 242);
             this.panel1.TabIndex = 0;
             // 
-            // label1
+            // txbTipoSala
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Kristen ITC", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(3, 4);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(191, 28);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Novo Tipo de Sala";
+            this.txbTipoSala.Location = new System.Drawing.Point(36, 109);
+            this.txbTipoSala.Name = "txbTipoSala";
+            this.txbTipoSala.Size = new System.Drawing.Size(260, 20);
+            this.txbTipoSala.TabIndex = 5;
             // 
-            // btnFechar
+            // lblTipoSala
             // 
-            this.btnFechar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnFechar.BackgroundImage")));
-            this.btnFechar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnFechar.Location = new System.Drawing.Point(309, 4);
-            this.btnFechar.Name = "btnFechar";
-            this.btnFechar.Size = new System.Drawing.Size(25, 25);
-            this.btnFechar.TabIndex = 1;
-            this.btnFechar.UseVisualStyleBackColor = true;
-            this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
-            // 
-            // btnSalvar
-            // 
-            this.btnSalvar.Image = ((System.Drawing.Image)(resources.GetObject("btnSalvar.Image")));
-            this.btnSalvar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSalvar.Location = new System.Drawing.Point(247, 202);
-            this.btnSalvar.Name = "btnSalvar";
-            this.btnSalvar.Size = new System.Drawing.Size(87, 37);
-            this.btnSalvar.TabIndex = 2;
-            this.btnSalvar.Text = "Salvar";
-            this.btnSalvar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnSalvar.UseVisualStyleBackColor = true;
+            this.lblTipoSala.AutoSize = true;
+            this.lblTipoSala.Location = new System.Drawing.Point(33, 93);
+            this.lblTipoSala.Name = "lblTipoSala";
+            this.lblTipoSala.Size = new System.Drawing.Size(67, 13);
+            this.lblTipoSala.TabIndex = 4;
+            this.lblTipoSala.Text = "Tipo de Sala";
             // 
             // btnCancelar
             // 
@@ -99,21 +82,39 @@
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
-            // lblTipoSala
+            // btnSalvar
             // 
-            this.lblTipoSala.AutoSize = true;
-            this.lblTipoSala.Location = new System.Drawing.Point(33, 93);
-            this.lblTipoSala.Name = "lblTipoSala";
-            this.lblTipoSala.Size = new System.Drawing.Size(67, 13);
-            this.lblTipoSala.TabIndex = 4;
-            this.lblTipoSala.Text = "Tipo de Sala";
+            this.btnSalvar.Image = ((System.Drawing.Image)(resources.GetObject("btnSalvar.Image")));
+            this.btnSalvar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSalvar.Location = new System.Drawing.Point(247, 202);
+            this.btnSalvar.Name = "btnSalvar";
+            this.btnSalvar.Size = new System.Drawing.Size(87, 37);
+            this.btnSalvar.TabIndex = 2;
+            this.btnSalvar.Text = "Salvar";
+            this.btnSalvar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnSalvar.UseVisualStyleBackColor = true;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
-            // txbTipoSala
+            // btnFechar
             // 
-            this.txbTipoSala.Location = new System.Drawing.Point(36, 109);
-            this.txbTipoSala.Name = "txbTipoSala";
-            this.txbTipoSala.Size = new System.Drawing.Size(260, 20);
-            this.txbTipoSala.TabIndex = 5;
+            this.btnFechar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnFechar.BackgroundImage")));
+            this.btnFechar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnFechar.Location = new System.Drawing.Point(309, 4);
+            this.btnFechar.Name = "btnFechar";
+            this.btnFechar.Size = new System.Drawing.Size(25, 25);
+            this.btnFechar.TabIndex = 1;
+            this.btnFechar.UseVisualStyleBackColor = true;
+            this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Kristen ITC", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(3, 4);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(191, 28);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Novo Tipo de Sala";
             // 
             // frmCadastrarTipoSala
             // 

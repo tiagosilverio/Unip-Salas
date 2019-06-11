@@ -26,7 +26,7 @@ namespace pim2019_desk.Modelo
         public Nullable<int> fkAlfabeto { get; set; }
         public Nullable<int> fkCampus { get; set; }
         public Nullable<int> fkCurso { get; set; }
-        public Nullable<System.DateTime> anoInicio { get; set; }
+        public string anoInicio { get; set; }
         public Nullable<int> semestreInicio { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

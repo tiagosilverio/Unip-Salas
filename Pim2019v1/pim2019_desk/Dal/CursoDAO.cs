@@ -29,10 +29,9 @@ namespace pim2019_desk.Dal
 
         public void EditarCurso(tb_curso curso)
         {
-            this.mensagem = "";
-
             try
             {
+                this.mensagem = "";
                 cursoEntity.Entry(curso).State = System.Data.Entity.EntityState.Modified;
                 cursoEntity.SaveChanges();
                 this.mensagem = "Editado com Sucesso!";

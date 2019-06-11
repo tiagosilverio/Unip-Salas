@@ -37,6 +37,14 @@
             this.btnEditarAula = new System.Windows.Forms.Button();
             this.btnNovaAula = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lblNumeroTurmaAula = new System.Windows.Forms.Label();
+            this.lblAlfabetoTurmaAula = new System.Windows.Forms.Label();
+            this.lblQuantidadeAlunosAula = new System.Windows.Forms.Label();
+            this.lblCapacidadeSalaAula = new System.Windows.Forms.Label();
+            this.lblSiglaTurmaAula = new System.Windows.Forms.Label();
+            this.lblAndarAula = new System.Windows.Forms.Label();
+            this.lblAlfabetoSalaAula = new System.Windows.Forms.Label();
+            this.lblSalaAula = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -67,9 +75,6 @@
             this.lblRaAluno = new System.Windows.Forms.Label();
             this.lblIdAlunoResultado = new System.Windows.Forms.Label();
             this.lblIdAluno = new System.Windows.Forms.Label();
-            this.btnPesquisarAluno = new System.Windows.Forms.Button();
-            this.txbPesquisarAluno = new System.Windows.Forms.TextBox();
-            this.lblPesquisarAluno = new System.Windows.Forms.Label();
             this.dgvAlunos = new System.Windows.Forms.DataGridView();
             this.idAlunoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.raAlunoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -78,43 +83,46 @@
             this.tbalunoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.unip_salaDataSet4 = new pim2019_desk.unip_salaDataSet4();
             this.tbpTurma = new System.Windows.Forms.TabPage();
+            this.gpbTurma = new System.Windows.Forms.GroupBox();
+            this.lblSemestreInicioTurmaResultado = new System.Windows.Forms.Label();
+            this.lblSemestreInicio = new System.Windows.Forms.Label();
+            this.lblAnoInicioTurmaResultado = new System.Windows.Forms.Label();
+            this.lblAnoInicio = new System.Windows.Forms.Label();
+            this.lblCampusTurmaResultado = new System.Windows.Forms.Label();
+            this.lblCurso = new System.Windows.Forms.Label();
+            this.lblCursoTurmaResultado = new System.Windows.Forms.Label();
+            this.lblCampus = new System.Windows.Forms.Label();
+            this.lblNumeroTurmaResultado = new System.Windows.Forms.Label();
+            this.lblAlfabetoTurmaResultado = new System.Windows.Forms.Label();
+            this.lblSiglaTurmaResultado = new System.Windows.Forms.Label();
+            this.lblCodigo = new System.Windows.Forms.Label();
+            this.lblIdTurmaResultado = new System.Windows.Forms.Label();
+            this.lblIdTurma = new System.Windows.Forms.Label();
+            this.btnEditarTurma = new System.Windows.Forms.Button();
+            this.btnNovaTurma = new System.Windows.Forms.Button();
             this.dgvTurma = new System.Windows.Forms.DataGridView();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.configurarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.siglaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnMinimizar = new System.Windows.Forms.Button();
             this.btnSair = new System.Windows.Forms.Button();
             this.btnConfigurar = new System.Windows.Forms.Button();
             this.tb_alunoTableAdapter = new pim2019_desk.unip_salaDataSet4TableAdapters.tb_alunoTableAdapter();
-            this.lblPesquisarTurma = new System.Windows.Forms.Label();
-            this.txbPesquisarTurma = new System.Windows.Forms.TextBox();
-            this.btnPesquisarTurma = new System.Windows.Forms.Button();
-            this.btnNovaTurma = new System.Windows.Forms.Button();
-            this.btnEditarTurma = new System.Windows.Forms.Button();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.configurarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.siglaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.gpbTurma = new System.Windows.Forms.GroupBox();
-            this.lblIdTurma = new System.Windows.Forms.Label();
-            this.lblIdTurmaResultado = new System.Windows.Forms.Label();
-            this.lblCodigo = new System.Windows.Forms.Label();
-            this.lblSiglaTurmaResultado = new System.Windows.Forms.Label();
-            this.lblAlfabetoTurmaResultado = new System.Windows.Forms.Label();
-            this.lblNumeroTurmaResultado = new System.Windows.Forms.Label();
-            this.lblCampus = new System.Windows.Forms.Label();
-            this.lblCursoTurmaResultado = new System.Windows.Forms.Label();
-            this.lblCurso = new System.Windows.Forms.Label();
-            this.lblCampusTurmaResultado = new System.Windows.Forms.Label();
-            this.lblAnoInicio = new System.Windows.Forms.Label();
-            this.lblAnoInicioTurmaResultado = new System.Windows.Forms.Label();
-            this.lblSemestreInicio = new System.Windows.Forms.Label();
-            this.lblSemestreInicioTurmaResultado = new System.Windows.Forms.Label();
-            this.lblSalaAula = new System.Windows.Forms.Label();
-            this.lblAlfabetoSalaAula = new System.Windows.Forms.Label();
-            this.lblAndarAula = new System.Windows.Forms.Label();
-            this.lblSiglaTurmaAula = new System.Windows.Forms.Label();
-            this.lblCapacidadeSalaAula = new System.Windows.Forms.Label();
-            this.lblQuantidadeAlunosAula = new System.Windows.Forms.Label();
-            this.lblAlfabetoTurmaAula = new System.Windows.Forms.Label();
-            this.lblNumeroTurmaAula = new System.Windows.Forms.Label();
+            this.dts_turma = new pim2019_desk.dts_turma();
+            this.tbturmaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tb_turmaTableAdapter = new pim2019_desk.dts_turmaTableAdapters.tb_turmaTableAdapter();
+            this.listarTurma = new pim2019_desk.ListarTurma();
+            this.listarTurmaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataTable1BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataTable1TableAdapter = new pim2019_desk.ListarTurmaTableAdapters.DataTable1TableAdapter();
+            this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.siglaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.letraDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.numeroDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cursoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.anoDeInicioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.semestreDeInicioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1.SuspendLayout();
             this.tbpAula.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -124,10 +132,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.tbalunoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.unip_salaDataSet4)).BeginInit();
             this.tbpTurma.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvTurma)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.menuStrip1.SuspendLayout();
             this.gpbTurma.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTurma)).BeginInit();
+            this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dts_turma)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tbturmaBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.listarTurma)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.listarTurmaBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataTable1BindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -239,6 +252,78 @@
             this.groupBox1.Size = new System.Drawing.Size(386, 104);
             this.groupBox1.TabIndex = 14;
             this.groupBox1.TabStop = false;
+            // 
+            // lblNumeroTurmaAula
+            // 
+            this.lblNumeroTurmaAula.AutoSize = true;
+            this.lblNumeroTurmaAula.Location = new System.Drawing.Point(347, 26);
+            this.lblNumeroTurmaAula.Name = "lblNumeroTurmaAula";
+            this.lblNumeroTurmaAula.Size = new System.Drawing.Size(19, 13);
+            this.lblNumeroTurmaAula.TabIndex = 27;
+            this.lblNumeroTurmaAula.Text = "20";
+            // 
+            // lblAlfabetoTurmaAula
+            // 
+            this.lblAlfabetoTurmaAula.AutoSize = true;
+            this.lblAlfabetoTurmaAula.Location = new System.Drawing.Point(333, 26);
+            this.lblAlfabetoTurmaAula.Name = "lblAlfabetoTurmaAula";
+            this.lblAlfabetoTurmaAula.Size = new System.Drawing.Size(14, 13);
+            this.lblAlfabetoTurmaAula.TabIndex = 26;
+            this.lblAlfabetoTurmaAula.Text = "P";
+            // 
+            // lblQuantidadeAlunosAula
+            // 
+            this.lblQuantidadeAlunosAula.AutoSize = true;
+            this.lblQuantidadeAlunosAula.Location = new System.Drawing.Point(301, 76);
+            this.lblQuantidadeAlunosAula.Name = "lblQuantidadeAlunosAula";
+            this.lblQuantidadeAlunosAula.Size = new System.Drawing.Size(10, 13);
+            this.lblQuantidadeAlunosAula.TabIndex = 25;
+            this.lblQuantidadeAlunosAula.Text = "-";
+            // 
+            // lblCapacidadeSalaAula
+            // 
+            this.lblCapacidadeSalaAula.AutoSize = true;
+            this.lblCapacidadeSalaAula.Location = new System.Drawing.Point(301, 50);
+            this.lblCapacidadeSalaAula.Name = "lblCapacidadeSalaAula";
+            this.lblCapacidadeSalaAula.Size = new System.Drawing.Size(10, 13);
+            this.lblCapacidadeSalaAula.TabIndex = 24;
+            this.lblCapacidadeSalaAula.Text = "-";
+            // 
+            // lblSiglaTurmaAula
+            // 
+            this.lblSiglaTurmaAula.AutoSize = true;
+            this.lblSiglaTurmaAula.Location = new System.Drawing.Point(301, 26);
+            this.lblSiglaTurmaAula.Name = "lblSiglaTurmaAula";
+            this.lblSiglaTurmaAula.Size = new System.Drawing.Size(28, 13);
+            this.lblSiglaTurmaAula.TabIndex = 23;
+            this.lblSiglaTurmaAula.Text = "DS4";
+            // 
+            // lblAndarAula
+            // 
+            this.lblAndarAula.AutoSize = true;
+            this.lblAndarAula.Location = new System.Drawing.Point(72, 76);
+            this.lblAndarAula.Name = "lblAndarAula";
+            this.lblAndarAula.Size = new System.Drawing.Size(10, 13);
+            this.lblAndarAula.TabIndex = 22;
+            this.lblAndarAula.Text = "-";
+            // 
+            // lblAlfabetoSalaAula
+            // 
+            this.lblAlfabetoSalaAula.AutoSize = true;
+            this.lblAlfabetoSalaAula.Location = new System.Drawing.Point(72, 50);
+            this.lblAlfabetoSalaAula.Name = "lblAlfabetoSalaAula";
+            this.lblAlfabetoSalaAula.Size = new System.Drawing.Size(10, 13);
+            this.lblAlfabetoSalaAula.TabIndex = 21;
+            this.lblAlfabetoSalaAula.Text = "-";
+            // 
+            // lblSalaAula
+            // 
+            this.lblSalaAula.AutoSize = true;
+            this.lblSalaAula.Location = new System.Drawing.Point(72, 26);
+            this.lblSalaAula.Name = "lblSalaAula";
+            this.lblSalaAula.Size = new System.Drawing.Size(10, 13);
+            this.lblSalaAula.TabIndex = 20;
+            this.lblSalaAula.Text = "-";
             // 
             // label13
             // 
@@ -401,9 +486,6 @@
             this.tbpAluno.Controls.Add(this.btnEditarAluno);
             this.tbpAluno.Controls.Add(this.btnCadastrarAluno);
             this.tbpAluno.Controls.Add(this.gpbResultadoAluno);
-            this.tbpAluno.Controls.Add(this.btnPesquisarAluno);
-            this.tbpAluno.Controls.Add(this.txbPesquisarAluno);
-            this.tbpAluno.Controls.Add(this.lblPesquisarAluno);
             this.tbpAluno.Controls.Add(this.dgvAlunos);
             this.tbpAluno.Location = new System.Drawing.Point(4, 22);
             this.tbpAluno.Name = "tbpAluno";
@@ -449,7 +531,7 @@
             this.gpbResultadoAluno.Controls.Add(this.lblRaAluno);
             this.gpbResultadoAluno.Controls.Add(this.lblIdAlunoResultado);
             this.gpbResultadoAluno.Controls.Add(this.lblIdAluno);
-            this.gpbResultadoAluno.Location = new System.Drawing.Point(118, 246);
+            this.gpbResultadoAluno.Location = new System.Drawing.Point(118, 233);
             this.gpbResultadoAluno.Name = "gpbResultadoAluno";
             this.gpbResultadoAluno.Size = new System.Drawing.Size(372, 126);
             this.gpbResultadoAluno.TabIndex = 6;
@@ -527,32 +609,6 @@
             this.lblIdAluno.TabIndex = 0;
             this.lblIdAluno.Text = "ID:";
             // 
-            // btnPesquisarAluno
-            // 
-            this.btnPesquisarAluno.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnPesquisarAluno.BackgroundImage")));
-            this.btnPesquisarAluno.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnPesquisarAluno.Location = new System.Drawing.Point(358, 200);
-            this.btnPesquisarAluno.Name = "btnPesquisarAluno";
-            this.btnPesquisarAluno.Size = new System.Drawing.Size(25, 25);
-            this.btnPesquisarAluno.TabIndex = 5;
-            this.btnPesquisarAluno.UseVisualStyleBackColor = true;
-            // 
-            // txbPesquisarAluno
-            // 
-            this.txbPesquisarAluno.Location = new System.Drawing.Point(252, 203);
-            this.txbPesquisarAluno.Name = "txbPesquisarAluno";
-            this.txbPesquisarAluno.Size = new System.Drawing.Size(100, 20);
-            this.txbPesquisarAluno.TabIndex = 4;
-            // 
-            // lblPesquisarAluno
-            // 
-            this.lblPesquisarAluno.AutoSize = true;
-            this.lblPesquisarAluno.Location = new System.Drawing.Point(193, 205);
-            this.lblPesquisarAluno.Name = "lblPesquisarAluno";
-            this.lblPesquisarAluno.Size = new System.Drawing.Size(53, 13);
-            this.lblPesquisarAluno.TabIndex = 3;
-            this.lblPesquisarAluno.Text = "Pesquisar";
-            // 
             // dgvAlunos
             // 
             this.dgvAlunos.AllowUserToAddRows = false;
@@ -625,9 +681,6 @@
             this.tbpTurma.Controls.Add(this.gpbTurma);
             this.tbpTurma.Controls.Add(this.btnEditarTurma);
             this.tbpTurma.Controls.Add(this.btnNovaTurma);
-            this.tbpTurma.Controls.Add(this.btnPesquisarTurma);
-            this.tbpTurma.Controls.Add(this.txbPesquisarTurma);
-            this.tbpTurma.Controls.Add(this.lblPesquisarTurma);
             this.tbpTurma.Controls.Add(this.dgvTurma);
             this.tbpTurma.Controls.Add(this.menuStrip1);
             this.tbpTurma.Location = new System.Drawing.Point(4, 22);
@@ -638,18 +691,230 @@
             this.tbpTurma.Text = "Turma";
             this.tbpTurma.UseVisualStyleBackColor = true;
             // 
+            // gpbTurma
+            // 
+            this.gpbTurma.Controls.Add(this.lblSemestreInicioTurmaResultado);
+            this.gpbTurma.Controls.Add(this.lblSemestreInicio);
+            this.gpbTurma.Controls.Add(this.lblAnoInicioTurmaResultado);
+            this.gpbTurma.Controls.Add(this.lblAnoInicio);
+            this.gpbTurma.Controls.Add(this.lblCampusTurmaResultado);
+            this.gpbTurma.Controls.Add(this.lblCurso);
+            this.gpbTurma.Controls.Add(this.lblCursoTurmaResultado);
+            this.gpbTurma.Controls.Add(this.lblCampus);
+            this.gpbTurma.Controls.Add(this.lblNumeroTurmaResultado);
+            this.gpbTurma.Controls.Add(this.lblAlfabetoTurmaResultado);
+            this.gpbTurma.Controls.Add(this.lblSiglaTurmaResultado);
+            this.gpbTurma.Controls.Add(this.lblCodigo);
+            this.gpbTurma.Controls.Add(this.lblIdTurmaResultado);
+            this.gpbTurma.Controls.Add(this.lblIdTurma);
+            this.gpbTurma.Location = new System.Drawing.Point(69, 230);
+            this.gpbTurma.Name = "gpbTurma";
+            this.gpbTurma.Size = new System.Drawing.Size(468, 126);
+            this.gpbTurma.TabIndex = 10;
+            this.gpbTurma.TabStop = false;
+            // 
+            // lblSemestreInicioTurmaResultado
+            // 
+            this.lblSemestreInicioTurmaResultado.AutoSize = true;
+            this.lblSemestreInicioTurmaResultado.Location = new System.Drawing.Point(349, 95);
+            this.lblSemestreInicioTurmaResultado.Name = "lblSemestreInicioTurmaResultado";
+            this.lblSemestreInicioTurmaResultado.Size = new System.Drawing.Size(10, 13);
+            this.lblSemestreInicioTurmaResultado.TabIndex = 13;
+            this.lblSemestreInicioTurmaResultado.Text = "-";
+            // 
+            // lblSemestreInicio
+            // 
+            this.lblSemestreInicio.AutoSize = true;
+            this.lblSemestreInicio.Location = new System.Drawing.Point(239, 95);
+            this.lblSemestreInicio.Name = "lblSemestreInicio";
+            this.lblSemestreInicio.Size = new System.Drawing.Size(99, 13);
+            this.lblSemestreInicio.TabIndex = 12;
+            this.lblSemestreInicio.Text = "Semestre de Início:";
+            // 
+            // lblAnoInicioTurmaResultado
+            // 
+            this.lblAnoInicioTurmaResultado.AutoSize = true;
+            this.lblAnoInicioTurmaResultado.Location = new System.Drawing.Point(349, 58);
+            this.lblAnoInicioTurmaResultado.Name = "lblAnoInicioTurmaResultado";
+            this.lblAnoInicioTurmaResultado.Size = new System.Drawing.Size(10, 13);
+            this.lblAnoInicioTurmaResultado.TabIndex = 11;
+            this.lblAnoInicioTurmaResultado.Text = "-";
+            // 
+            // lblAnoInicio
+            // 
+            this.lblAnoInicio.AutoSize = true;
+            this.lblAnoInicio.Location = new System.Drawing.Point(264, 58);
+            this.lblAnoInicio.Name = "lblAnoInicio";
+            this.lblAnoInicio.Size = new System.Drawing.Size(74, 13);
+            this.lblAnoInicio.TabIndex = 10;
+            this.lblAnoInicio.Text = "Ano de Início:";
+            // 
+            // lblCampusTurmaResultado
+            // 
+            this.lblCampusTurmaResultado.AutoSize = true;
+            this.lblCampusTurmaResultado.Location = new System.Drawing.Point(69, 95);
+            this.lblCampusTurmaResultado.Name = "lblCampusTurmaResultado";
+            this.lblCampusTurmaResultado.Size = new System.Drawing.Size(10, 13);
+            this.lblCampusTurmaResultado.TabIndex = 9;
+            this.lblCampusTurmaResultado.Text = "-";
+            // 
+            // lblCurso
+            // 
+            this.lblCurso.AutoSize = true;
+            this.lblCurso.Location = new System.Drawing.Point(25, 58);
+            this.lblCurso.Name = "lblCurso";
+            this.lblCurso.Size = new System.Drawing.Size(37, 13);
+            this.lblCurso.TabIndex = 8;
+            this.lblCurso.Text = "Curso:";
+            // 
+            // lblCursoTurmaResultado
+            // 
+            this.lblCursoTurmaResultado.AutoSize = true;
+            this.lblCursoTurmaResultado.Location = new System.Drawing.Point(69, 58);
+            this.lblCursoTurmaResultado.Name = "lblCursoTurmaResultado";
+            this.lblCursoTurmaResultado.Size = new System.Drawing.Size(10, 13);
+            this.lblCursoTurmaResultado.TabIndex = 7;
+            this.lblCursoTurmaResultado.Text = "-";
+            // 
+            // lblCampus
+            // 
+            this.lblCampus.AutoSize = true;
+            this.lblCampus.Location = new System.Drawing.Point(14, 95);
+            this.lblCampus.Name = "lblCampus";
+            this.lblCampus.Size = new System.Drawing.Size(48, 13);
+            this.lblCampus.TabIndex = 6;
+            this.lblCampus.Text = "Campus:";
+            // 
+            // lblNumeroTurmaResultado
+            // 
+            this.lblNumeroTurmaResultado.AutoSize = true;
+            this.lblNumeroTurmaResultado.Location = new System.Drawing.Point(397, 20);
+            this.lblNumeroTurmaResultado.Name = "lblNumeroTurmaResultado";
+            this.lblNumeroTurmaResultado.Size = new System.Drawing.Size(10, 13);
+            this.lblNumeroTurmaResultado.TabIndex = 5;
+            this.lblNumeroTurmaResultado.Text = "-";
+            // 
+            // lblAlfabetoTurmaResultado
+            // 
+            this.lblAlfabetoTurmaResultado.AutoSize = true;
+            this.lblAlfabetoTurmaResultado.Location = new System.Drawing.Point(380, 20);
+            this.lblAlfabetoTurmaResultado.Name = "lblAlfabetoTurmaResultado";
+            this.lblAlfabetoTurmaResultado.Size = new System.Drawing.Size(10, 13);
+            this.lblAlfabetoTurmaResultado.TabIndex = 4;
+            this.lblAlfabetoTurmaResultado.Text = "-";
+            // 
+            // lblSiglaTurmaResultado
+            // 
+            this.lblSiglaTurmaResultado.AutoSize = true;
+            this.lblSiglaTurmaResultado.Location = new System.Drawing.Point(351, 20);
+            this.lblSiglaTurmaResultado.Name = "lblSiglaTurmaResultado";
+            this.lblSiglaTurmaResultado.Size = new System.Drawing.Size(10, 13);
+            this.lblSiglaTurmaResultado.TabIndex = 3;
+            this.lblSiglaTurmaResultado.Text = "-";
+            // 
+            // lblCodigo
+            // 
+            this.lblCodigo.AutoSize = true;
+            this.lblCodigo.Location = new System.Drawing.Point(295, 20);
+            this.lblCodigo.Name = "lblCodigo";
+            this.lblCodigo.Size = new System.Drawing.Size(43, 13);
+            this.lblCodigo.TabIndex = 2;
+            this.lblCodigo.Text = "Código:";
+            // 
+            // lblIdTurmaResultado
+            // 
+            this.lblIdTurmaResultado.AutoSize = true;
+            this.lblIdTurmaResultado.Location = new System.Drawing.Point(69, 20);
+            this.lblIdTurmaResultado.Name = "lblIdTurmaResultado";
+            this.lblIdTurmaResultado.Size = new System.Drawing.Size(10, 13);
+            this.lblIdTurmaResultado.TabIndex = 1;
+            this.lblIdTurmaResultado.Text = "-";
+            // 
+            // lblIdTurma
+            // 
+            this.lblIdTurma.AutoSize = true;
+            this.lblIdTurma.Location = new System.Drawing.Point(41, 20);
+            this.lblIdTurma.Name = "lblIdTurma";
+            this.lblIdTurma.Size = new System.Drawing.Size(21, 13);
+            this.lblIdTurma.TabIndex = 0;
+            this.lblIdTurma.Text = "ID:";
+            // 
+            // btnEditarTurma
+            // 
+            this.btnEditarTurma.Image = ((System.Drawing.Image)(resources.GetObject("btnEditarTurma.Image")));
+            this.btnEditarTurma.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEditarTurma.Location = new System.Drawing.Point(494, 387);
+            this.btnEditarTurma.Name = "btnEditarTurma";
+            this.btnEditarTurma.Size = new System.Drawing.Size(109, 37);
+            this.btnEditarTurma.TabIndex = 8;
+            this.btnEditarTurma.Text = "Editar Turma";
+            this.btnEditarTurma.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnEditarTurma.UseVisualStyleBackColor = true;
+            this.btnEditarTurma.Click += new System.EventHandler(this.btnEditarTurma_Click);
+            // 
+            // btnNovaTurma
+            // 
+            this.btnNovaTurma.Image = ((System.Drawing.Image)(resources.GetObject("btnNovaTurma.Image")));
+            this.btnNovaTurma.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnNovaTurma.Location = new System.Drawing.Point(6, 387);
+            this.btnNovaTurma.Name = "btnNovaTurma";
+            this.btnNovaTurma.Size = new System.Drawing.Size(109, 37);
+            this.btnNovaTurma.TabIndex = 7;
+            this.btnNovaTurma.Text = "Nova Turma";
+            this.btnNovaTurma.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnNovaTurma.UseVisualStyleBackColor = true;
+            this.btnNovaTurma.Click += new System.EventHandler(this.btnNovaTurma_Click);
+            // 
             // dgvTurma
             // 
             this.dgvTurma.AllowUserToAddRows = false;
             this.dgvTurma.AllowUserToDeleteRows = false;
             this.dgvTurma.AllowUserToResizeColumns = false;
             this.dgvTurma.AllowUserToResizeRows = false;
+            this.dgvTurma.AutoGenerateColumns = false;
             this.dgvTurma.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvTurma.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.iDDataGridViewTextBoxColumn,
+            this.siglaDataGridViewTextBoxColumn,
+            this.letraDataGridViewTextBoxColumn,
+            this.numeroDataGridViewTextBoxColumn,
+            this.cursoDataGridViewTextBoxColumn,
+            this.anoDeInicioDataGridViewTextBoxColumn,
+            this.semestreDeInicioDataGridViewTextBoxColumn});
+            this.dgvTurma.DataSource = this.dataTable1BindingSource;
             this.dgvTurma.Location = new System.Drawing.Point(6, 30);
+            this.dgvTurma.MultiSelect = false;
             this.dgvTurma.Name = "dgvTurma";
             this.dgvTurma.ReadOnly = true;
+            this.dgvTurma.ShowEditingIcon = false;
             this.dgvTurma.Size = new System.Drawing.Size(597, 164);
             this.dgvTurma.TabIndex = 3;
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.BackColor = System.Drawing.Color.Gainsboro;
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.configurarToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(3, 3);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(603, 24);
+            this.menuStrip1.TabIndex = 9;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // configurarToolStripMenuItem
+            // 
+            this.configurarToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.siglaToolStripMenuItem});
+            this.configurarToolStripMenuItem.Name = "configurarToolStripMenuItem";
+            this.configurarToolStripMenuItem.Size = new System.Drawing.Size(76, 20);
+            this.configurarToolStripMenuItem.Text = "Configurar";
+            // 
+            // siglaToolStripMenuItem
+            // 
+            this.siglaToolStripMenuItem.Name = "siglaToolStripMenuItem";
+            this.siglaToolStripMenuItem.Size = new System.Drawing.Size(99, 22);
+            this.siglaToolStripMenuItem.Text = "Sigla";
+            this.siglaToolStripMenuItem.Click += new System.EventHandler(this.siglaToolStripMenuItem_Click);
             // 
             // pictureBox1
             // 
@@ -703,303 +968,94 @@
             // 
             this.tb_alunoTableAdapter.ClearBeforeFill = true;
             // 
-            // lblPesquisarTurma
+            // dts_turma
             // 
-            this.lblPesquisarTurma.AutoSize = true;
-            this.lblPesquisarTurma.Location = new System.Drawing.Point(193, 205);
-            this.lblPesquisarTurma.Name = "lblPesquisarTurma";
-            this.lblPesquisarTurma.Size = new System.Drawing.Size(53, 13);
-            this.lblPesquisarTurma.TabIndex = 4;
-            this.lblPesquisarTurma.Text = "Pesquisar";
+            this.dts_turma.DataSetName = "dts_turma";
+            this.dts_turma.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // txbPesquisarTurma
+            // tbturmaBindingSource
             // 
-            this.txbPesquisarTurma.Location = new System.Drawing.Point(252, 203);
-            this.txbPesquisarTurma.Name = "txbPesquisarTurma";
-            this.txbPesquisarTurma.Size = new System.Drawing.Size(100, 20);
-            this.txbPesquisarTurma.TabIndex = 5;
+            this.tbturmaBindingSource.DataMember = "tb_turma";
+            this.tbturmaBindingSource.DataSource = this.dts_turma;
             // 
-            // btnPesquisarTurma
+            // tb_turmaTableAdapter
             // 
-            this.btnPesquisarTurma.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnPesquisarTurma.BackgroundImage")));
-            this.btnPesquisarTurma.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnPesquisarTurma.Location = new System.Drawing.Point(358, 200);
-            this.btnPesquisarTurma.Name = "btnPesquisarTurma";
-            this.btnPesquisarTurma.Size = new System.Drawing.Size(25, 25);
-            this.btnPesquisarTurma.TabIndex = 6;
-            this.btnPesquisarTurma.UseVisualStyleBackColor = true;
+            this.tb_turmaTableAdapter.ClearBeforeFill = true;
             // 
-            // btnNovaTurma
+            // listarTurma
             // 
-            this.btnNovaTurma.Image = ((System.Drawing.Image)(resources.GetObject("btnNovaTurma.Image")));
-            this.btnNovaTurma.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNovaTurma.Location = new System.Drawing.Point(6, 387);
-            this.btnNovaTurma.Name = "btnNovaTurma";
-            this.btnNovaTurma.Size = new System.Drawing.Size(109, 37);
-            this.btnNovaTurma.TabIndex = 7;
-            this.btnNovaTurma.Text = "Nova Turma";
-            this.btnNovaTurma.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnNovaTurma.UseVisualStyleBackColor = true;
-            this.btnNovaTurma.Click += new System.EventHandler(this.btnNovaTurma_Click);
+            this.listarTurma.DataSetName = "ListarTurma";
+            this.listarTurma.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // btnEditarTurma
+            // listarTurmaBindingSource
             // 
-            this.btnEditarTurma.Image = ((System.Drawing.Image)(resources.GetObject("btnEditarTurma.Image")));
-            this.btnEditarTurma.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEditarTurma.Location = new System.Drawing.Point(494, 387);
-            this.btnEditarTurma.Name = "btnEditarTurma";
-            this.btnEditarTurma.Size = new System.Drawing.Size(109, 37);
-            this.btnEditarTurma.TabIndex = 8;
-            this.btnEditarTurma.Text = "Editar Turma";
-            this.btnEditarTurma.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnEditarTurma.UseVisualStyleBackColor = true;
-            this.btnEditarTurma.Click += new System.EventHandler(this.btnEditarTurma_Click);
+            this.listarTurmaBindingSource.DataSource = this.listarTurma;
+            this.listarTurmaBindingSource.Position = 0;
             // 
-            // menuStrip1
+            // dataTable1BindingSource
             // 
-            this.menuStrip1.BackColor = System.Drawing.Color.Gainsboro;
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.configurarToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(3, 3);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(603, 24);
-            this.menuStrip1.TabIndex = 9;
-            this.menuStrip1.Text = "menuStrip1";
+            this.dataTable1BindingSource.DataMember = "DataTable1";
+            this.dataTable1BindingSource.DataSource = this.listarTurmaBindingSource;
             // 
-            // configurarToolStripMenuItem
+            // dataTable1TableAdapter
             // 
-            this.configurarToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.siglaToolStripMenuItem});
-            this.configurarToolStripMenuItem.Name = "configurarToolStripMenuItem";
-            this.configurarToolStripMenuItem.Size = new System.Drawing.Size(76, 20);
-            this.configurarToolStripMenuItem.Text = "Configurar";
+            this.dataTable1TableAdapter.ClearBeforeFill = true;
             // 
-            // siglaToolStripMenuItem
+            // iDDataGridViewTextBoxColumn
             // 
-            this.siglaToolStripMenuItem.Name = "siglaToolStripMenuItem";
-            this.siglaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.siglaToolStripMenuItem.Text = "Sigla";
-            this.siglaToolStripMenuItem.Click += new System.EventHandler(this.siglaToolStripMenuItem_Click);
+            this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
+            this.iDDataGridViewTextBoxColumn.HeaderText = "ID";
+            this.iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
+            this.iDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.iDDataGridViewTextBoxColumn.Width = 50;
             // 
-            // gpbTurma
+            // siglaDataGridViewTextBoxColumn
             // 
-            this.gpbTurma.Controls.Add(this.lblSemestreInicioTurmaResultado);
-            this.gpbTurma.Controls.Add(this.lblSemestreInicio);
-            this.gpbTurma.Controls.Add(this.lblAnoInicioTurmaResultado);
-            this.gpbTurma.Controls.Add(this.lblAnoInicio);
-            this.gpbTurma.Controls.Add(this.lblCampusTurmaResultado);
-            this.gpbTurma.Controls.Add(this.lblCurso);
-            this.gpbTurma.Controls.Add(this.lblCursoTurmaResultado);
-            this.gpbTurma.Controls.Add(this.lblCampus);
-            this.gpbTurma.Controls.Add(this.lblNumeroTurmaResultado);
-            this.gpbTurma.Controls.Add(this.lblAlfabetoTurmaResultado);
-            this.gpbTurma.Controls.Add(this.lblSiglaTurmaResultado);
-            this.gpbTurma.Controls.Add(this.lblCodigo);
-            this.gpbTurma.Controls.Add(this.lblIdTurmaResultado);
-            this.gpbTurma.Controls.Add(this.lblIdTurma);
-            this.gpbTurma.Location = new System.Drawing.Point(69, 246);
-            this.gpbTurma.Name = "gpbTurma";
-            this.gpbTurma.Size = new System.Drawing.Size(468, 126);
-            this.gpbTurma.TabIndex = 10;
-            this.gpbTurma.TabStop = false;
+            this.siglaDataGridViewTextBoxColumn.DataPropertyName = "Sigla";
+            this.siglaDataGridViewTextBoxColumn.HeaderText = "Sigla";
+            this.siglaDataGridViewTextBoxColumn.Name = "siglaDataGridViewTextBoxColumn";
+            this.siglaDataGridViewTextBoxColumn.ReadOnly = true;
+            this.siglaDataGridViewTextBoxColumn.Width = 50;
             // 
-            // lblIdTurma
+            // letraDataGridViewTextBoxColumn
             // 
-            this.lblIdTurma.AutoSize = true;
-            this.lblIdTurma.Location = new System.Drawing.Point(41, 20);
-            this.lblIdTurma.Name = "lblIdTurma";
-            this.lblIdTurma.Size = new System.Drawing.Size(21, 13);
-            this.lblIdTurma.TabIndex = 0;
-            this.lblIdTurma.Text = "ID:";
+            this.letraDataGridViewTextBoxColumn.DataPropertyName = "Letra";
+            this.letraDataGridViewTextBoxColumn.HeaderText = "Letra";
+            this.letraDataGridViewTextBoxColumn.Name = "letraDataGridViewTextBoxColumn";
+            this.letraDataGridViewTextBoxColumn.ReadOnly = true;
+            this.letraDataGridViewTextBoxColumn.Width = 50;
             // 
-            // lblIdTurmaResultado
+            // numeroDataGridViewTextBoxColumn
             // 
-            this.lblIdTurmaResultado.AutoSize = true;
-            this.lblIdTurmaResultado.Location = new System.Drawing.Point(69, 20);
-            this.lblIdTurmaResultado.Name = "lblIdTurmaResultado";
-            this.lblIdTurmaResultado.Size = new System.Drawing.Size(10, 13);
-            this.lblIdTurmaResultado.TabIndex = 1;
-            this.lblIdTurmaResultado.Text = "-";
+            this.numeroDataGridViewTextBoxColumn.DataPropertyName = "Numero";
+            this.numeroDataGridViewTextBoxColumn.HeaderText = "Numero Campus";
+            this.numeroDataGridViewTextBoxColumn.Name = "numeroDataGridViewTextBoxColumn";
+            this.numeroDataGridViewTextBoxColumn.ReadOnly = true;
+            this.numeroDataGridViewTextBoxColumn.Width = 60;
             // 
-            // lblCodigo
+            // cursoDataGridViewTextBoxColumn
             // 
-            this.lblCodigo.AutoSize = true;
-            this.lblCodigo.Location = new System.Drawing.Point(295, 20);
-            this.lblCodigo.Name = "lblCodigo";
-            this.lblCodigo.Size = new System.Drawing.Size(43, 13);
-            this.lblCodigo.TabIndex = 2;
-            this.lblCodigo.Text = "Código:";
+            this.cursoDataGridViewTextBoxColumn.DataPropertyName = "Curso";
+            this.cursoDataGridViewTextBoxColumn.HeaderText = "Curso";
+            this.cursoDataGridViewTextBoxColumn.Name = "cursoDataGridViewTextBoxColumn";
+            this.cursoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.cursoDataGridViewTextBoxColumn.Width = 235;
             // 
-            // lblSiglaTurmaResultado
+            // anoDeInicioDataGridViewTextBoxColumn
             // 
-            this.lblSiglaTurmaResultado.AutoSize = true;
-            this.lblSiglaTurmaResultado.Location = new System.Drawing.Point(351, 20);
-            this.lblSiglaTurmaResultado.Name = "lblSiglaTurmaResultado";
-            this.lblSiglaTurmaResultado.Size = new System.Drawing.Size(10, 13);
-            this.lblSiglaTurmaResultado.TabIndex = 3;
-            this.lblSiglaTurmaResultado.Text = "-";
+            this.anoDeInicioDataGridViewTextBoxColumn.DataPropertyName = "Ano de Inicio";
+            this.anoDeInicioDataGridViewTextBoxColumn.HeaderText = "Ano de Inicio";
+            this.anoDeInicioDataGridViewTextBoxColumn.Name = "anoDeInicioDataGridViewTextBoxColumn";
+            this.anoDeInicioDataGridViewTextBoxColumn.ReadOnly = true;
+            this.anoDeInicioDataGridViewTextBoxColumn.Width = 50;
             // 
-            // lblAlfabetoTurmaResultado
+            // semestreDeInicioDataGridViewTextBoxColumn
             // 
-            this.lblAlfabetoTurmaResultado.AutoSize = true;
-            this.lblAlfabetoTurmaResultado.Location = new System.Drawing.Point(380, 20);
-            this.lblAlfabetoTurmaResultado.Name = "lblAlfabetoTurmaResultado";
-            this.lblAlfabetoTurmaResultado.Size = new System.Drawing.Size(10, 13);
-            this.lblAlfabetoTurmaResultado.TabIndex = 4;
-            this.lblAlfabetoTurmaResultado.Text = "-";
-            // 
-            // lblNumeroTurmaResultado
-            // 
-            this.lblNumeroTurmaResultado.AutoSize = true;
-            this.lblNumeroTurmaResultado.Location = new System.Drawing.Point(397, 20);
-            this.lblNumeroTurmaResultado.Name = "lblNumeroTurmaResultado";
-            this.lblNumeroTurmaResultado.Size = new System.Drawing.Size(10, 13);
-            this.lblNumeroTurmaResultado.TabIndex = 5;
-            this.lblNumeroTurmaResultado.Text = "-";
-            // 
-            // lblCampus
-            // 
-            this.lblCampus.AutoSize = true;
-            this.lblCampus.Location = new System.Drawing.Point(14, 95);
-            this.lblCampus.Name = "lblCampus";
-            this.lblCampus.Size = new System.Drawing.Size(48, 13);
-            this.lblCampus.TabIndex = 6;
-            this.lblCampus.Text = "Campus:";
-            // 
-            // lblCursoTurmaResultado
-            // 
-            this.lblCursoTurmaResultado.AutoSize = true;
-            this.lblCursoTurmaResultado.Location = new System.Drawing.Point(69, 58);
-            this.lblCursoTurmaResultado.Name = "lblCursoTurmaResultado";
-            this.lblCursoTurmaResultado.Size = new System.Drawing.Size(10, 13);
-            this.lblCursoTurmaResultado.TabIndex = 7;
-            this.lblCursoTurmaResultado.Text = "-";
-            // 
-            // lblCurso
-            // 
-            this.lblCurso.AutoSize = true;
-            this.lblCurso.Location = new System.Drawing.Point(25, 58);
-            this.lblCurso.Name = "lblCurso";
-            this.lblCurso.Size = new System.Drawing.Size(37, 13);
-            this.lblCurso.TabIndex = 8;
-            this.lblCurso.Text = "Curso:";
-            // 
-            // lblCampusTurmaResultado
-            // 
-            this.lblCampusTurmaResultado.AutoSize = true;
-            this.lblCampusTurmaResultado.Location = new System.Drawing.Point(69, 95);
-            this.lblCampusTurmaResultado.Name = "lblCampusTurmaResultado";
-            this.lblCampusTurmaResultado.Size = new System.Drawing.Size(10, 13);
-            this.lblCampusTurmaResultado.TabIndex = 9;
-            this.lblCampusTurmaResultado.Text = "-";
-            // 
-            // lblAnoInicio
-            // 
-            this.lblAnoInicio.AutoSize = true;
-            this.lblAnoInicio.Location = new System.Drawing.Point(264, 58);
-            this.lblAnoInicio.Name = "lblAnoInicio";
-            this.lblAnoInicio.Size = new System.Drawing.Size(74, 13);
-            this.lblAnoInicio.TabIndex = 10;
-            this.lblAnoInicio.Text = "Ano de Início:";
-            // 
-            // lblAnoInicioTurmaResultado
-            // 
-            this.lblAnoInicioTurmaResultado.AutoSize = true;
-            this.lblAnoInicioTurmaResultado.Location = new System.Drawing.Point(349, 58);
-            this.lblAnoInicioTurmaResultado.Name = "lblAnoInicioTurmaResultado";
-            this.lblAnoInicioTurmaResultado.Size = new System.Drawing.Size(10, 13);
-            this.lblAnoInicioTurmaResultado.TabIndex = 11;
-            this.lblAnoInicioTurmaResultado.Text = "-";
-            // 
-            // lblSemestreInicio
-            // 
-            this.lblSemestreInicio.AutoSize = true;
-            this.lblSemestreInicio.Location = new System.Drawing.Point(239, 95);
-            this.lblSemestreInicio.Name = "lblSemestreInicio";
-            this.lblSemestreInicio.Size = new System.Drawing.Size(99, 13);
-            this.lblSemestreInicio.TabIndex = 12;
-            this.lblSemestreInicio.Text = "Semestre de Início:";
-            // 
-            // lblSemestreInicioTurmaResultado
-            // 
-            this.lblSemestreInicioTurmaResultado.AutoSize = true;
-            this.lblSemestreInicioTurmaResultado.Location = new System.Drawing.Point(349, 95);
-            this.lblSemestreInicioTurmaResultado.Name = "lblSemestreInicioTurmaResultado";
-            this.lblSemestreInicioTurmaResultado.Size = new System.Drawing.Size(10, 13);
-            this.lblSemestreInicioTurmaResultado.TabIndex = 13;
-            this.lblSemestreInicioTurmaResultado.Text = "-";
-            // 
-            // lblSalaAula
-            // 
-            this.lblSalaAula.AutoSize = true;
-            this.lblSalaAula.Location = new System.Drawing.Point(72, 26);
-            this.lblSalaAula.Name = "lblSalaAula";
-            this.lblSalaAula.Size = new System.Drawing.Size(10, 13);
-            this.lblSalaAula.TabIndex = 20;
-            this.lblSalaAula.Text = "-";
-            // 
-            // lblAlfabetoSalaAula
-            // 
-            this.lblAlfabetoSalaAula.AutoSize = true;
-            this.lblAlfabetoSalaAula.Location = new System.Drawing.Point(72, 50);
-            this.lblAlfabetoSalaAula.Name = "lblAlfabetoSalaAula";
-            this.lblAlfabetoSalaAula.Size = new System.Drawing.Size(10, 13);
-            this.lblAlfabetoSalaAula.TabIndex = 21;
-            this.lblAlfabetoSalaAula.Text = "-";
-            // 
-            // lblAndarAula
-            // 
-            this.lblAndarAula.AutoSize = true;
-            this.lblAndarAula.Location = new System.Drawing.Point(72, 76);
-            this.lblAndarAula.Name = "lblAndarAula";
-            this.lblAndarAula.Size = new System.Drawing.Size(10, 13);
-            this.lblAndarAula.TabIndex = 22;
-            this.lblAndarAula.Text = "-";
-            // 
-            // lblSiglaTurmaAula
-            // 
-            this.lblSiglaTurmaAula.AutoSize = true;
-            this.lblSiglaTurmaAula.Location = new System.Drawing.Point(301, 26);
-            this.lblSiglaTurmaAula.Name = "lblSiglaTurmaAula";
-            this.lblSiglaTurmaAula.Size = new System.Drawing.Size(28, 13);
-            this.lblSiglaTurmaAula.TabIndex = 23;
-            this.lblSiglaTurmaAula.Text = "DS4";
-            // 
-            // lblCapacidadeSalaAula
-            // 
-            this.lblCapacidadeSalaAula.AutoSize = true;
-            this.lblCapacidadeSalaAula.Location = new System.Drawing.Point(301, 50);
-            this.lblCapacidadeSalaAula.Name = "lblCapacidadeSalaAula";
-            this.lblCapacidadeSalaAula.Size = new System.Drawing.Size(10, 13);
-            this.lblCapacidadeSalaAula.TabIndex = 24;
-            this.lblCapacidadeSalaAula.Text = "-";
-            // 
-            // lblQuantidadeAlunosAula
-            // 
-            this.lblQuantidadeAlunosAula.AutoSize = true;
-            this.lblQuantidadeAlunosAula.Location = new System.Drawing.Point(301, 76);
-            this.lblQuantidadeAlunosAula.Name = "lblQuantidadeAlunosAula";
-            this.lblQuantidadeAlunosAula.Size = new System.Drawing.Size(10, 13);
-            this.lblQuantidadeAlunosAula.TabIndex = 25;
-            this.lblQuantidadeAlunosAula.Text = "-";
-            // 
-            // lblAlfabetoTurmaAula
-            // 
-            this.lblAlfabetoTurmaAula.AutoSize = true;
-            this.lblAlfabetoTurmaAula.Location = new System.Drawing.Point(333, 26);
-            this.lblAlfabetoTurmaAula.Name = "lblAlfabetoTurmaAula";
-            this.lblAlfabetoTurmaAula.Size = new System.Drawing.Size(14, 13);
-            this.lblAlfabetoTurmaAula.TabIndex = 26;
-            this.lblAlfabetoTurmaAula.Text = "P";
-            // 
-            // lblNumeroTurmaAula
-            // 
-            this.lblNumeroTurmaAula.AutoSize = true;
-            this.lblNumeroTurmaAula.Location = new System.Drawing.Point(347, 26);
-            this.lblNumeroTurmaAula.Name = "lblNumeroTurmaAula";
-            this.lblNumeroTurmaAula.Size = new System.Drawing.Size(19, 13);
-            this.lblNumeroTurmaAula.TabIndex = 27;
-            this.lblNumeroTurmaAula.Text = "20";
+            this.semestreDeInicioDataGridViewTextBoxColumn.DataPropertyName = "Semestre de Inicio";
+            this.semestreDeInicioDataGridViewTextBoxColumn.HeaderText = "Semestre de Inicio";
+            this.semestreDeInicioDataGridViewTextBoxColumn.Name = "semestreDeInicioDataGridViewTextBoxColumn";
+            this.semestreDeInicioDataGridViewTextBoxColumn.ReadOnly = true;
+            this.semestreDeInicioDataGridViewTextBoxColumn.Width = 60;
             // 
             // frmPrincipal
             // 
@@ -1025,7 +1081,6 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.tbpAluno.ResumeLayout(false);
-            this.tbpAluno.PerformLayout();
             this.gpbResultadoAluno.ResumeLayout(false);
             this.gpbResultadoAluno.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAlunos)).EndInit();
@@ -1033,12 +1088,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.unip_salaDataSet4)).EndInit();
             this.tbpTurma.ResumeLayout(false);
             this.tbpTurma.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvTurma)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
             this.gpbTurma.ResumeLayout(false);
             this.gpbTurma.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTurma)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dts_turma)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tbturmaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.listarTurma)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.listarTurmaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataTable1BindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1051,7 +1111,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TabPage tbpTurma;
         private System.Windows.Forms.DataGridView dgvAlunos;
-        private System.Windows.Forms.DataGridView dgvTurma;
         private System.Windows.Forms.Button btnMinimizar;
         private System.Windows.Forms.Button btnSair;
         private System.Windows.Forms.Button btnConfigurar;
@@ -1063,9 +1122,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn nomeAlunoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewCheckBoxColumn statusAlunoDataGridViewCheckBoxColumn;
         private System.Windows.Forms.GroupBox gpbResultadoAluno;
-        private System.Windows.Forms.Button btnPesquisarAluno;
-        private System.Windows.Forms.TextBox txbPesquisarAluno;
-        private System.Windows.Forms.Label lblPesquisarAluno;
         private System.Windows.Forms.Button btnEditarAluno;
         private System.Windows.Forms.Button btnCadastrarAluno;
         private System.Windows.Forms.Label lblNomeAluno;
@@ -1101,9 +1157,6 @@
         private System.Windows.Forms.Button btnPesquisarAula;
         private System.Windows.Forms.Button btnEditarTurma;
         private System.Windows.Forms.Button btnNovaTurma;
-        private System.Windows.Forms.Button btnPesquisarTurma;
-        private System.Windows.Forms.TextBox txbPesquisarTurma;
-        private System.Windows.Forms.Label lblPesquisarTurma;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem configurarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem siglaToolStripMenuItem;
@@ -1130,5 +1183,20 @@
         private System.Windows.Forms.Label lblAndarAula;
         private System.Windows.Forms.Label lblAlfabetoSalaAula;
         private System.Windows.Forms.Label lblSalaAula;
+        private dts_turma dts_turma;
+        private System.Windows.Forms.BindingSource tbturmaBindingSource;
+        private dts_turmaTableAdapters.tb_turmaTableAdapter tb_turmaTableAdapter;
+        public System.Windows.Forms.DataGridView dgvTurma;
+        private System.Windows.Forms.BindingSource listarTurmaBindingSource;
+        private ListarTurma listarTurma;
+        private System.Windows.Forms.BindingSource dataTable1BindingSource;
+        private ListarTurmaTableAdapters.DataTable1TableAdapter dataTable1TableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn siglaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn letraDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn numeroDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cursoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn anoDeInicioDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn semestreDeInicioDataGridViewTextBoxColumn;
     }
 }

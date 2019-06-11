@@ -30,15 +30,15 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmEditarAndar));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.lblIdAndar = new System.Windows.Forms.Label();
-            this.txbIdAndar = new System.Windows.Forms.TextBox();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.btnEditarAndar = new System.Windows.Forms.Button();
+            this.btnExluirAndar = new System.Windows.Forms.Button();
+            this.btnFechar = new System.Windows.Forms.Button();
             this.txbAndar = new System.Windows.Forms.TextBox();
             this.lblAndar = new System.Windows.Forms.Label();
-            this.btnFechar = new System.Windows.Forms.Button();
-            this.btnExluirAndar = new System.Windows.Forms.Button();
-            this.btnEditarAndar = new System.Windows.Forms.Button();
-            this.btnCancelar = new System.Windows.Forms.Button();
+            this.txbIdAndar = new System.Windows.Forms.TextBox();
+            this.lblIdAndar = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -59,33 +59,55 @@
             this.panel1.Size = new System.Drawing.Size(337, 242);
             this.panel1.TabIndex = 0;
             // 
-            // label1
+            // btnCancelar
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Kristen ITC", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(3, 3);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(143, 28);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Editar Andar";
+            this.btnCancelar.Image = ((System.Drawing.Image)(resources.GetObject("btnCancelar.Image")));
+            this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCancelar.Location = new System.Drawing.Point(143, 202);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(87, 37);
+            this.btnCancelar.TabIndex = 8;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
-            // lblIdAndar
+            // btnEditarAndar
             // 
-            this.lblIdAndar.AutoSize = true;
-            this.lblIdAndar.Location = new System.Drawing.Point(35, 57);
-            this.lblIdAndar.Name = "lblIdAndar";
-            this.lblIdAndar.Size = new System.Drawing.Size(18, 13);
-            this.lblIdAndar.TabIndex = 1;
-            this.lblIdAndar.Text = "ID";
+            this.btnEditarAndar.Image = ((System.Drawing.Image)(resources.GetObject("btnEditarAndar.Image")));
+            this.btnEditarAndar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEditarAndar.Location = new System.Drawing.Point(247, 202);
+            this.btnEditarAndar.Name = "btnEditarAndar";
+            this.btnEditarAndar.Size = new System.Drawing.Size(87, 37);
+            this.btnEditarAndar.TabIndex = 7;
+            this.btnEditarAndar.Text = "Salvar";
+            this.btnEditarAndar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnEditarAndar.UseVisualStyleBackColor = true;
+            this.btnEditarAndar.Click += new System.EventHandler(this.btnEditarAndar_Click);
             // 
-            // txbIdAndar
+            // btnExluirAndar
             // 
-            this.txbIdAndar.Enabled = false;
-            this.txbIdAndar.Location = new System.Drawing.Point(38, 73);
-            this.txbIdAndar.Name = "txbIdAndar";
-            this.txbIdAndar.ReadOnly = true;
-            this.txbIdAndar.Size = new System.Drawing.Size(67, 20);
-            this.txbIdAndar.TabIndex = 2;
+            this.btnExluirAndar.Image = ((System.Drawing.Image)(resources.GetObject("btnExluirAndar.Image")));
+            this.btnExluirAndar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnExluirAndar.Location = new System.Drawing.Point(8, 202);
+            this.btnExluirAndar.Name = "btnExluirAndar";
+            this.btnExluirAndar.Size = new System.Drawing.Size(87, 37);
+            this.btnExluirAndar.TabIndex = 6;
+            this.btnExluirAndar.Text = "Excluir";
+            this.btnExluirAndar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnExluirAndar.UseVisualStyleBackColor = true;
+            this.btnExluirAndar.Click += new System.EventHandler(this.btnExluirAndar_Click);
+            // 
+            // btnFechar
+            // 
+            this.btnFechar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnFechar.BackgroundImage")));
+            this.btnFechar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnFechar.Location = new System.Drawing.Point(309, 3);
+            this.btnFechar.Name = "btnFechar";
+            this.btnFechar.Size = new System.Drawing.Size(25, 25);
+            this.btnFechar.TabIndex = 5;
+            this.btnFechar.UseVisualStyleBackColor = true;
+            this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
             // 
             // txbAndar
             // 
@@ -103,53 +125,33 @@
             this.lblAndar.TabIndex = 3;
             this.lblAndar.Text = "Andar";
             // 
-            // btnFechar
+            // txbIdAndar
             // 
-            this.btnFechar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnFechar.BackgroundImage")));
-            this.btnFechar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnFechar.Location = new System.Drawing.Point(309, 3);
-            this.btnFechar.Name = "btnFechar";
-            this.btnFechar.Size = new System.Drawing.Size(25, 25);
-            this.btnFechar.TabIndex = 5;
-            this.btnFechar.UseVisualStyleBackColor = true;
-            this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
+            this.txbIdAndar.Enabled = false;
+            this.txbIdAndar.Location = new System.Drawing.Point(38, 73);
+            this.txbIdAndar.Name = "txbIdAndar";
+            this.txbIdAndar.ReadOnly = true;
+            this.txbIdAndar.Size = new System.Drawing.Size(67, 20);
+            this.txbIdAndar.TabIndex = 2;
             // 
-            // btnExluirAndar
+            // lblIdAndar
             // 
-            this.btnExluirAndar.Image = ((System.Drawing.Image)(resources.GetObject("btnExluirAndar.Image")));
-            this.btnExluirAndar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnExluirAndar.Location = new System.Drawing.Point(8, 202);
-            this.btnExluirAndar.Name = "btnExluirAndar";
-            this.btnExluirAndar.Size = new System.Drawing.Size(87, 37);
-            this.btnExluirAndar.TabIndex = 6;
-            this.btnExluirAndar.Text = "Excluir";
-            this.btnExluirAndar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnExluirAndar.UseVisualStyleBackColor = true;
+            this.lblIdAndar.AutoSize = true;
+            this.lblIdAndar.Location = new System.Drawing.Point(35, 57);
+            this.lblIdAndar.Name = "lblIdAndar";
+            this.lblIdAndar.Size = new System.Drawing.Size(18, 13);
+            this.lblIdAndar.TabIndex = 1;
+            this.lblIdAndar.Text = "ID";
             // 
-            // btnEditarAndar
+            // label1
             // 
-            this.btnEditarAndar.Image = ((System.Drawing.Image)(resources.GetObject("btnEditarAndar.Image")));
-            this.btnEditarAndar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEditarAndar.Location = new System.Drawing.Point(247, 202);
-            this.btnEditarAndar.Name = "btnEditarAndar";
-            this.btnEditarAndar.Size = new System.Drawing.Size(87, 37);
-            this.btnEditarAndar.TabIndex = 7;
-            this.btnEditarAndar.Text = "Salvar";
-            this.btnEditarAndar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnEditarAndar.UseVisualStyleBackColor = true;
-            // 
-            // btnCancelar
-            // 
-            this.btnCancelar.Image = ((System.Drawing.Image)(resources.GetObject("btnCancelar.Image")));
-            this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCancelar.Location = new System.Drawing.Point(143, 202);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(87, 37);
-            this.btnCancelar.TabIndex = 8;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnCancelar.UseVisualStyleBackColor = true;
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Kristen ITC", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(3, 3);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(143, 28);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Editar Andar";
             // 
             // frmEditarAndar
             // 

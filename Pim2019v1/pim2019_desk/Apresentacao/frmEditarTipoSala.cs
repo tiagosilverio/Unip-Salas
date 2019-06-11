@@ -26,5 +26,35 @@ namespace pim2019_desk.Apresentacao
         {
             this.Close();
         }
+
+        private void btnEditarTipoSala_Click(object sender, EventArgs e)
+        {
+            List<String> dadosTipo = new List<String>();
+            dadosTipo.Add(txbIdTipoSala.Text);
+            dadosTipo.Add(txbTipoSala.Text);
+            Modelo.Controle controle = new Modelo.Controle();
+            controle.EditarTipoSala(dadosTipo);
+            MessageBox.Show(controle.mensagem, "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            txbIdTipoSala.Text = "";
+            txbTipoSala.Text = "";
+        }
+
+        private void btnExcluirTipoSala_Click(object sender, EventArgs e)
+        {
+            List<String> dadosTipo = new List<String>();
+            dadosTipo.Add(txbIdTipoSala.Text);
+            dadosTipo.Add(txbTipoSala.Text);
+            Modelo.Controle controle = new Modelo.Controle();
+
+            DialogResult result = MessageBox.Show("Deseja realmente excluir?",
+                "Alerta de exclusão", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (result == DialogResult.Yes)
+            {
+                controle.ExcluirTipoSala(dadosTipo);
+                MessageBox.Show(controle.mensagem, "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txbIdTipoSala.Text = "";
+                txbTipoSala.Text = "";
+            }
+        }
     }
 }

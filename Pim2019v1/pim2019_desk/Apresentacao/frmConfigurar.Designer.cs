@@ -48,9 +48,6 @@
             this.tbpSala = new System.Windows.Forms.TabPage();
             this.btnEditarSala = new System.Windows.Forms.Button();
             this.btnNovaSala = new System.Windows.Forms.Button();
-            this.btnPesquisarSala = new System.Windows.Forms.Button();
-            this.txbPesquisarSala = new System.Windows.Forms.TextBox();
-            this.lblPesquisarSala = new System.Windows.Forms.Label();
             this.gpbResultadoSala = new System.Windows.Forms.GroupBox();
             this.lblAndarResultado = new System.Windows.Forms.Label();
             this.lblNumeroSalaResultado = new System.Windows.Forms.Label();
@@ -65,15 +62,21 @@
             this.lblTipoSala = new System.Windows.Forms.Label();
             this.lblIdSala = new System.Windows.Forms.Label();
             this.dgvSala = new System.Windows.Forms.DataGridView();
+            this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.numeroDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.capacidadeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.blocoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tipoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.andarDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataTable1BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.listarSalaxsdBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.listarSalaxsd = new pim2019_desk.ListarSalaxsd();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.editarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tipoDeSalaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.andarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.alfabetoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tbpCurso = new System.Windows.Forms.TabPage();
-            this.btnPesquisarCurso = new System.Windows.Forms.Button();
-            this.txbPesquisarCurso = new System.Windows.Forms.TextBox();
-            this.lblPesquisarCurso = new System.Windows.Forms.Label();
             this.gpbResultadoCurso = new System.Windows.Forms.GroupBox();
             this.lblNomeCursoResultado = new System.Windows.Forms.Label();
             this.lblIdCursoResultado = new System.Windows.Forms.Label();
@@ -85,9 +88,6 @@
             this.idCursoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nomeCursoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabCampus = new System.Windows.Forms.TabPage();
-            this.btnPesquisarCampus = new System.Windows.Forms.Button();
-            this.txbPesquisarCampus = new System.Windows.Forms.TextBox();
-            this.lblPesquisarCampus = new System.Windows.Forms.Label();
             this.btnEditarCampus = new System.Windows.Forms.Button();
             this.btnCadastrarCampus = new System.Windows.Forms.Button();
             this.gpbResultadoCampus = new System.Windows.Forms.GroupBox();
@@ -102,6 +102,10 @@
             this.numeroCampusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nomeCampusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.unip_salaDataSet8 = new pim2019_desk.unip_salaDataSet8();
+            this.tbsalaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tb_salaTableAdapter = new pim2019_desk.unip_salaDataSet8TableAdapters.tb_salaTableAdapter();
+            this.dataTable1TableAdapter = new pim2019_desk.ListarSalaxsdTableAdapters.DataTable1TableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.unip_salaDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbcursoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbcampusBindingSource)).BeginInit();
@@ -114,6 +118,9 @@
             this.tbpSala.SuspendLayout();
             this.gpbResultadoSala.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSala)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataTable1BindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.listarSalaxsdBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.listarSalaxsd)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.tbpCurso.SuspendLayout();
             this.gpbResultadoCurso.SuspendLayout();
@@ -122,6 +129,8 @@
             this.gpbResultadoCampus.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCampus)).BeginInit();
             this.tabControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.unip_salaDataSet8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tbsalaBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // unip_salaDataSet
@@ -219,9 +228,6 @@
             // 
             this.tbpSala.Controls.Add(this.btnEditarSala);
             this.tbpSala.Controls.Add(this.btnNovaSala);
-            this.tbpSala.Controls.Add(this.btnPesquisarSala);
-            this.tbpSala.Controls.Add(this.txbPesquisarSala);
-            this.tbpSala.Controls.Add(this.lblPesquisarSala);
             this.tbpSala.Controls.Add(this.gpbResultadoSala);
             this.tbpSala.Controls.Add(this.dgvSala);
             this.tbpSala.Controls.Add(this.menuStrip1);
@@ -259,32 +265,6 @@
             this.btnNovaSala.UseVisualStyleBackColor = true;
             this.btnNovaSala.Click += new System.EventHandler(this.btnNovaSala_Click);
             // 
-            // btnPesquisarSala
-            // 
-            this.btnPesquisarSala.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnPesquisarSala.BackgroundImage")));
-            this.btnPesquisarSala.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnPesquisarSala.Location = new System.Drawing.Point(284, 195);
-            this.btnPesquisarSala.Name = "btnPesquisarSala";
-            this.btnPesquisarSala.Size = new System.Drawing.Size(25, 25);
-            this.btnPesquisarSala.TabIndex = 5;
-            this.btnPesquisarSala.UseVisualStyleBackColor = true;
-            // 
-            // txbPesquisarSala
-            // 
-            this.txbPesquisarSala.Location = new System.Drawing.Point(178, 198);
-            this.txbPesquisarSala.Name = "txbPesquisarSala";
-            this.txbPesquisarSala.Size = new System.Drawing.Size(100, 20);
-            this.txbPesquisarSala.TabIndex = 4;
-            // 
-            // lblPesquisarSala
-            // 
-            this.lblPesquisarSala.AutoSize = true;
-            this.lblPesquisarSala.Location = new System.Drawing.Point(119, 201);
-            this.lblPesquisarSala.Name = "lblPesquisarSala";
-            this.lblPesquisarSala.Size = new System.Drawing.Size(53, 13);
-            this.lblPesquisarSala.TabIndex = 3;
-            this.lblPesquisarSala.Text = "Pesquisar";
-            // 
             // gpbResultadoSala
             // 
             this.gpbResultadoSala.Controls.Add(this.lblAndarResultado);
@@ -299,7 +279,7 @@
             this.gpbResultadoSala.Controls.Add(this.lblCapacidade);
             this.gpbResultadoSala.Controls.Add(this.lblTipoSala);
             this.gpbResultadoSala.Controls.Add(this.lblIdSala);
-            this.gpbResultadoSala.Location = new System.Drawing.Point(43, 226);
+            this.gpbResultadoSala.Location = new System.Drawing.Point(43, 220);
             this.gpbResultadoSala.Name = "gpbResultadoSala";
             this.gpbResultadoSala.Size = new System.Drawing.Size(381, 132);
             this.gpbResultadoSala.TabIndex = 2;
@@ -415,11 +395,89 @@
             // 
             // dgvSala
             // 
+            this.dgvSala.AllowUserToAddRows = false;
+            this.dgvSala.AllowUserToDeleteRows = false;
+            this.dgvSala.AllowUserToResizeColumns = false;
+            this.dgvSala.AllowUserToResizeRows = false;
+            this.dgvSala.AutoGenerateColumns = false;
             this.dgvSala.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvSala.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.iDDataGridViewTextBoxColumn,
+            this.numeroDataGridViewTextBoxColumn,
+            this.capacidadeDataGridViewTextBoxColumn,
+            this.blocoDataGridViewTextBoxColumn,
+            this.tipoDataGridViewTextBoxColumn,
+            this.andarDataGridViewTextBoxColumn});
+            this.dgvSala.DataSource = this.dataTable1BindingSource;
             this.dgvSala.Location = new System.Drawing.Point(6, 30);
+            this.dgvSala.MultiSelect = false;
             this.dgvSala.Name = "dgvSala";
+            this.dgvSala.ReadOnly = true;
             this.dgvSala.Size = new System.Drawing.Size(460, 162);
             this.dgvSala.TabIndex = 1;
+            this.dgvSala.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSala_CellEnter);
+            this.dgvSala.SelectionChanged += new System.EventHandler(this.dgvSala_SelectionChanged);
+            // 
+            // iDDataGridViewTextBoxColumn
+            // 
+            this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
+            this.iDDataGridViewTextBoxColumn.HeaderText = "ID";
+            this.iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
+            this.iDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.iDDataGridViewTextBoxColumn.Width = 50;
+            // 
+            // numeroDataGridViewTextBoxColumn
+            // 
+            this.numeroDataGridViewTextBoxColumn.DataPropertyName = "Numero";
+            this.numeroDataGridViewTextBoxColumn.HeaderText = "Numero";
+            this.numeroDataGridViewTextBoxColumn.Name = "numeroDataGridViewTextBoxColumn";
+            this.numeroDataGridViewTextBoxColumn.ReadOnly = true;
+            this.numeroDataGridViewTextBoxColumn.Width = 50;
+            // 
+            // capacidadeDataGridViewTextBoxColumn
+            // 
+            this.capacidadeDataGridViewTextBoxColumn.DataPropertyName = "Capacidade";
+            this.capacidadeDataGridViewTextBoxColumn.HeaderText = "Capacidade";
+            this.capacidadeDataGridViewTextBoxColumn.Name = "capacidadeDataGridViewTextBoxColumn";
+            this.capacidadeDataGridViewTextBoxColumn.ReadOnly = true;
+            this.capacidadeDataGridViewTextBoxColumn.Width = 70;
+            // 
+            // blocoDataGridViewTextBoxColumn
+            // 
+            this.blocoDataGridViewTextBoxColumn.DataPropertyName = "Bloco";
+            this.blocoDataGridViewTextBoxColumn.HeaderText = "Bloco";
+            this.blocoDataGridViewTextBoxColumn.Name = "blocoDataGridViewTextBoxColumn";
+            this.blocoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.blocoDataGridViewTextBoxColumn.Width = 50;
+            // 
+            // tipoDataGridViewTextBoxColumn
+            // 
+            this.tipoDataGridViewTextBoxColumn.DataPropertyName = "Tipo";
+            this.tipoDataGridViewTextBoxColumn.HeaderText = "Tipo";
+            this.tipoDataGridViewTextBoxColumn.Name = "tipoDataGridViewTextBoxColumn";
+            this.tipoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // andarDataGridViewTextBoxColumn
+            // 
+            this.andarDataGridViewTextBoxColumn.DataPropertyName = "Andar";
+            this.andarDataGridViewTextBoxColumn.HeaderText = "Andar";
+            this.andarDataGridViewTextBoxColumn.Name = "andarDataGridViewTextBoxColumn";
+            this.andarDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // dataTable1BindingSource
+            // 
+            this.dataTable1BindingSource.DataMember = "DataTable1";
+            this.dataTable1BindingSource.DataSource = this.listarSalaxsdBindingSource;
+            // 
+            // listarSalaxsdBindingSource
+            // 
+            this.listarSalaxsdBindingSource.DataSource = this.listarSalaxsd;
+            this.listarSalaxsdBindingSource.Position = 0;
+            // 
+            // listarSalaxsd
+            // 
+            this.listarSalaxsd.DataSetName = "ListarSalaxsd";
+            this.listarSalaxsd.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // menuStrip1
             // 
@@ -465,9 +523,6 @@
             // 
             // tbpCurso
             // 
-            this.tbpCurso.Controls.Add(this.btnPesquisarCurso);
-            this.tbpCurso.Controls.Add(this.txbPesquisarCurso);
-            this.tbpCurso.Controls.Add(this.lblPesquisarCurso);
             this.tbpCurso.Controls.Add(this.gpbResultadoCurso);
             this.tbpCurso.Controls.Add(this.btnEditarCurso);
             this.tbpCurso.Controls.Add(this.btnCadastrarCurso);
@@ -480,39 +535,13 @@
             this.tbpCurso.Text = "Curso";
             this.tbpCurso.UseVisualStyleBackColor = true;
             // 
-            // btnPesquisarCurso
-            // 
-            this.btnPesquisarCurso.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnPesquisarCurso.BackgroundImage")));
-            this.btnPesquisarCurso.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnPesquisarCurso.Location = new System.Drawing.Point(284, 195);
-            this.btnPesquisarCurso.Name = "btnPesquisarCurso";
-            this.btnPesquisarCurso.Size = new System.Drawing.Size(25, 25);
-            this.btnPesquisarCurso.TabIndex = 27;
-            this.btnPesquisarCurso.UseVisualStyleBackColor = true;
-            // 
-            // txbPesquisarCurso
-            // 
-            this.txbPesquisarCurso.Location = new System.Drawing.Point(178, 198);
-            this.txbPesquisarCurso.Name = "txbPesquisarCurso";
-            this.txbPesquisarCurso.Size = new System.Drawing.Size(100, 20);
-            this.txbPesquisarCurso.TabIndex = 26;
-            // 
-            // lblPesquisarCurso
-            // 
-            this.lblPesquisarCurso.AutoSize = true;
-            this.lblPesquisarCurso.Location = new System.Drawing.Point(119, 201);
-            this.lblPesquisarCurso.Name = "lblPesquisarCurso";
-            this.lblPesquisarCurso.Size = new System.Drawing.Size(53, 13);
-            this.lblPesquisarCurso.TabIndex = 25;
-            this.lblPesquisarCurso.Text = "Pesquisar";
-            // 
             // gpbResultadoCurso
             // 
             this.gpbResultadoCurso.Controls.Add(this.lblNomeCursoResultado);
             this.gpbResultadoCurso.Controls.Add(this.lblIdCursoResultado);
             this.gpbResultadoCurso.Controls.Add(this.lblIdCurso);
             this.gpbResultadoCurso.Controls.Add(this.lblNomeCurso);
-            this.gpbResultadoCurso.Location = new System.Drawing.Point(77, 225);
+            this.gpbResultadoCurso.Location = new System.Drawing.Point(77, 222);
             this.gpbResultadoCurso.Name = "gpbResultadoCurso";
             this.gpbResultadoCurso.Size = new System.Drawing.Size(330, 114);
             this.gpbResultadoCurso.TabIndex = 24;
@@ -618,9 +647,6 @@
             // 
             // tabCampus
             // 
-            this.tabCampus.Controls.Add(this.btnPesquisarCampus);
-            this.tabCampus.Controls.Add(this.txbPesquisarCampus);
-            this.tabCampus.Controls.Add(this.lblPesquisarCampus);
             this.tabCampus.Controls.Add(this.btnEditarCampus);
             this.tabCampus.Controls.Add(this.btnCadastrarCampus);
             this.tabCampus.Controls.Add(this.gpbResultadoCampus);
@@ -632,32 +658,6 @@
             this.tabCampus.TabIndex = 0;
             this.tabCampus.Text = "Campus";
             this.tabCampus.UseVisualStyleBackColor = true;
-            // 
-            // btnPesquisarCampus
-            // 
-            this.btnPesquisarCampus.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnPesquisarCampus.BackgroundImage")));
-            this.btnPesquisarCampus.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnPesquisarCampus.Location = new System.Drawing.Point(284, 195);
-            this.btnPesquisarCampus.Name = "btnPesquisarCampus";
-            this.btnPesquisarCampus.Size = new System.Drawing.Size(25, 25);
-            this.btnPesquisarCampus.TabIndex = 19;
-            this.btnPesquisarCampus.UseVisualStyleBackColor = true;
-            // 
-            // txbPesquisarCampus
-            // 
-            this.txbPesquisarCampus.Location = new System.Drawing.Point(178, 198);
-            this.txbPesquisarCampus.Name = "txbPesquisarCampus";
-            this.txbPesquisarCampus.Size = new System.Drawing.Size(100, 20);
-            this.txbPesquisarCampus.TabIndex = 14;
-            // 
-            // lblPesquisarCampus
-            // 
-            this.lblPesquisarCampus.AutoSize = true;
-            this.lblPesquisarCampus.Location = new System.Drawing.Point(119, 201);
-            this.lblPesquisarCampus.Name = "lblPesquisarCampus";
-            this.lblPesquisarCampus.Size = new System.Drawing.Size(53, 13);
-            this.lblPesquisarCampus.TabIndex = 13;
-            this.lblPesquisarCampus.Text = "Pesquisar";
             // 
             // btnEditarCampus
             // 
@@ -695,7 +695,7 @@
             this.gpbResultadoCampus.Controls.Add(this.lblNumeroCampus);
             this.gpbResultadoCampus.Controls.Add(this.lblIdCampusResultado);
             this.gpbResultadoCampus.Controls.Add(this.lblIdCampus);
-            this.gpbResultadoCampus.Location = new System.Drawing.Point(77, 225);
+            this.gpbResultadoCampus.Location = new System.Drawing.Point(77, 221);
             this.gpbResultadoCampus.Name = "gpbResultadoCampus";
             this.gpbResultadoCampus.Size = new System.Drawing.Size(330, 114);
             this.gpbResultadoCampus.TabIndex = 18;
@@ -819,6 +819,24 @@
             this.tabControl1.Size = new System.Drawing.Size(480, 450);
             this.tabControl1.TabIndex = 13;
             // 
+            // unip_salaDataSet8
+            // 
+            this.unip_salaDataSet8.DataSetName = "unip_salaDataSet8";
+            this.unip_salaDataSet8.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tbsalaBindingSource
+            // 
+            this.tbsalaBindingSource.DataMember = "tb_sala";
+            this.tbsalaBindingSource.DataSource = this.unip_salaDataSet8;
+            // 
+            // tb_salaTableAdapter
+            // 
+            this.tb_salaTableAdapter.ClearBeforeFill = true;
+            // 
+            // dataTable1TableAdapter
+            // 
+            this.dataTable1TableAdapter.ClearBeforeFill = true;
+            // 
             // frmConfigurar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -851,19 +869,22 @@
             this.gpbResultadoSala.ResumeLayout(false);
             this.gpbResultadoSala.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSala)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataTable1BindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.listarSalaxsdBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.listarSalaxsd)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.tbpCurso.ResumeLayout(false);
-            this.tbpCurso.PerformLayout();
             this.gpbResultadoCurso.ResumeLayout(false);
             this.gpbResultadoCurso.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCurso)).EndInit();
             this.tabCampus.ResumeLayout(false);
-            this.tabCampus.PerformLayout();
             this.gpbResultadoCampus.ResumeLayout(false);
             this.gpbResultadoCampus.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCampus)).EndInit();
             this.tabControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.unip_salaDataSet8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tbsalaBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -891,9 +912,6 @@
         private System.Windows.Forms.ToolStripMenuItem andarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem alfabetoToolStripMenuItem;
         private System.Windows.Forms.TabPage tbpCurso;
-        private System.Windows.Forms.Button btnPesquisarCurso;
-        private System.Windows.Forms.TextBox txbPesquisarCurso;
-        private System.Windows.Forms.Label lblPesquisarCurso;
         private System.Windows.Forms.GroupBox gpbResultadoCurso;
         private System.Windows.Forms.Label lblNomeCursoResultado;
         private System.Windows.Forms.Label lblIdCursoResultado;
@@ -905,9 +923,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn idCursoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nomeCursoDataGridViewTextBoxColumn;
         private System.Windows.Forms.TabPage tabCampus;
-        private System.Windows.Forms.Button btnPesquisarCampus;
-        private System.Windows.Forms.TextBox txbPesquisarCampus;
-        private System.Windows.Forms.Label lblPesquisarCampus;
         private System.Windows.Forms.Button btnEditarCampus;
         private System.Windows.Forms.Button btnCadastrarCampus;
         private System.Windows.Forms.GroupBox gpbResultadoCampus;
@@ -922,12 +937,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn numeroCampusDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nomeCampusDataGridViewTextBoxColumn;
         private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.DataGridView dgvSala;
         private System.Windows.Forms.Button btnEditarSala;
         private System.Windows.Forms.Button btnNovaSala;
-        private System.Windows.Forms.Button btnPesquisarSala;
-        private System.Windows.Forms.TextBox txbPesquisarSala;
-        private System.Windows.Forms.Label lblPesquisarSala;
         private System.Windows.Forms.GroupBox gpbResultadoSala;
         private System.Windows.Forms.Label lblAndarResultado;
         private System.Windows.Forms.Label lblNumeroSalaResultado;
@@ -941,5 +952,19 @@
         private System.Windows.Forms.Label lblCapacidade;
         private System.Windows.Forms.Label lblTipoSala;
         private System.Windows.Forms.Label lblIdSala;
+        private unip_salaDataSet8 unip_salaDataSet8;
+        private System.Windows.Forms.BindingSource tbsalaBindingSource;
+        private unip_salaDataSet8TableAdapters.tb_salaTableAdapter tb_salaTableAdapter;
+        public System.Windows.Forms.DataGridView dgvSala;
+        private System.Windows.Forms.BindingSource listarSalaxsdBindingSource;
+        private ListarSalaxsd listarSalaxsd;
+        private System.Windows.Forms.BindingSource dataTable1BindingSource;
+        private ListarSalaxsdTableAdapters.DataTable1TableAdapter dataTable1TableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn numeroDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn capacidadeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn blocoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tipoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn andarDataGridViewTextBoxColumn;
     }
 }

@@ -30,12 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCadastrarSigla));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.lblSigla = new System.Windows.Forms.Label();
-            this.txbSigla = new System.Windows.Forms.TextBox();
-            this.btnFechar = new System.Windows.Forms.Button();
-            this.btnCancelar = new System.Windows.Forms.Button();
             this.btnCadastrarSigla = new System.Windows.Forms.Button();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.btnFechar = new System.Windows.Forms.Button();
+            this.txbSigla = new System.Windows.Forms.TextBox();
+            this.lblSigla = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -53,42 +53,18 @@
             this.panel1.Size = new System.Drawing.Size(337, 242);
             this.panel1.TabIndex = 0;
             // 
-            // label1
+            // btnCadastrarSigla
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Kristen ITC", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(4, 4);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(115, 28);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Nova Sigla";
-            // 
-            // lblSigla
-            // 
-            this.lblSigla.AutoSize = true;
-            this.lblSigla.Location = new System.Drawing.Point(33, 93);
-            this.lblSigla.Name = "lblSigla";
-            this.lblSigla.Size = new System.Drawing.Size(30, 13);
-            this.lblSigla.TabIndex = 1;
-            this.lblSigla.Text = "Sigla";
-            // 
-            // txbSigla
-            // 
-            this.txbSigla.Location = new System.Drawing.Point(36, 109);
-            this.txbSigla.Name = "txbSigla";
-            this.txbSigla.Size = new System.Drawing.Size(260, 20);
-            this.txbSigla.TabIndex = 2;
-            // 
-            // btnFechar
-            // 
-            this.btnFechar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnFechar.BackgroundImage")));
-            this.btnFechar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnFechar.Location = new System.Drawing.Point(309, 4);
-            this.btnFechar.Name = "btnFechar";
-            this.btnFechar.Size = new System.Drawing.Size(25, 25);
-            this.btnFechar.TabIndex = 3;
-            this.btnFechar.UseVisualStyleBackColor = true;
-            this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
+            this.btnCadastrarSigla.Image = ((System.Drawing.Image)(resources.GetObject("btnCadastrarSigla.Image")));
+            this.btnCadastrarSigla.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCadastrarSigla.Location = new System.Drawing.Point(247, 202);
+            this.btnCadastrarSigla.Name = "btnCadastrarSigla";
+            this.btnCadastrarSigla.Size = new System.Drawing.Size(87, 37);
+            this.btnCadastrarSigla.TabIndex = 5;
+            this.btnCadastrarSigla.Text = "Salvar";
+            this.btnCadastrarSigla.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnCadastrarSigla.UseVisualStyleBackColor = true;
+            this.btnCadastrarSigla.Click += new System.EventHandler(this.btnCadastrarSigla_Click);
             // 
             // btnCancelar
             // 
@@ -103,17 +79,42 @@
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
-            // btnCadastrarSigla
+            // btnFechar
             // 
-            this.btnCadastrarSigla.Image = ((System.Drawing.Image)(resources.GetObject("btnCadastrarSigla.Image")));
-            this.btnCadastrarSigla.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCadastrarSigla.Location = new System.Drawing.Point(247, 202);
-            this.btnCadastrarSigla.Name = "btnCadastrarSigla";
-            this.btnCadastrarSigla.Size = new System.Drawing.Size(87, 37);
-            this.btnCadastrarSigla.TabIndex = 5;
-            this.btnCadastrarSigla.Text = "Salvar";
-            this.btnCadastrarSigla.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnCadastrarSigla.UseVisualStyleBackColor = true;
+            this.btnFechar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnFechar.BackgroundImage")));
+            this.btnFechar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnFechar.Location = new System.Drawing.Point(309, 4);
+            this.btnFechar.Name = "btnFechar";
+            this.btnFechar.Size = new System.Drawing.Size(25, 25);
+            this.btnFechar.TabIndex = 3;
+            this.btnFechar.UseVisualStyleBackColor = true;
+            this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
+            // 
+            // txbSigla
+            // 
+            this.txbSigla.Location = new System.Drawing.Point(36, 109);
+            this.txbSigla.Name = "txbSigla";
+            this.txbSigla.Size = new System.Drawing.Size(260, 20);
+            this.txbSigla.TabIndex = 2;
+            // 
+            // lblSigla
+            // 
+            this.lblSigla.AutoSize = true;
+            this.lblSigla.Location = new System.Drawing.Point(33, 93);
+            this.lblSigla.Name = "lblSigla";
+            this.lblSigla.Size = new System.Drawing.Size(30, 13);
+            this.lblSigla.TabIndex = 1;
+            this.lblSigla.Text = "Sigla";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Kristen ITC", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(4, 4);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(115, 28);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Nova Sigla";
             // 
             // frmCadastrarSigla
             // 

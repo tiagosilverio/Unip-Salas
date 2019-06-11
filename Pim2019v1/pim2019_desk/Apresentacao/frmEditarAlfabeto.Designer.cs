@@ -30,15 +30,15 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmEditarAlfabeto));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.IdAlfabeto = new System.Windows.Forms.Label();
-            this.txbIdAlfabeto = new System.Windows.Forms.TextBox();
+            this.btnExcluirAlfabeto = new System.Windows.Forms.Button();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.btnEditarAlfabeto = new System.Windows.Forms.Button();
+            this.btnFechar = new System.Windows.Forms.Button();
             this.txbNomeAlfabeto = new System.Windows.Forms.TextBox();
             this.lblNomeAlfabeto = new System.Windows.Forms.Label();
-            this.btnFechar = new System.Windows.Forms.Button();
-            this.btnEditarAlfabeto = new System.Windows.Forms.Button();
-            this.btnCancelar = new System.Windows.Forms.Button();
-            this.btnExcluirAlfabeto = new System.Windows.Forms.Button();
+            this.txbIdAlfabeto = new System.Windows.Forms.TextBox();
+            this.IdAlfabeto = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -59,33 +59,55 @@
             this.panel1.Size = new System.Drawing.Size(337, 242);
             this.panel1.TabIndex = 0;
             // 
-            // label1
+            // btnExcluirAlfabeto
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Kristen ITC", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(3, 3);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(180, 28);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Editar Caractere";
+            this.btnExcluirAlfabeto.Image = ((System.Drawing.Image)(resources.GetObject("btnExcluirAlfabeto.Image")));
+            this.btnExcluirAlfabeto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnExcluirAlfabeto.Location = new System.Drawing.Point(8, 202);
+            this.btnExcluirAlfabeto.Name = "btnExcluirAlfabeto";
+            this.btnExcluirAlfabeto.Size = new System.Drawing.Size(87, 37);
+            this.btnExcluirAlfabeto.TabIndex = 8;
+            this.btnExcluirAlfabeto.Text = "Excluir";
+            this.btnExcluirAlfabeto.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnExcluirAlfabeto.UseVisualStyleBackColor = true;
+            this.btnExcluirAlfabeto.Click += new System.EventHandler(this.btnExcluirAlfabeto_Click);
             // 
-            // IdAlfabeto
+            // btnCancelar
             // 
-            this.IdAlfabeto.AutoSize = true;
-            this.IdAlfabeto.Location = new System.Drawing.Point(35, 57);
-            this.IdAlfabeto.Name = "IdAlfabeto";
-            this.IdAlfabeto.Size = new System.Drawing.Size(18, 13);
-            this.IdAlfabeto.TabIndex = 1;
-            this.IdAlfabeto.Text = "ID";
+            this.btnCancelar.Image = ((System.Drawing.Image)(resources.GetObject("btnCancelar.Image")));
+            this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCancelar.Location = new System.Drawing.Point(143, 202);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(87, 37);
+            this.btnCancelar.TabIndex = 7;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
-            // txbIdAlfabeto
+            // btnEditarAlfabeto
             // 
-            this.txbIdAlfabeto.Enabled = false;
-            this.txbIdAlfabeto.Location = new System.Drawing.Point(38, 73);
-            this.txbIdAlfabeto.Name = "txbIdAlfabeto";
-            this.txbIdAlfabeto.ReadOnly = true;
-            this.txbIdAlfabeto.Size = new System.Drawing.Size(67, 20);
-            this.txbIdAlfabeto.TabIndex = 2;
+            this.btnEditarAlfabeto.Image = ((System.Drawing.Image)(resources.GetObject("btnEditarAlfabeto.Image")));
+            this.btnEditarAlfabeto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEditarAlfabeto.Location = new System.Drawing.Point(247, 202);
+            this.btnEditarAlfabeto.Name = "btnEditarAlfabeto";
+            this.btnEditarAlfabeto.Size = new System.Drawing.Size(87, 37);
+            this.btnEditarAlfabeto.TabIndex = 6;
+            this.btnEditarAlfabeto.Text = "Salvar";
+            this.btnEditarAlfabeto.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnEditarAlfabeto.UseVisualStyleBackColor = true;
+            this.btnEditarAlfabeto.Click += new System.EventHandler(this.btnEditarAlfabeto_Click);
+            // 
+            // btnFechar
+            // 
+            this.btnFechar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnFechar.BackgroundImage")));
+            this.btnFechar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnFechar.Location = new System.Drawing.Point(309, 3);
+            this.btnFechar.Name = "btnFechar";
+            this.btnFechar.Size = new System.Drawing.Size(25, 25);
+            this.btnFechar.TabIndex = 5;
+            this.btnFechar.UseVisualStyleBackColor = true;
+            this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
             // 
             // txbNomeAlfabeto
             // 
@@ -103,53 +125,33 @@
             this.lblNomeAlfabeto.TabIndex = 3;
             this.lblNomeAlfabeto.Text = "Caractere";
             // 
-            // btnFechar
+            // txbIdAlfabeto
             // 
-            this.btnFechar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnFechar.BackgroundImage")));
-            this.btnFechar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnFechar.Location = new System.Drawing.Point(309, 3);
-            this.btnFechar.Name = "btnFechar";
-            this.btnFechar.Size = new System.Drawing.Size(25, 25);
-            this.btnFechar.TabIndex = 5;
-            this.btnFechar.UseVisualStyleBackColor = true;
-            this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
+            this.txbIdAlfabeto.Enabled = false;
+            this.txbIdAlfabeto.Location = new System.Drawing.Point(38, 73);
+            this.txbIdAlfabeto.Name = "txbIdAlfabeto";
+            this.txbIdAlfabeto.ReadOnly = true;
+            this.txbIdAlfabeto.Size = new System.Drawing.Size(67, 20);
+            this.txbIdAlfabeto.TabIndex = 2;
             // 
-            // btnEditarAlfabeto
+            // IdAlfabeto
             // 
-            this.btnEditarAlfabeto.Image = ((System.Drawing.Image)(resources.GetObject("btnEditarAlfabeto.Image")));
-            this.btnEditarAlfabeto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEditarAlfabeto.Location = new System.Drawing.Point(247, 202);
-            this.btnEditarAlfabeto.Name = "btnEditarAlfabeto";
-            this.btnEditarAlfabeto.Size = new System.Drawing.Size(87, 37);
-            this.btnEditarAlfabeto.TabIndex = 6;
-            this.btnEditarAlfabeto.Text = "Salvar";
-            this.btnEditarAlfabeto.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnEditarAlfabeto.UseVisualStyleBackColor = true;
+            this.IdAlfabeto.AutoSize = true;
+            this.IdAlfabeto.Location = new System.Drawing.Point(35, 57);
+            this.IdAlfabeto.Name = "IdAlfabeto";
+            this.IdAlfabeto.Size = new System.Drawing.Size(18, 13);
+            this.IdAlfabeto.TabIndex = 1;
+            this.IdAlfabeto.Text = "ID";
             // 
-            // btnCancelar
+            // label1
             // 
-            this.btnCancelar.Image = ((System.Drawing.Image)(resources.GetObject("btnCancelar.Image")));
-            this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCancelar.Location = new System.Drawing.Point(143, 202);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(87, 37);
-            this.btnCancelar.TabIndex = 7;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnCancelar.UseVisualStyleBackColor = true;
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
-            // 
-            // btnExcluirAlfabeto
-            // 
-            this.btnExcluirAlfabeto.Image = ((System.Drawing.Image)(resources.GetObject("btnExcluirAlfabeto.Image")));
-            this.btnExcluirAlfabeto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnExcluirAlfabeto.Location = new System.Drawing.Point(8, 202);
-            this.btnExcluirAlfabeto.Name = "btnExcluirAlfabeto";
-            this.btnExcluirAlfabeto.Size = new System.Drawing.Size(87, 37);
-            this.btnExcluirAlfabeto.TabIndex = 8;
-            this.btnExcluirAlfabeto.Text = "Excluir";
-            this.btnExcluirAlfabeto.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnExcluirAlfabeto.UseVisualStyleBackColor = true;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Kristen ITC", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(3, 3);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(180, 28);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Editar Caractere";
             // 
             // frmEditarAlfabeto
             // 

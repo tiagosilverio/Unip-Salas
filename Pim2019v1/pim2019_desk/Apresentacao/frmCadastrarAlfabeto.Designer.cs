@@ -30,12 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCadastrarAlfabeto));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.lblCaractere = new System.Windows.Forms.Label();
-            this.txbAlfabeto = new System.Windows.Forms.TextBox();
-            this.btnFechar = new System.Windows.Forms.Button();
-            this.btnCancelar = new System.Windows.Forms.Button();
             this.btnCadastrarAlfabeto = new System.Windows.Forms.Button();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.btnFechar = new System.Windows.Forms.Button();
+            this.txbAlfabeto = new System.Windows.Forms.TextBox();
+            this.lblCaractere = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -53,42 +53,18 @@
             this.panel1.Size = new System.Drawing.Size(337, 242);
             this.panel1.TabIndex = 0;
             // 
-            // label1
+            // btnCadastrarAlfabeto
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Kristen ITC", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(3, 4);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(171, 28);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Novo Caractere";
-            // 
-            // lblCaractere
-            // 
-            this.lblCaractere.AutoSize = true;
-            this.lblCaractere.Location = new System.Drawing.Point(33, 93);
-            this.lblCaractere.Name = "lblCaractere";
-            this.lblCaractere.Size = new System.Drawing.Size(53, 13);
-            this.lblCaractere.TabIndex = 1;
-            this.lblCaractere.Text = "Caractere";
-            // 
-            // txbAlfabeto
-            // 
-            this.txbAlfabeto.Location = new System.Drawing.Point(36, 109);
-            this.txbAlfabeto.Name = "txbAlfabeto";
-            this.txbAlfabeto.Size = new System.Drawing.Size(260, 20);
-            this.txbAlfabeto.TabIndex = 2;
-            // 
-            // btnFechar
-            // 
-            this.btnFechar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnFechar.BackgroundImage")));
-            this.btnFechar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnFechar.Location = new System.Drawing.Point(309, 4);
-            this.btnFechar.Name = "btnFechar";
-            this.btnFechar.Size = new System.Drawing.Size(25, 25);
-            this.btnFechar.TabIndex = 3;
-            this.btnFechar.UseVisualStyleBackColor = true;
-            this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
+            this.btnCadastrarAlfabeto.Image = ((System.Drawing.Image)(resources.GetObject("btnCadastrarAlfabeto.Image")));
+            this.btnCadastrarAlfabeto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCadastrarAlfabeto.Location = new System.Drawing.Point(247, 202);
+            this.btnCadastrarAlfabeto.Name = "btnCadastrarAlfabeto";
+            this.btnCadastrarAlfabeto.Size = new System.Drawing.Size(87, 37);
+            this.btnCadastrarAlfabeto.TabIndex = 5;
+            this.btnCadastrarAlfabeto.Text = "Salvar";
+            this.btnCadastrarAlfabeto.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnCadastrarAlfabeto.UseVisualStyleBackColor = true;
+            this.btnCadastrarAlfabeto.Click += new System.EventHandler(this.btnCadastrarAlfabeto_Click);
             // 
             // btnCancelar
             // 
@@ -103,17 +79,42 @@
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
-            // btnCadastrarAlfabeto
+            // btnFechar
             // 
-            this.btnCadastrarAlfabeto.Image = ((System.Drawing.Image)(resources.GetObject("btnCadastrarAlfabeto.Image")));
-            this.btnCadastrarAlfabeto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCadastrarAlfabeto.Location = new System.Drawing.Point(247, 202);
-            this.btnCadastrarAlfabeto.Name = "btnCadastrarAlfabeto";
-            this.btnCadastrarAlfabeto.Size = new System.Drawing.Size(87, 37);
-            this.btnCadastrarAlfabeto.TabIndex = 5;
-            this.btnCadastrarAlfabeto.Text = "Salvar";
-            this.btnCadastrarAlfabeto.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnCadastrarAlfabeto.UseVisualStyleBackColor = true;
+            this.btnFechar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnFechar.BackgroundImage")));
+            this.btnFechar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnFechar.Location = new System.Drawing.Point(309, 4);
+            this.btnFechar.Name = "btnFechar";
+            this.btnFechar.Size = new System.Drawing.Size(25, 25);
+            this.btnFechar.TabIndex = 3;
+            this.btnFechar.UseVisualStyleBackColor = true;
+            this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
+            // 
+            // txbAlfabeto
+            // 
+            this.txbAlfabeto.Location = new System.Drawing.Point(36, 109);
+            this.txbAlfabeto.Name = "txbAlfabeto";
+            this.txbAlfabeto.Size = new System.Drawing.Size(260, 20);
+            this.txbAlfabeto.TabIndex = 2;
+            // 
+            // lblCaractere
+            // 
+            this.lblCaractere.AutoSize = true;
+            this.lblCaractere.Location = new System.Drawing.Point(33, 93);
+            this.lblCaractere.Name = "lblCaractere";
+            this.lblCaractere.Size = new System.Drawing.Size(53, 13);
+            this.lblCaractere.TabIndex = 1;
+            this.lblCaractere.Text = "Caractere";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Kristen ITC", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(3, 4);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(171, 28);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Novo Caractere";
             // 
             // frmCadastrarAlfabeto
             // 

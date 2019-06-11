@@ -18,6 +18,7 @@ namespace pim2019_desk.Apresentacao
             InitializeComponent();
             ExibirCampus();
             ExibirCurso();
+            ExibirSala();            
         }
 
         private void frmCampus_Load(object sender, EventArgs e)
@@ -35,6 +36,11 @@ namespace pim2019_desk.Apresentacao
             this.tb_campusTableAdapter.Fill(this.unip_salaDataSet1.tb_campus);
         }
 
+        private void ExibirSala()
+        {
+            this.dataTable1TableAdapter.Fill(this.listarSalaxsd.DataTable1);
+        }
+
         private void btnSair_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -45,7 +51,7 @@ namespace pim2019_desk.Apresentacao
             this.WindowState = FormWindowState.Minimized;
         }
 
-        private void preencheControlesCampus(Modelo.tb_campus campus)
+        private void preencheControlesCampus(tb_campus campus)
         {            
             lblIdCampusResultado.Text = campus.idCampus.ToString();
             lblNomeCampusResultado.Text = campus.nomeCampus.ToString();
@@ -55,8 +61,8 @@ namespace pim2019_desk.Apresentacao
         private void dgvCampus_CellEnter(object sender, DataGridViewCellEventArgs e)
         {
             int idCampus = Convert.ToInt32(dgvCampus.Rows[e.RowIndex].Cells[0].Value);
-            Modelo.Controle controle = new Modelo.Controle();
-            Modelo.tb_campus campus = controle.GetRegistroPorCodigo(idCampus);
+            Controle controle = new Controle();
+            tb_campus campus = controle.GetRegistroPorCodigo(idCampus);
             preencheControlesCampus(campus);            
         }
 
@@ -77,7 +83,7 @@ namespace pim2019_desk.Apresentacao
             ExibirCampus();            
         }
 
-        private void preencheControlesCurso(Modelo.tb_curso curso)
+        private void preencheControlesCurso(tb_curso curso)
         {
             lblIdCursoResultado.Text = curso.idCurso.ToString();
             lblNomeCursoResultado.Text = curso.nomeCurso;
@@ -86,8 +92,8 @@ namespace pim2019_desk.Apresentacao
         private void dgvCurso_CellEnter(object sender, DataGridViewCellEventArgs e)
         {
             int idCurso = Convert.ToInt32(dgvCurso.Rows[e.RowIndex].Cells[0].Value);
-            Modelo.Controle controle = new Modelo.Controle();
-            Modelo.tb_curso curso = controle.GetCursoPorCodigo(idCurso);
+            Controle controle = new Controle();
+            tb_curso curso = controle.GetCursoPorCodigo(idCurso);
             preencheControlesCurso(curso);
         }
 
@@ -125,22 +131,78 @@ namespace pim2019_desk.Apresentacao
             alfabeto.ShowDialog();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void preencheControlesSala(tb_sala sala)
         {
-            frmCadastrarSala cadastrarSala = new frmCadastrarSala();
-            cadastrarSala.ShowDialog();
+            lblIdSalaResultado.Text = sala.idSala.ToString();
+            lblNumeroSalaResultado.Text = sala.numeroSala.ToString();
+            lblCapacidadeResultado.Text = sala.capacidade.ToString();
+            lblAlfabetoResultado.Text = sala.fkAlfabeto.ToString();
+            lblTipoSalaResultado.Text = sala.fkTipoSala.ToString();
+            lblAndarResultado.Text = sala.fkAndar.ToString();
         }
 
         private void btnEditarSala_Click(object sender, EventArgs e)
         {
             frmEditarSala editarSala = new frmEditarSala();
+            editarSala.txbIdSala.Text = this.lblIdSalaResultado.Text;
+            editarSala.txbNumeroSala.Text = this.lblNumeroSalaResultado.Text;
+            editarSala.txbCapacidade.Text = this.lblCapacidadeResultado.Text;
+            editarSala.cmbAlfabeto.Text = this.lblAlfabetoResultado.Text;
+            editarSala.cmbTipoSala.Text = this.lblTipoSalaResultado.Text;
             editarSala.ShowDialog();
+            ExibirSala();
+        }
+
+        private void ListarSala()
+        {
+            //try
+            //{
+            //    Controle controle = new Controle();
+            //    dgvSala.DataSource = controle.ListarSala();
+            //}
+            //catch (Exception e)
+            //{
+            //    MessageBox.Show(e.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //}
+            
         }
 
         private void btnNovaSala_Click(object sender, EventArgs e)
         {
             frmCadastrarSala cadastrarSala = new frmCadastrarSala();
             cadastrarSala.ShowDialog();
+            ExibirSala();
+        }
+
+        private void dgvSala_CellEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            //int idSala = Convert.ToInt32(dgvSala.Rows[e.RowIndex].Cells[0].FormattedValue);
+            //Controle controle = new Controle();
+            //tb_sala sala = controle.GetSalaPorCodigo(idSala);
+            //preencheControlesSala(sala);
+
+            string idSala = Convert.ToString(dgvSala.Rows[e.RowIndex].Cells[0].FormattedValue);
+            string numeroSala = Convert.ToString(dgvSala.Rows[e.RowIndex].Cells[1].FormattedValue);
+            string capacidade = Convert.ToString(dgvSala.Rows[e.RowIndex].Cells[2].FormattedValue);
+            string bloco = Convert.ToString(dgvSala.Rows[e.RowIndex].Cells[3].FormattedValue);
+            string tipo = Convert.ToString(dgvSala.Rows[e.RowIndex].Cells[4].FormattedValue);
+            string andar = Convert.ToString(dgvSala.Rows[e.RowIndex].Cells[5].FormattedValue);
+
+            lblIdSalaResultado.Text = idSala;
+            lblNumeroSalaResultado.Text = numeroSala;
+            lblCapacidadeResultado.Text = capacidade;
+            lblAlfabetoResultado.Text = bloco;
+            lblTipoSalaResultado.Text = tipo;
+            lblAndarResultado.Text = andar;
+
+        }
+
+        private void dgvSala_SelectionChanged(object sender, EventArgs e)
+        {
+            
+            
+                
+            
         }
     }
 }

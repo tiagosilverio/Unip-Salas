@@ -26,5 +26,16 @@ namespace pim2019_desk.Apresentacao
         {
             this.Close();
         }
+
+        private void btnCadastrarAndar_Click(object sender, EventArgs e)
+        {
+            List<String> dadosAndar = new List<string>();
+            dadosAndar.Add("0");
+            dadosAndar.Add(txbAndar.Text);
+            Modelo.Controle controle = new Modelo.Controle();
+            controle.CadastrarAndar(dadosAndar);
+            MessageBox.Show(controle.mensagem, "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            txbAndar.Text = "";
+        }
     }
 }

@@ -16,6 +16,7 @@ namespace pim2019_desk.Apresentacao
         {
             InitializeComponent();
             ExibirAluno();
+            ExibirTurma();
         }
 
         private void btnMinimizar_Click(object sender, EventArgs e)
@@ -36,7 +37,16 @@ namespace pim2019_desk.Apresentacao
 
         private void frmPrincipal_Load(object sender, EventArgs e)
         {
+            // TODO: esta linha de código carrega dados na tabela 'listarTurma.DataTable1'. Você pode movê-la ou removê-la conforme necessário.
             
+            // TODO: esta linha de código carrega dados na tabela 'dts_turma.tb_turma'. Você pode movê-la ou removê-la conforme necessário.
+            //this.tb_turmaTableAdapter.Fill(this.dts_turma.tb_turma);
+
+        }
+
+        private void ExibirTurma()
+        {
+            this.dataTable1TableAdapter.Fill(this.listarTurma.DataTable1);
         }
 
         private void ExibirAluno()
@@ -104,12 +114,14 @@ namespace pim2019_desk.Apresentacao
         {
             frmEditarTurma editarTurma = new frmEditarTurma();
             editarTurma.ShowDialog();
+            ExibirTurma();
         }
 
         private void btnNovaTurma_Click(object sender, EventArgs e)
         {
             frmCadastrarTurma cadastrarTurma = new frmCadastrarTurma();
             cadastrarTurma.ShowDialog();
+            ExibirTurma();
         }
 
         private void btnNovaAula_Click(object sender, EventArgs e)

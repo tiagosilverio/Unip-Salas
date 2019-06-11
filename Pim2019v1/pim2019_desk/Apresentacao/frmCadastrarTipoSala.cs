@@ -26,5 +26,16 @@ namespace pim2019_desk.Apresentacao
         {
             this.Close();
         }
+
+        private void btnSalvar_Click(object sender, EventArgs e)
+        {
+            List<String> dadosTipo = new List<string>();
+            dadosTipo.Add("0");
+            dadosTipo.Add(txbTipoSala.Text);            
+            Modelo.Controle controle = new Modelo.Controle();
+            controle.CadastrarTipoSala(dadosTipo);
+            MessageBox.Show(controle.mensagem, "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            txbTipoSala.Text = "";            
+        }        
     }
 }

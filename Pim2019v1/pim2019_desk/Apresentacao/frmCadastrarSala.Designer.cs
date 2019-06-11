@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCadastrarSala));
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblAndar = new System.Windows.Forms.Label();
@@ -44,7 +45,30 @@
             this.btnCadastrarSala = new System.Windows.Forms.Button();
             this.btnFechar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.unip_salaDataSet6 = new pim2019_desk.unip_salaDataSet6();
+            this.unipsalaDataSet6BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.unip_salaDataSet7 = new pim2019_desk.unip_salaDataSet7();
+            this.unipsalaDataSet7BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cmbTipoSala1 = new pim2019_desk.cmbTipoSala();
+            this.tbtiposalaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tb_tipo_salaTableAdapter = new pim2019_desk.cmbTipoSalaTableAdapters.tb_tipo_salaTableAdapter();
+            this.cmbAndar1 = new pim2019_desk.cmbAndar();
+            this.tbandarBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tb_andarTableAdapter = new pim2019_desk.cmbAndarTableAdapters.tb_andarTableAdapter();
+            this.cmbAlfabeto1 = new pim2019_desk.cmbAlfabeto();
+            this.tbalfabetoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tb_alfabetoTableAdapter = new pim2019_desk.cmbAlfabetoTableAdapters.tb_alfabetoTableAdapter();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.unip_salaDataSet6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.unipsalaDataSet6BindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.unip_salaDataSet7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.unipsalaDataSet7BindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbTipoSala1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tbtiposalaBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbAndar1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tbandarBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbAlfabeto1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tbalfabetoBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -80,16 +104,19 @@
             // 
             // cmbAndar
             // 
+            this.cmbAndar.DataSource = this.tbandarBindingSource;
+            this.cmbAndar.DisplayMember = "nomeAndar";
             this.cmbAndar.FormattingEnabled = true;
             this.cmbAndar.Location = new System.Drawing.Point(203, 188);
             this.cmbAndar.Name = "cmbAndar";
             this.cmbAndar.Size = new System.Drawing.Size(121, 21);
             this.cmbAndar.TabIndex = 14;
+            this.cmbAndar.ValueMember = "idAndar";
             // 
             // lblTipoSala
             // 
             this.lblTipoSala.AutoSize = true;
-            this.lblTipoSala.Location = new System.Drawing.Point(200, 58);
+            this.lblTipoSala.Location = new System.Drawing.Point(200, 116);
             this.lblTipoSala.Name = "lblTipoSala";
             this.lblTipoSala.Size = new System.Drawing.Size(67, 13);
             this.lblTipoSala.TabIndex = 13;
@@ -97,16 +124,18 @@
             // 
             // cmbTipoSala
             // 
-            this.cmbTipoSala.FormattingEnabled = true;
-            this.cmbTipoSala.Location = new System.Drawing.Point(203, 74);
+            this.cmbTipoSala.DataSource = this.tbtiposalaBindingSource;
+            this.cmbTipoSala.DisplayMember = "nomeTipoSala";
+            this.cmbTipoSala.Location = new System.Drawing.Point(203, 132);
             this.cmbTipoSala.Name = "cmbTipoSala";
             this.cmbTipoSala.Size = new System.Drawing.Size(121, 21);
             this.cmbTipoSala.TabIndex = 12;
+            this.cmbTipoSala.ValueMember = "idTipoSala";
             // 
             // lblAlfabeto
             // 
             this.lblAlfabeto.AutoSize = true;
-            this.lblAlfabeto.Location = new System.Drawing.Point(200, 116);
+            this.lblAlfabeto.Location = new System.Drawing.Point(200, 58);
             this.lblAlfabeto.Name = "lblAlfabeto";
             this.lblAlfabeto.Size = new System.Drawing.Size(34, 13);
             this.lblAlfabeto.TabIndex = 11;
@@ -114,11 +143,14 @@
             // 
             // cmbAlfabeto
             // 
+            this.cmbAlfabeto.DataSource = this.tbalfabetoBindingSource;
+            this.cmbAlfabeto.DisplayMember = "nomeAlfabeto";
             this.cmbAlfabeto.FormattingEnabled = true;
-            this.cmbAlfabeto.Location = new System.Drawing.Point(203, 132);
+            this.cmbAlfabeto.Location = new System.Drawing.Point(203, 74);
             this.cmbAlfabeto.Name = "cmbAlfabeto";
-            this.cmbAlfabeto.Size = new System.Drawing.Size(121, 21);
+            this.cmbAlfabeto.Size = new System.Drawing.Size(72, 21);
             this.cmbAlfabeto.TabIndex = 10;
+            this.cmbAlfabeto.ValueMember = "idAlfabeto";
             // 
             // txbCapacidade
             // 
@@ -176,6 +208,7 @@
             this.btnCadastrarSala.Text = "Salvar";
             this.btnCadastrarSala.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCadastrarSala.UseVisualStyleBackColor = true;
+            this.btnCadastrarSala.Click += new System.EventHandler(this.btnCadastrarSala_Click);
             // 
             // btnFechar
             // 
@@ -198,6 +231,68 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Nova Sala";
             // 
+            // unip_salaDataSet6
+            // 
+            this.unip_salaDataSet6.DataSetName = "unip_salaDataSet6";
+            this.unip_salaDataSet6.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // unipsalaDataSet6BindingSource
+            // 
+            this.unipsalaDataSet6BindingSource.DataSource = this.unip_salaDataSet6;
+            this.unipsalaDataSet6BindingSource.Position = 0;
+            // 
+            // unip_salaDataSet7
+            // 
+            this.unip_salaDataSet7.DataSetName = "unip_salaDataSet7";
+            this.unip_salaDataSet7.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // unipsalaDataSet7BindingSource
+            // 
+            this.unipsalaDataSet7BindingSource.DataSource = this.unip_salaDataSet7;
+            this.unipsalaDataSet7BindingSource.Position = 0;
+            // 
+            // cmbTipoSala1
+            // 
+            this.cmbTipoSala1.DataSetName = "cmbTipoSala";
+            this.cmbTipoSala1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tbtiposalaBindingSource
+            // 
+            this.tbtiposalaBindingSource.DataMember = "tb_tipo_sala";
+            this.tbtiposalaBindingSource.DataSource = this.cmbTipoSala1;
+            // 
+            // tb_tipo_salaTableAdapter
+            // 
+            this.tb_tipo_salaTableAdapter.ClearBeforeFill = true;
+            // 
+            // cmbAndar1
+            // 
+            this.cmbAndar1.DataSetName = "cmbAndar";
+            this.cmbAndar1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tbandarBindingSource
+            // 
+            this.tbandarBindingSource.DataMember = "tb_andar";
+            this.tbandarBindingSource.DataSource = this.cmbAndar1;
+            // 
+            // tb_andarTableAdapter
+            // 
+            this.tb_andarTableAdapter.ClearBeforeFill = true;
+            // 
+            // cmbAlfabeto1
+            // 
+            this.cmbAlfabeto1.DataSetName = "cmbAlfabeto";
+            this.cmbAlfabeto1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tbalfabetoBindingSource
+            // 
+            this.tbalfabetoBindingSource.DataMember = "tb_alfabeto";
+            this.tbalfabetoBindingSource.DataSource = this.cmbAlfabeto1;
+            // 
+            // tb_alfabetoTableAdapter
+            // 
+            this.tb_alfabetoTableAdapter.ClearBeforeFill = true;
+            // 
             // frmCadastrarSala
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -209,8 +304,19 @@
             this.Name = "frmCadastrarSala";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmCadastrarSala";
+            this.Load += new System.EventHandler(this.frmCadastrarSala_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.unip_salaDataSet6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.unipsalaDataSet6BindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.unip_salaDataSet7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.unipsalaDataSet7BindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbTipoSala1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tbtiposalaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbAndar1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tbandarBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbAlfabeto1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tbalfabetoBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -232,5 +338,18 @@
         private System.Windows.Forms.Button btnCadastrarSala;
         private System.Windows.Forms.Button btnFechar;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.BindingSource unipsalaDataSet7BindingSource;
+        private unip_salaDataSet7 unip_salaDataSet7;
+        private unip_salaDataSet6 unip_salaDataSet6;
+        private System.Windows.Forms.BindingSource unipsalaDataSet6BindingSource;
+        private cmbTipoSala cmbTipoSala1;
+        private System.Windows.Forms.BindingSource tbtiposalaBindingSource;
+        private cmbTipoSalaTableAdapters.tb_tipo_salaTableAdapter tb_tipo_salaTableAdapter;
+        private cmbAndar cmbAndar1;
+        private System.Windows.Forms.BindingSource tbandarBindingSource;
+        private cmbAndarTableAdapters.tb_andarTableAdapter tb_andarTableAdapter;
+        private cmbAlfabeto cmbAlfabeto1;
+        private System.Windows.Forms.BindingSource tbalfabetoBindingSource;
+        private cmbAlfabetoTableAdapters.tb_alfabetoTableAdapter tb_alfabetoTableAdapter;
     }
 }

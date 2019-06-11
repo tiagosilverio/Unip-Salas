@@ -26,5 +26,16 @@ namespace pim2019_desk.Apresentacao
         {
             this.Close();
         }
+
+        private void btnCadastrarSigla_Click(object sender, EventArgs e)
+        {
+            List<String> dadosSigla = new List<string>();
+            dadosSigla.Add("0");
+            dadosSigla.Add(txbSigla.Text);
+            Modelo.Controle controle = new Modelo.Controle();
+            controle.CadastrarSigla(dadosSigla);
+            MessageBox.Show(controle.mensagem, "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            txbSigla.Text = "";
+        }
     }
 }

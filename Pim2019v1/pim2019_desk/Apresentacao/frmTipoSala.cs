@@ -15,6 +15,7 @@ namespace pim2019_desk.Apresentacao
         public frmTipoSala()
         {
             InitializeComponent();
+            ExibirTipoSala();
         }
 
         private void btnFechar_Click(object sender, EventArgs e)
@@ -26,12 +27,40 @@ namespace pim2019_desk.Apresentacao
         {
             frmCadastrarTipoSala cadastrarTipoSala = new frmCadastrarTipoSala();
             cadastrarTipoSala.ShowDialog();
+            ExibirTipoSala();
         }
 
         private void btnEditarTipo_Click(object sender, EventArgs e)
         {
             frmEditarTipoSala editarTipoSala = new frmEditarTipoSala();
+            editarTipoSala.txbIdTipoSala.Text = this.lblIdTipoSalaResultado.Text;
+            editarTipoSala.txbTipoSala.Text = this.lblNomeTipoSalaResultado.Text;
             editarTipoSala.ShowDialog();
+            ExibirTipoSala();
+        }
+
+        private void ExibirTipoSala()
+        {
+            this.tb_tipo_salaTableAdapter.Fill(this.unip_salaDataSet7.tb_tipo_sala);
+        }
+
+        private void preencherControlesTipoSala(Modelo.tb_tipo_sala tipo)
+        {
+            lblIdTipoSalaResultado.Text = tipo.idTipoSala.ToString();
+            lblNomeTipoSalaResultado.Text = tipo.nomeTipoSala.ToString();
+        }
+
+        private void frmTipoSala_Load(object sender, EventArgs e)
+        {            
+
+        }
+
+        private void dgvTipoSala_CellEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            int idTipoSala = Convert.ToInt32(dgvTipoSala.Rows[e.RowIndex].Cells[0].Value);
+            Modelo.Controle controle = new Modelo.Controle();
+            Modelo.tb_tipo_sala tipo = controle.GetTipoSalaPorCodigo(idTipoSala);
+            preencherControlesTipoSala(tipo);
         }
     }
 }

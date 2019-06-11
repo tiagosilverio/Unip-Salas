@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAndar));
             this.panel1 = new System.Windows.Forms.Panel();
             this.gpbAndar = new System.Windows.Forms.GroupBox();
@@ -40,9 +41,16 @@
             this.btnFechar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvAndar = new System.Windows.Forms.DataGridView();
+            this.idAndarDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nomeAndarDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tbandarBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.unip_salaDataSet6 = new pim2019_desk.unip_salaDataSet6();
+            this.tb_andarTableAdapter = new pim2019_desk.unip_salaDataSet6TableAdapters.tb_andarTableAdapter();
             this.panel1.SuspendLayout();
             this.gpbAndar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAndar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tbandarBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.unip_salaDataSet6)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -156,11 +164,53 @@
             // 
             // dgvAndar
             // 
+            this.dgvAndar.AllowUserToAddRows = false;
+            this.dgvAndar.AllowUserToDeleteRows = false;
+            this.dgvAndar.AllowUserToResizeColumns = false;
+            this.dgvAndar.AllowUserToResizeRows = false;
+            this.dgvAndar.AutoGenerateColumns = false;
             this.dgvAndar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAndar.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idAndarDataGridViewTextBoxColumn,
+            this.nomeAndarDataGridViewTextBoxColumn});
+            this.dgvAndar.DataSource = this.tbandarBindingSource;
             this.dgvAndar.Location = new System.Drawing.Point(3, 48);
+            this.dgvAndar.MultiSelect = false;
             this.dgvAndar.Name = "dgvAndar";
+            this.dgvAndar.ReadOnly = true;
             this.dgvAndar.Size = new System.Drawing.Size(378, 91);
             this.dgvAndar.TabIndex = 0;
+            this.dgvAndar.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAndar_CellEnter);
+            // 
+            // idAndarDataGridViewTextBoxColumn
+            // 
+            this.idAndarDataGridViewTextBoxColumn.DataPropertyName = "idAndar";
+            this.idAndarDataGridViewTextBoxColumn.HeaderText = "ID";
+            this.idAndarDataGridViewTextBoxColumn.Name = "idAndarDataGridViewTextBoxColumn";
+            this.idAndarDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idAndarDataGridViewTextBoxColumn.Width = 60;
+            // 
+            // nomeAndarDataGridViewTextBoxColumn
+            // 
+            this.nomeAndarDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.nomeAndarDataGridViewTextBoxColumn.DataPropertyName = "nomeAndar";
+            this.nomeAndarDataGridViewTextBoxColumn.HeaderText = "Andar";
+            this.nomeAndarDataGridViewTextBoxColumn.Name = "nomeAndarDataGridViewTextBoxColumn";
+            this.nomeAndarDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // tbandarBindingSource
+            // 
+            this.tbandarBindingSource.DataMember = "tb_andar";
+            this.tbandarBindingSource.DataSource = this.unip_salaDataSet6;
+            // 
+            // unip_salaDataSet6
+            // 
+            this.unip_salaDataSet6.DataSetName = "unip_salaDataSet6";
+            this.unip_salaDataSet6.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tb_andarTableAdapter
+            // 
+            this.tb_andarTableAdapter.ClearBeforeFill = true;
             // 
             // frmAndar
             // 
@@ -173,11 +223,14 @@
             this.Name = "frmAndar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmAndar";
+            this.Load += new System.EventHandler(this.frmAndar_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.gpbAndar.ResumeLayout(false);
             this.gpbAndar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAndar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tbandarBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.unip_salaDataSet6)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -194,6 +247,11 @@
         private System.Windows.Forms.Button btnNovoAndar;
         private System.Windows.Forms.Button btnFechar;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dgvAndar;
+        private unip_salaDataSet6 unip_salaDataSet6;
+        private System.Windows.Forms.BindingSource tbandarBindingSource;
+        private unip_salaDataSet6TableAdapters.tb_andarTableAdapter tb_andarTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idAndarDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nomeAndarDataGridViewTextBoxColumn;
+        public System.Windows.Forms.DataGridView dgvAndar;
     }
 }

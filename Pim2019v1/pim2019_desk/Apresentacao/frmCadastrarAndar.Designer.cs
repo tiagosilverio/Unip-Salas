@@ -30,12 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCadastrarAndar));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.lblAndar = new System.Windows.Forms.Label();
-            this.txbAndar = new System.Windows.Forms.TextBox();
-            this.btnFechar = new System.Windows.Forms.Button();
-            this.btnCadastrarAndar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
+            this.btnCadastrarAndar = new System.Windows.Forms.Button();
+            this.btnFechar = new System.Windows.Forms.Button();
+            this.txbAndar = new System.Windows.Forms.TextBox();
+            this.lblAndar = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -53,55 +53,6 @@
             this.panel1.Size = new System.Drawing.Size(337, 242);
             this.panel1.TabIndex = 0;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Kristen ITC", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(3, 4);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(134, 28);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Novo Andar";
-            // 
-            // lblAndar
-            // 
-            this.lblAndar.AutoSize = true;
-            this.lblAndar.Location = new System.Drawing.Point(33, 93);
-            this.lblAndar.Name = "lblAndar";
-            this.lblAndar.Size = new System.Drawing.Size(35, 13);
-            this.lblAndar.TabIndex = 1;
-            this.lblAndar.Text = "Andar";
-            // 
-            // txbAndar
-            // 
-            this.txbAndar.Location = new System.Drawing.Point(36, 109);
-            this.txbAndar.Name = "txbAndar";
-            this.txbAndar.Size = new System.Drawing.Size(260, 20);
-            this.txbAndar.TabIndex = 2;
-            // 
-            // btnFechar
-            // 
-            this.btnFechar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnFechar.BackgroundImage")));
-            this.btnFechar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnFechar.Location = new System.Drawing.Point(309, 4);
-            this.btnFechar.Name = "btnFechar";
-            this.btnFechar.Size = new System.Drawing.Size(25, 25);
-            this.btnFechar.TabIndex = 3;
-            this.btnFechar.UseVisualStyleBackColor = true;
-            this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
-            // 
-            // btnCadastrarAndar
-            // 
-            this.btnCadastrarAndar.Image = ((System.Drawing.Image)(resources.GetObject("btnCadastrarAndar.Image")));
-            this.btnCadastrarAndar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCadastrarAndar.Location = new System.Drawing.Point(247, 202);
-            this.btnCadastrarAndar.Name = "btnCadastrarAndar";
-            this.btnCadastrarAndar.Size = new System.Drawing.Size(87, 37);
-            this.btnCadastrarAndar.TabIndex = 4;
-            this.btnCadastrarAndar.Text = "Salvar";
-            this.btnCadastrarAndar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnCadastrarAndar.UseVisualStyleBackColor = true;
-            // 
             // btnCancelar
             // 
             this.btnCancelar.Image = ((System.Drawing.Image)(resources.GetObject("btnCancelar.Image")));
@@ -114,6 +65,56 @@
             this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            // 
+            // btnCadastrarAndar
+            // 
+            this.btnCadastrarAndar.Image = ((System.Drawing.Image)(resources.GetObject("btnCadastrarAndar.Image")));
+            this.btnCadastrarAndar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCadastrarAndar.Location = new System.Drawing.Point(247, 202);
+            this.btnCadastrarAndar.Name = "btnCadastrarAndar";
+            this.btnCadastrarAndar.Size = new System.Drawing.Size(87, 37);
+            this.btnCadastrarAndar.TabIndex = 4;
+            this.btnCadastrarAndar.Text = "Salvar";
+            this.btnCadastrarAndar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnCadastrarAndar.UseVisualStyleBackColor = true;
+            this.btnCadastrarAndar.Click += new System.EventHandler(this.btnCadastrarAndar_Click);
+            // 
+            // btnFechar
+            // 
+            this.btnFechar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnFechar.BackgroundImage")));
+            this.btnFechar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnFechar.Location = new System.Drawing.Point(309, 4);
+            this.btnFechar.Name = "btnFechar";
+            this.btnFechar.Size = new System.Drawing.Size(25, 25);
+            this.btnFechar.TabIndex = 3;
+            this.btnFechar.UseVisualStyleBackColor = true;
+            this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
+            // 
+            // txbAndar
+            // 
+            this.txbAndar.Location = new System.Drawing.Point(36, 109);
+            this.txbAndar.Name = "txbAndar";
+            this.txbAndar.Size = new System.Drawing.Size(260, 20);
+            this.txbAndar.TabIndex = 2;
+            // 
+            // lblAndar
+            // 
+            this.lblAndar.AutoSize = true;
+            this.lblAndar.Location = new System.Drawing.Point(33, 93);
+            this.lblAndar.Name = "lblAndar";
+            this.lblAndar.Size = new System.Drawing.Size(35, 13);
+            this.lblAndar.TabIndex = 1;
+            this.lblAndar.Text = "Andar";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Kristen ITC", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(3, 4);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(134, 28);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Novo Andar";
             // 
             // frmCadastrarAndar
             // 
